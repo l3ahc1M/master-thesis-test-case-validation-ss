@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you tell me how many payment transaction order requests there are in total?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountContractPaymentTransactionOrderRequest;"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to add a payment transaction instruction to the current account contract with the ID 12345678-90ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef/PaymentTransactionInstructions",
+        "body": {}
+    }
+}

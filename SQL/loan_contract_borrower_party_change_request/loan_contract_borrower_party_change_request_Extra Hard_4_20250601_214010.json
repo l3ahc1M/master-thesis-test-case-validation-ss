@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please provide me with the IDs of the loan contract borrower party change requests that were completed in the last month and have a reason code of 3. Also, make sure to include the identifying details of the new borrower.",
+    "output": {
+        "sql": "SELECT ID, NewBorrowerPartyIdentifyingElements FROM LoanContractBorrowerPartyChangeRequest WHERE CompletionDate >= DATEADD(MONTH, -1, GETDATE()) AND ReasonCode = '3';"
+    }
+}

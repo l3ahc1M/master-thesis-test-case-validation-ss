@@ -1,0 +1,14 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please change the balance restriction for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I want to set a transaction limit of 2500 euros, and I’d like to make sure that accounts with used coupons are excluded.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/1",
+        "body": {
+            "transactionThreshold": 2500,
+            "exclude": {
+                "usedCoupon": true
+            }
+        }
+    }
+}

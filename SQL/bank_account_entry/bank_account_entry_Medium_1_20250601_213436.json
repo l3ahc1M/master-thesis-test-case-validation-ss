@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the total number of bank account entries for the account that has the Standard ID DE65904199170010000707?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountEntries WHERE BankAccountStandardID = 'DE65904199170010000707';"
+    }
+}

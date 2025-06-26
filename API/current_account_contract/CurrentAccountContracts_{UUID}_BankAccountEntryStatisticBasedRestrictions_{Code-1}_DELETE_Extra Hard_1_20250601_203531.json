@@ -1,0 +1,9 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Please go ahead and remove the statistic-based restriction that has the ID of 4 from current account contract, which is identified by the UUID 45678901-23ab-cdef-0123-456789abcdef.",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions/4",
+    "body": {}
+  }
+}

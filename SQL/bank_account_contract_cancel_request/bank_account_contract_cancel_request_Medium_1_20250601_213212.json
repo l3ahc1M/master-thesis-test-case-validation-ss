@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the requests to cancel bank account contracts that need to be completed right away?",
+    "output": {
+        "sql": "SELECT * FROM BankAccountContractCancelRequest WHERE ImmediateCompletionRequiredIndicator = TRUE;"
+    }
+}

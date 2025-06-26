@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to update the terms of the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef, making it last for 24 months and adding a clause for penalties if I withdraw early.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/TermAgreements/1",
+        "body": {
+            "duration": "24 months",
+            "earlyWithdrawalPenalty": true
+        }
+    }
+}

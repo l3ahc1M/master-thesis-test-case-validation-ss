@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get the debtor parties and their related creditor parties for all direct debit mandates that are valid for more than six months.",
+    "output": {
+        "sql": "SELECT DebtorParty, CreditorParty FROM DirectDebitMandate WHERE ValidityPeriod > 'P6M';"
+    }
+}

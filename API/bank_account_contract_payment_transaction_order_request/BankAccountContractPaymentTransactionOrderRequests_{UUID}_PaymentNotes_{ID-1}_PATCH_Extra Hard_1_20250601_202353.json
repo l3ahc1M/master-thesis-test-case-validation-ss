@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please update the note with the ID of 4 for the payment transaction order request, which has the UUID of 01234567-89ab-cdef-0123-456789abcdef. The new note should say, \"Payment for services rendered in March 2024, invoice number 98765, and it should be processed as soon as possible.\"",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef/PaymentNotes/4",
+        "body": {
+            "PaymentNotes": [
+                "Payment for services rendered in March 2024, invoice #98765, and should be processed as soon as possible."
+            ]
+        }
+    }
+}

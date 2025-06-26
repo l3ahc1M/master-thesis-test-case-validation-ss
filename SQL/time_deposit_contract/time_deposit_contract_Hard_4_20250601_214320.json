@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many time deposit contracts have been set up by account holders named 'John Doe'?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM TimeDepositContract WHERE AccountHolderPartyIdentifyingElements = 'John Doe';"
+    }
+}

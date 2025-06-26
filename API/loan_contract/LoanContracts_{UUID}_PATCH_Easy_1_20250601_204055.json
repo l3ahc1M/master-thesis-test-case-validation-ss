@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I need to update the loan contract with the ID 01234567-89ab-cdef-0123-456789abcdef to change its status to 'Inactive'.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/LoanContracts/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "LifeCycleStatusCode": "0",
+            "LifeCycleStatusName": "Inactive"
+        }
+    }
+}

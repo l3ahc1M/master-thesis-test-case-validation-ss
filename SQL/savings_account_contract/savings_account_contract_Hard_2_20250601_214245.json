@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Find out how many savings account contracts are currently dormant and have a specific note attached to their usage.",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM SavingsAccountContract WHERE DormancyStatusCode = '01' AND UsageNote IS NOT NULL;"
+    }
+}

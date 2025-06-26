@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the UUIDs of payment transaction order requests where the transaction amount is over 1,000 and the requests were made in the year 2021?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractPaymentTransactionOrderRequest WHERE TransactionCurrencyAmount > '1000' AND YEAR(BankAccountPostingDate) = 2021;"
+    }
+}

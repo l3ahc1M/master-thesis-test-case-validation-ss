@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please add another person as a secondary account holder with the ID 98765 to savings account contract that has the UUID 321e0987-e34b-12d3-a456-426614174003?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/OtherPartyIdentifyingElements",
+        "body": {
+            "AccountHolderID": "98765"
+        }
+    }
+}

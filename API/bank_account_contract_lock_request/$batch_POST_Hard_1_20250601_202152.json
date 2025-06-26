@@ -1,0 +1,21 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to put together a batch request to lock the bank account contract with the ID 01234567-89ab-cdef-0123-456789abcdef, starting the validity on January 1, 2023, and ending it on December 31, 2023.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractLockRequests",
+                    "body": {
+                        "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+                        "ValidityStartDate": "2023-01-01",
+                        "ValidityEndDate": "2023-12-31"
+                    }
+                }
+            ]
+        }
+    }
+}

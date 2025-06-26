@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please update the term agreement with the ID of 2 for the loan contract that has the UUID 23456789-01ab-cdef-0123-456789abcdef? I need the term specification changed to 24 months and the interest rate updated to 4.0%.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/LoanContracts/23456789-01ab-cdef-0123-456789abcdef/TermAgreements/2",
+        "body": {
+            "TermSpecification": "24 months",
+            "InterestRate": "4.0%"
+        }
+    }
+}

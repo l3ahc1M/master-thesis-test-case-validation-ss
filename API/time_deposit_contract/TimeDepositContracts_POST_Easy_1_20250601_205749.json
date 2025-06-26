@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I would like to open a time deposit account with euros, and the account ID is 12345.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts",
+        "body": {
+            "CurrencyCode": "EUR",
+            "ID": "12345"
+        }
+    }
+}

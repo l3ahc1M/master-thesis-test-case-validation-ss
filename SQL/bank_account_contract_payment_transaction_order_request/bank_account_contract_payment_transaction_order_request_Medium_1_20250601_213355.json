@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the number of payment transaction order requests that were made on April 13, 2017?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountContractPaymentTransactionOrderRequest WHERE BankAccountPostingDate = '2017-04-13';"
+    }
+}

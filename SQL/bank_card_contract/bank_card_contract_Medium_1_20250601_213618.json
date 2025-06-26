@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the bank card contracts along with the names of the cardholders and their current statuses?",
+    "output": {
+        "sql": "SELECT T1.PaymentCardID, T1.PaymentCardLifeCycleStatusName, T1.CardHolderPartyIdentifyingElements FROM BankCardContract AS T1;"
+    }
+}

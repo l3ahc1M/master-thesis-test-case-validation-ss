@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to cancel the loan contract payoff request with the ID 01234567-89ab-cdef-0123-456789abcdef because something unexpected came up.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanContractPayoffRequests/01234567-89ab-cdef-0123-456789abcdef/SAP__self.CancelLoanContractPayoffRequest",
+        "body": {
+            "CancellationReasonCode": "4",
+            "CancellationReasonName": "Unforeseen Circumstances"
+        }
+    }
+}

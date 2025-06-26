@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you look for the bank card contracts that have a payment card character code of '1' and are still active?",
+    "output": {
+        "sql": "SELECT * FROM BankCardContract WHERE PaymentCardCharacterCode = '1' AND PaymentCardLifeCycleStatusCode = '1';"
+    }
+}

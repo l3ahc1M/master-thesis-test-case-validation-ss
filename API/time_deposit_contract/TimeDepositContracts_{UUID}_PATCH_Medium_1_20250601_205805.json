@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please change the status of the time deposit contract for the account with the ID 12345678-90ab-cdef-0123-456789abcdef to inactive?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef",
+        "body": {
+            "LifeCycleStatusCode": "0",
+            "LifeCycleStatusName": "Inactive"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please provide a list of all the requests to cancel bank account contracts, along with the details of the corresponding bank account contracts, specifically for those requests that have the cancellation reason listed as 'Customer Request'.",
+    "output": {
+        "sql": "SELECT T1.*, T2.* FROM BankAccountContractCancelRequest AS T1 JOIN BankAccountContract AS T2 ON T1.BankAccountContractUUID = T2.UUID WHERE T1.ReasonName = 'Customer Request';"
+    }
+}

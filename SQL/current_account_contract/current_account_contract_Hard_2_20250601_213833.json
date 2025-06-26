@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the names of the account holders and their usage notes for all active current account contracts.",
+    "output": {
+        "sql": "SELECT AccountHolderPartyIdentifyingElements, UsageNote FROM CurrentAccountContract WHERE LifeCycleStatusCode = '2';"
+    }
+}

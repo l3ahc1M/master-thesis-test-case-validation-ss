@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to change the status of the customer with the ID 303 to show that their account is now inactive.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankCustomerLockRequests/303",
+        "body": {
+            "UserStatusCode": "4",
+            "UserStatusName": "Inactive"
+        }
+    }
+}

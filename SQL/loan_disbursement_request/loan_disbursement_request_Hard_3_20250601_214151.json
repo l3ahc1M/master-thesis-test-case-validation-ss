@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the loan disbursement requests that have been canceled, along with their related loan contract UUIDs?",
+    "output": {
+        "sql": "SELECT LoanContractUUID FROM LoanDisbursementRequest WHERE CancellationReasonCode IS NOT NULL;"
+    }
+}

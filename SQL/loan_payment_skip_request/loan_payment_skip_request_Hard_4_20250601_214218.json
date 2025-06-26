@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many loan payment skip requests there are, and group them by the reasons for cancellation?",
+    "output": {
+        "sql": "SELECT CancellationReasonName, COUNT(*) FROM LoanPaymentSkipRequest GROUP BY CancellationReasonName;"
+    }
+}

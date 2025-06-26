@@ -1,0 +1,12 @@
+{
+  "difficulty": "Hard",
+  "input": "Please figure out the financial results for the bank account contract with the ID 34567890-12ab-cdef-0123-456789abcdef, making sure to leave out any transactions that happened after I requested to cancel.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateByUUID",
+    "body": {
+      "BankAccountContractUUID": "34567890-12ab-cdef-0123-456789abcdef",
+      "ExcludeRecentTransactions": true
+    }
+  }
+}

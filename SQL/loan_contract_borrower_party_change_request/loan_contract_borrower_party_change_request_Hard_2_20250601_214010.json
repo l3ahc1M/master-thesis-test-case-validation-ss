@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you provide me with the IDs and completion dates of the loan contract borrower party change requests that were finished in the year 2021 and have a reason code of 1?",
+    "output": {
+        "sql": "SELECT ID, CompletionDate FROM LoanContractBorrowerPartyChangeRequest WHERE CompletionDate BETWEEN '2021-01-01' AND '2021-12-31' AND ReasonCode = '1';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many bank accounts are there that use a specific currency code and are associated with contracts that are currently active?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccount WHERE CurrencyCode = 'EUR' AND BankAccountContractUUID IN (SELECT UUID FROM BankAccountContract WHERE LifeCycleStatusCode = '1');"
+    }
+}

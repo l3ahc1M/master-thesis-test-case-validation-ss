@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Please provide me with the UUIDs of the savings account contracts that are associated with a specific product and are currently active.",
+    "output": {
+        "sql": "SELECT UUID FROM SavingsAccountContract WHERE Product = 'Specific Product' AND LifeCycleStatusCode = '2';"
+    }
+}

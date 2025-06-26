@@ -1,0 +1,23 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please add several parties to the time deposit contract, which has the ID 45678901-23ab-cdef-0123-456789abcdef? I need to include their identification details and roles as follows: Alice Johnson as Beneficiary with ID 123456789, and Bob Brown as Trustee with ID 987654321.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/OtherPartyIdentifyingElements",
+        "body": {
+            "parties": [
+                {
+                    "name": "Alice Johnson",
+                    "role": "Beneficiary",
+                    "ID": "123456789"
+                },
+                {
+                    "name": "Bob Brown",
+                    "role": "Trustee",
+                    "ID": "987654321"
+                }
+            ],
+            "validate": true
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "difficulty": "Medium",
+  "input": "I need to change the account holder for current account 12345678-90ab-cdef-0123-456789abcdef. The new account holder is Tony Stark, and the previous one was Natasha Romanoff. I would like to request that the activation charge be waived for this change.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/ProposedBankAccountContractAccountHolderChangeRequest",
+    "body": {
+      "BankAccountContractUUID": "12345678-90ab-cdef-0123-456789abcdef",
+      "NewAccountHolderPartyIdentifyingElements": "Tony Stark",
+      "FormerAccountHolderPartyIdentifyingElements": "Natasha Romanoff",
+      "ChargeWaiverRequestedIndicator": true
+    }
+  }
+}

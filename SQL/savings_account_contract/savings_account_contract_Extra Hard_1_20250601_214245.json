@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get the UUIDs of savings account contracts that are in draft status and linked to a specific product.",
+    "output": {
+        "sql": "SELECT UUID FROM SavingsAccountContract WHERE CreateDraftRequestedIndicator = TRUE AND Product = 'Specific Product';"
+    }
+}

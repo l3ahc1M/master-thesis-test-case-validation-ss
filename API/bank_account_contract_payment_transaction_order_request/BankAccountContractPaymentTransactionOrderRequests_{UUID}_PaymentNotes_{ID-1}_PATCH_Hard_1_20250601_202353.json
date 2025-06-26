@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to update the note for the payment transaction order request, which has the UUID 01234567-89ab-cdef-0123-456789abcdef. The note I want to change has the ID 3, and it should now say, \"This payment is for the project completed in April 2024, invoice #12345.\"",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef/PaymentNotes/3",
+        "body": {
+            "PaymentNotes": [
+                "This payment is for the project completed in April 2024, invoice #12345"
+            ]
+        }
+    }
+}

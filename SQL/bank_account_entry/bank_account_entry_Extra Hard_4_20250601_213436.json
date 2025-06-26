@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the total amount of transactions for bank accounts that are currently locked and have had any entries in the last 30 days?",
+    "output": {
+        "sql": "SELECT SUM(T2.Amount) FROM BankAccount AS T1 JOIN BankAccountEntries AS T2 ON T1.UUID = T2.BankAccountUUID WHERE T1.ID IN (SELECT ID FROM BankAccountContractLockRequest WHERE ValidityEndDate > CURRENT_DATE) AND T2.TransactionDate > DATE_SUB(CURRENT_DATE, INTERVAL 30 DAY);"
+    }
+}

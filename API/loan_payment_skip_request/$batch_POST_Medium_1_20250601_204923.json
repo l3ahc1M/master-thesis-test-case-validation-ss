@@ -1,0 +1,13 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please help me with a request to skip loan payments? The loan contract has the ID 01234567-89ab-cdef-0123-456789abcdef, and I’d like to skip payments for the next 2 months. After that, I want the new installment amount to be 400.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanPaymentSkipRequests",
+        "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "SkipDatePeriod": "2 months",
+            "NewInstallmentAmount": "400"
+        }
+    }
+}

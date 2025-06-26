@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the direct debit mandates and the names of the creditor parties associated with them?",
+    "output": {
+        "sql": "SELECT ID, CreditorParty FROM DirectDebitMandate;"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me how many time deposit contracts are currently active and have a currency code of USD?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM TimeDepositContract WHERE CurrencyCode = 'USD' AND LifeCycleStatusCode = '2';"
+    }
+}

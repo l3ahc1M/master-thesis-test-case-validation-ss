@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the number of loan contracts for each type of product?",
+    "output": {
+        "sql": "SELECT Product, COUNT(*) FROM LoanContract GROUP BY Product;"
+    }
+}

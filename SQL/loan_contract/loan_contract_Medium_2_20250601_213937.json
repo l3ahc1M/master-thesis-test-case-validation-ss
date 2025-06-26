@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me how many loan contracts for a specific product type are currently active?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContract WHERE Product = 'Home Loan' AND LifeCycleStatusCode = '2';"
+    }
+}

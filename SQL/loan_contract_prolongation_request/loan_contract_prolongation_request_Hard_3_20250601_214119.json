@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you look for the loan contract extension requests where the final payment amount is higher than the average final payment amount?",
+    "output": {
+        "sql": "SELECT * FROM LoanContractProlongationRequest WHERE FinalPaymentAmount > (SELECT AVG(FinalPaymentAmount) FROM LoanContractProlongationRequest);"
+    }
+}

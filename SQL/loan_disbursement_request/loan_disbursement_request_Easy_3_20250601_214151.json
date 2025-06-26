@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the ID of the loan disbursement request that has the highest gross amount?",
+    "output": {
+        "sql": "SELECT ID FROM LoanDisbursementRequest ORDER BY GrossAmount DESC LIMIT 1;"
+    }
+}

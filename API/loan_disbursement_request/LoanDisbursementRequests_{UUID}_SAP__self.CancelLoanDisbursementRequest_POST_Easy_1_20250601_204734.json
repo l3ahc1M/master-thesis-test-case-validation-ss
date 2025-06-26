@@ -1,0 +1,9 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to cancel the loan disbursement request with the ID 01234567-89ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanDisbursementRequests/01234567-89ab-cdef-0123-456789abcdef/SAP__self.CancelLoanDisbursementRequest",
+        "body": {}
+    }
+}

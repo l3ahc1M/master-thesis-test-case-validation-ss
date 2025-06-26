@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out the average daily interest amount for loan contracts that have been fully paid off?",
+    "output": {
+        "sql": "SELECT AVG(DailyInterestAmount) FROM LoanContractPayoffRequest AS T1 JOIN LoanContract AS T2 ON T1.LoanContractUUID = T2.UUID WHERE T2.LifeCycleStatusCode = '3';"
+    }
+}

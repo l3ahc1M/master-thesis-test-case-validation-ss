@@ -1,0 +1,13 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please change the balance restriction for the current account contract, which has the ID 45678901-23ab-cdef-0123-456789abcdef, to 10,000 euros? Also, make sure to add a note \"Includes seasonal limits\".",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/4",
+    "body": {
+      "restrictionAmount": 10000,
+      "currency": "EUR",
+      "note": "Includes seasonal limits"
+    }
+  }
+}

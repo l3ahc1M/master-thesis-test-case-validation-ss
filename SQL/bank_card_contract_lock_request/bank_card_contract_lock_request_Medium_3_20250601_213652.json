@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the requests for locking bank card contracts along with the names of the users' statuses?",
+    "output": {
+        "sql": "SELECT ID, UserStatusName FROM BankCardContractLockRequest;"
+    }
+}

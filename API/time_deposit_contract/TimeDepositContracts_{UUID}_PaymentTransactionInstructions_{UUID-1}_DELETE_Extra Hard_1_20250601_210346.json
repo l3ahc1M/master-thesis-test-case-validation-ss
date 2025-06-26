@@ -1,0 +1,8 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please remove the payment transaction instruction with id 1 for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef?",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/1"
+  }
+}

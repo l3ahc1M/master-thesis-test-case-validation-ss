@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Look for the UUIDs of bank accounts that have over 10 entries and are associated with contracts that have a planned cancellation date set in the future.",
+    "output": {
+        "sql": "SELECT T1.UUID FROM BankAccount AS T1 JOIN BankAccountEntries AS T2 ON T1.UUID = T2.BankAccountUUID GROUP BY T1.UUID HAVING COUNT(T2.UUID) > 10 AND T1.PlannedCancellationDate > CURRENT_DATE;"
+    }
+}

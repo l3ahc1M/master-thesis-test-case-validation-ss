@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I'm looking to skip the loan payments for the contract with the ID 47938. I'd like to pause the payments for three months and request a waiver for the activation charge. ",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanPaymentSkipRequests",
+        "body": {
+            "ID": "47938",
+            "SkipDatePeriod": "3 months",
+            "ActivationChargeWaiverRequestedIndicator": true
+        }
+    }
+}

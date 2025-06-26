@@ -1,0 +1,15 @@
+{
+  "difficulty": "Easy",
+  "input": "I want to cancel bank account contract 01234567-89ab-cdef-0123-456789abcdef. Date of receipt is May 1st 2024.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractCancelRequests",
+    "body": {
+      "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+      "ImmediateCompletionRequiredIndicator": true,
+      "ReasonCode": "107",
+      "ReasonName": "Other",
+      "ReceiptDate": "2024-05-01"
+    }
+  }
+}

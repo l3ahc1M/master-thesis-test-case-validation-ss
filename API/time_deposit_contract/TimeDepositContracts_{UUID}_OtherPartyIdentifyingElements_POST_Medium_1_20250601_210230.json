@@ -1,0 +1,15 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please add a co-holder to time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef? Details: Name: John Doe, Relationship: Co-holder, ID: 987654321",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/OtherPartyIdentifyingElements",
+        "body": {
+            "identificationDetails": {
+                "name": "John Doe",
+                "relationship": "Co-holder",
+                "ID": "987654321"
+            }
+        }
+    }
+}

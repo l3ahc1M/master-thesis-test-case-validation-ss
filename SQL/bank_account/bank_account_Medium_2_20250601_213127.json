@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you show me the bank account entries for the account that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT BankAccountEntries FROM BankAccount WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

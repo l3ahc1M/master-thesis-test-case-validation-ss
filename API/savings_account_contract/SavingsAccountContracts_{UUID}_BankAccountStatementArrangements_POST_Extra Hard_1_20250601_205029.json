@@ -1,0 +1,12 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please arrange for a savings account statements for the contract with the ID 321e0987-e34b-12d3-a456-426614174003, making sure the customer gets detailed statements every six months and that they include a summary of her transactions.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/BankAccountStatementArrangements",
+        "body": {
+            "Frequency": "Bi-Annual",
+            "IncludeTransactionSummary": true
+        }
+    }
+}

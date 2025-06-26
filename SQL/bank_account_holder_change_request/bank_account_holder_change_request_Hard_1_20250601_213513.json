@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me when the account holder change request with the UUID 01234567-89ab-cdef-0123-456789abcdef was completed?",
+    "output": {
+        "sql": "SELECT CompletionDate FROM BankAccountContractAccountHolderChangeRequest WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

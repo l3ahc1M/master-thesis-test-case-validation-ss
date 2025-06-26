@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average balance of bank accounts linked to contracts that have been canceled?",
+    "output": {
+        "sql": "SELECT AVG(Balance) FROM BankAccount WHERE BankAccountContractUUID IN (SELECT UUID FROM BankAccountContractCancelRequest WHERE LifeCycleStatusCode = '3');"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to update the current direct debit mandate with the ID TEST5678. The debtor bank account is DE89370400440532013002, the signature date is 2023-11-01, and the change state ID is 2023-11-01T10:00:00Z. The user status code should be set to 2, indicating that the mandate is now active.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/DirectDebitMandates",
+        "body": {
+            "ID": "TEST5678",
+            "DebtorBankAccount": "DE89370400440532013002",
+            "SignatureDate": "2023-11-01",
+            "ChangeStateID": "2023-11-01T10:00:00Z",
+            "UserStatusCode": "2",
+            "UserStatusName": "Mandate - Active"
+        }
+    }
+}

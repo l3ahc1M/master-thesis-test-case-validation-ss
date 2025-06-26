@@ -1,0 +1,18 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I want to cancel bank account contract 01234567-89ab-cdef-0123-456789abcdef. The leftover balance of 50 eur is settled in cash. I received the cancellation on May 1st 2024.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractCancelRequests",
+    "body": {
+      "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+      "ImmediateCompletionRequiredIndicator": true,
+      "BalancingByCashIndicator": true,
+      "ResidualBankAccountBalanceAmount": "1000.00",
+      "CancellationChargeAmount": "50.00",
+      "ReasonCode": "107",
+      "ReasonName": "Other",
+      "ReceiptDate": "2024-05-01"
+    }
+  }
+}

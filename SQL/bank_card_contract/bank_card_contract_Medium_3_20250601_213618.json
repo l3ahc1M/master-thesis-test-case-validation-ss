@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me the bank card contracts that are valid until December 31st of this year?",
+    "output": {
+        "sql": "SELECT * FROM BankCardContract WHERE PaymentCardValidTo <= '2023-12-31';"
+    }
+}

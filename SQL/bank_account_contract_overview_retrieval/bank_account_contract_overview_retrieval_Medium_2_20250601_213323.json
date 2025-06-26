@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you provide a list of the current account contracts and their corresponding currency codes?",
+    "output": {
+        "sql": "SELECT ID, CurrencyCode FROM BankAccountContract WHERE TypeName = 'Current Account Contract';"
+    }
+}

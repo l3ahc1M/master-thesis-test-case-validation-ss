@@ -1,0 +1,15 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to update the account holder for time deposit account 12345678-90ab-cdef-0123-456789abcdef. The new account holder is Michael Brown, and the previous account holder was Sarah Brown. We're making this change because they just got married.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "12345678-90ab-cdef-0123-456789abcdef",
+      "NewAccountHolderPartyIdentifyingElements": "Michael Brown",
+      "FormerAccountHolderPartyIdentifyingElements": "Sarah Brown",
+      "ReasonCode": "5",
+      "ChargeWaiverRequestedIndicator": false
+    }
+  }
+}

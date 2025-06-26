@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the ID of the very first payment card that was issued?",
+    "output": {
+        "sql": "SELECT PaymentCardID FROM BankCardContract WHERE PaymentCardSequenceID = '0001';"
+    }
+}

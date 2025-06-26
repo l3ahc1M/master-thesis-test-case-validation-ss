@@ -1,0 +1,14 @@
+{
+  "difficulty": "Easy",
+  "input": "I would like to change the account holder for the savings account abcdef12-3456-7890-abcd-ef1234567890. The new account holder is Sarah Connor, and the previous account holder was John Connor.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "abcdef12-3456-7890-abcd-ef1234567890",
+      "NewAccountHolderPartyIdentifyingElements": "Sarah Connor",
+      "FormerAccountHolderPartyIdentifyingElements": "John Connor",
+      "ChargeWaiverRequestedIndicator": false
+    }
+  }
+}

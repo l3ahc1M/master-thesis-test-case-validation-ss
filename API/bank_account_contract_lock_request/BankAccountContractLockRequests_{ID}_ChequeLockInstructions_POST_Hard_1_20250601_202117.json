@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to set up a cheque lock instruction for the lock request with the ID of 105, and I want to include a note saying, \"Cheque lost on April 1, 2023,\" along with a cheque amount of 500.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractLockRequests/105/ChequeLockInstructions",
+        "body": {
+            "note": "Cheque lost on April 01, 2023",
+            "chequeAmount": 500
+        }
+    }
+}

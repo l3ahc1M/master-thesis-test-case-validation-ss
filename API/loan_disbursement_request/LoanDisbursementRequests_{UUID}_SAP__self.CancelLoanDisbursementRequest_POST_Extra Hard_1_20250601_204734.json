@@ -1,0 +1,12 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I need to cancel the loan disbursement request with the ID 01234567-89ab-cdef-0123-456789abcdef because I found a better loan offer. Please make sure this is taken care of right away.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanDisbursementRequests/01234567-89ab-cdef-0123-456789abcdef/SAP__self.CancelLoanDisbursementRequest",
+        "body": {
+            "CancellationReasonCode": "3",
+            "CancellationReasonName": "Found a better loan offer"
+        }
+    }
+}

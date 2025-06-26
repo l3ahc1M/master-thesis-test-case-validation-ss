@@ -1,0 +1,11 @@
+{
+  "difficulty": "Medium",
+  "input": "Can you help me set up a bank account statement arrangement for current account with the ID 23456789-01ab-cdef-0123-456789abcdef? The user would like to receive monthly statements, please.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+    "body": {
+      "frequency": "monthly"
+    }
+  }
+}

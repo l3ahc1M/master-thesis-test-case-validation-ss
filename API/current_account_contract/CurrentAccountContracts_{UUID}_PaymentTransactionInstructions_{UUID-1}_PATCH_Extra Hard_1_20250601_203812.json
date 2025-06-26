@@ -1,0 +1,14 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please update the payment transaction instructions for the current account contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I want it to require dual authorization for any transactions that exceed 15,000 euros, and please add a note \"Requires dual authorization for compliance.\".",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/4",
+    "body": {
+      "dualAuthorizationRequired": true,
+      "transactionLimit": 15000,
+      "currency": "EUR",
+      "note": "Requires dual authorization for compliance."
+    }
+  }
+}

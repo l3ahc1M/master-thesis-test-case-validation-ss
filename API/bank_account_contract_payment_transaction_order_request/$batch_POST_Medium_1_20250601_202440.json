@@ -1,0 +1,32 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please process two payment transaction order requests at once? The first request is for the user with the ID 01234567-89ab-cdef-0123-456789abcdef, and they want to make a payment of 200.00 euros. The second request is for the user with the ID 12345678-90ab-cdef-0123-456789abcdef, and they want to make a payment of 150.00 euros.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "200.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "12345678-90ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "150.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                }
+            ]
+        }
+    }
+}

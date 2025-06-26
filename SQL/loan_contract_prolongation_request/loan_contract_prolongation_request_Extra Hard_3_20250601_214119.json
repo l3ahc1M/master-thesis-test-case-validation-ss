@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the total amount of money reimbursed for requests to extend loan contracts, and break it down by the status of each request?",
+    "output": {
+        "sql": "SELECT LifeCycleStatusName, SUM(ReimbursementAmount) FROM LoanContractProlongationRequest GROUP BY LifeCycleStatusName;"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the ID of the loan contract prolongation request that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT ID FROM LoanContractProlongationRequest WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

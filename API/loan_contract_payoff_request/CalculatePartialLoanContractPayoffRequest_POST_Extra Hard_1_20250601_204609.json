@@ -1,0 +1,15 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I'm looking to make a partial payment request to pay off the loan, which has the ID 71. The unique identifier for the loan contract is 01234567-89ab-cdef-0123-456789abcdef. The customer wants to settle a net amount of 3000 right away, and needs this done immediately.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CalculatePartialLoanContractPayoffRequest",
+        "body": {
+            "ID": "71",
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "NetAmount": "3000",
+            "ImmediateCompletionRequiredIndicator": true,
+            "FullPayoffRequiredIndicator": false
+        }
+    }
+}

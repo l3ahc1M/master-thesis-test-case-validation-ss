@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you tell me how many requests there are for extending loan contracts?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContractProlongationRequest;"
+    }
+}

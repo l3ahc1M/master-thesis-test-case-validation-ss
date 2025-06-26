@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please draft a term agreement for the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef? I need it to cover a duration of one year and an interest rate of 3%.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/TermAgreements",
+        "body": {
+            "duration": "12 months",
+            "interestRate": 3
+        }
+    }
+}

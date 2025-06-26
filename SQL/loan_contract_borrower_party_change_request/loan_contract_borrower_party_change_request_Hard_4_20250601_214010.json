@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many requests there are to change the borrower party on loan contracts, and group those counts by the name of the life cycle status?",
+    "output": {
+        "sql": "SELECT LifeCycleStatusName, COUNT(*) FROM LoanContractBorrowerPartyChangeRequest GROUP BY LifeCycleStatusName;"
+    }
+}

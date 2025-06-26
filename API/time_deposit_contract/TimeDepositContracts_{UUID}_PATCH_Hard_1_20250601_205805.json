@@ -1,0 +1,11 @@
+{
+    "difficulty": "Hard",
+    "input": "I would like to update the term specification of the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef to 24 months.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef",
+        "body": {
+            "TermSpecification": "24 months"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the UUIDs of all the requests to change account holders that were completed in the year 2021.",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractAccountHolderChangeRequest WHERE YEAR(CompletionDate) = 2021;"
+    }
+}

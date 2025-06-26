@@ -1,0 +1,13 @@
+{
+  "difficulty": "Hard",
+  "input": "I would like to change the contract for the current account, which has the ID 23456789-01ab-cdef-0123-456789abcdef, to set its status to 'Dormant' and add a note \"Account is currently not in use.\".",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef",
+    "body": {
+      "DormancyStatusCode": "02",
+      "DormancyStatusName": "Dormant",
+      "UsageNote": "Account is currently not in use."
+    }
+  }
+}

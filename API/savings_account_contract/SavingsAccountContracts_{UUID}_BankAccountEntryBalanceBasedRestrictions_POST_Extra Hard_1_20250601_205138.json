@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please set up some complex rules for the savings account contract with the ID 789e0123-e45b-12d3-a456-426614174004. I want to allow withdrawals only when the balance is over 3000 euros, and I’d like to receive a notification if the balance drops below that amount.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/789e0123-e45b-12d3-a456-426614174004/BankAccountEntryBalanceBasedRestrictions",
+        "body": {
+            "MinimumBalance": 3000,
+            "NotificationEnabled": true,
+            "CurrencyCode": "EUR"
+        }
+    }
+}

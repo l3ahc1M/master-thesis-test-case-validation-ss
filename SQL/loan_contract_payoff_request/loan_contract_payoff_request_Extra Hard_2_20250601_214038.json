@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you show me all the loan contract payoff requests that need to be completed right away and have a gross amount that is higher than the average gross amount of all requests?",
+    "output": {
+        "sql": "SELECT * FROM LoanContractPayoffRequest WHERE ImmediateCompletionRequiredIndicator = TRUE AND GrossAmount > (SELECT AVG(GrossAmount) FROM LoanContractPayoffRequest);"
+    }
+}

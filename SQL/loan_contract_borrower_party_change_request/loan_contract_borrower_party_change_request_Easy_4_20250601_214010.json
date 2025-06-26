@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you let me know the Change State ID for the loan contract borrower party change request that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT ChangeStateID FROM LoanContractBorrowerPartyChangeRequest WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

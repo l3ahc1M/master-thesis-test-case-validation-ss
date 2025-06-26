@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me how many payment transaction order requests there are, organized by their current lifecycle status?",
+    "output": {
+        "sql": "SELECT LifeCycleStatusName, COUNT(*) FROM BankAccountContractPaymentTransactionOrderRequest GROUP BY LifeCycleStatusName;"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "difficulty": "Medium",
+    "input": "I need to set up a new bank credit facility contract with the ID 5678, using euros as the currency, and the product is a personal loan.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankCreditFacilityContract",
+        "body": {
+            "ID": "5678",
+            "CurrencyCode": "EUR",
+            "Product": "Personal Loan"
+        }
+    }
+}

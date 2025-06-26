@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you set up the bank account statement arrangements for the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef? The customer wants to receive those statements every month, please.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+        "body": {
+            "frequency": "monthly"
+        }
+    }
+}

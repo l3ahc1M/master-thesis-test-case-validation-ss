@@ -1,0 +1,19 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please set up a time deposit contract for the account, which has the ID 98765. I want to make sure that accounts with used coupons and those in loyalty programs are not included, and I need the average interest rate to be calculated.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts",
+        "body": {
+            "ID": "98765",
+            "AdaptedInterestConditions": {
+                "exclude": {
+                    "usedCoupon": true,
+                    "inLoyaltyProgram": true
+                },
+                "aggregation": "average",
+                "field": "interestRate"
+            }
+        }
+    }
+}

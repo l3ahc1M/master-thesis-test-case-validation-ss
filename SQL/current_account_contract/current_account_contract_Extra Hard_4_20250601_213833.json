@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you provide me with the IDs of the current account contracts that have a planned cancellation date and are linked to a certain type of product?",
+    "output": {
+        "sql": "SELECT ID FROM CurrentAccountContract WHERE PlannedCancellationDate IS NOT NULL AND Product = 'Specific Product Type';"
+    }
+}

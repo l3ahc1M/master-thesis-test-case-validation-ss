@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please look for all the bank card contract lock requests that include a note and are linked to a specific party, and provide me with their event names.",
+    "output": {
+        "sql": "SELECT EventName FROM BankCardContractLockRequest WHERE Note IS NOT NULL AND PartyIdentifyingElements IS NOT NULL;"
+    }
+}

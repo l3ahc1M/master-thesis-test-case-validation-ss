@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you help me locate the bank account contract UUID for the account that has the standard ID DE65904199170010000707?",
+    "output": {
+        "sql": "SELECT BankAccountContractUUID FROM BankAccount WHERE StandardID = 'DE65904199170010000707';"
+    }
+}

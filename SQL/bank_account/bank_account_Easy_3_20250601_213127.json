@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the internal ID for the bank account that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT InternalID FROM BankAccount WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

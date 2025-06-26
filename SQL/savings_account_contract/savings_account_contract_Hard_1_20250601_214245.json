@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the UUIDs of savings account contracts that allow withdrawals of earnings after more than one month?",
+    "output": {
+        "sql": "SELECT UUID FROM SavingsAccountContract WHERE WithdrawalEarningsAvailabilityDuration > 'P1M';"
+    }
+}

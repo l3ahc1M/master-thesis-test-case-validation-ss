@@ -1,0 +1,12 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I need to update the bank card contract lock request with the ID of 105 to change the event name to \"Travel Lock\" and change the start date of the validity to today.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/BankCardContractLockRequests/105",
+    "body": {
+      "EventName": "Travel Lock",
+      "ValidityStartDate": "2024-05-01"
+    }
+  }
+}

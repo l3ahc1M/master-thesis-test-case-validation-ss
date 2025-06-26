@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the loan disbursement requests and the UUIDs of their related loan contracts?",
+    "output": {
+        "sql": "SELECT ID, LoanContractUUID FROM LoanDisbursementRequest;"
+    }
+}

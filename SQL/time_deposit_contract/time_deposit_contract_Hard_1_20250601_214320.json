@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me the average interest rate for all active time deposit contracts that are set to end after December 31, 2023?",
+    "output": {
+        "sql": "SELECT AVG(InterestRate) FROM TimeDepositContract WHERE LifeCycleStatusCode = '2' AND PlannedEndDate > '2023-12-31';"
+    }
+}

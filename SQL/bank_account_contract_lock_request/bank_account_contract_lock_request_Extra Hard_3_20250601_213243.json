@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you look for the bank account contract lock requests where the user status is 'Active' and the requests were created between January 1, 2023, and December 31, 2023?",
+    "output": {
+        "sql": "SELECT * FROM BankAccountContractLockRequest WHERE UserStatusCode = '2' AND ValidityStartDate BETWEEN '2023-01-01' AND '2023-12-31';"
+    }
+}

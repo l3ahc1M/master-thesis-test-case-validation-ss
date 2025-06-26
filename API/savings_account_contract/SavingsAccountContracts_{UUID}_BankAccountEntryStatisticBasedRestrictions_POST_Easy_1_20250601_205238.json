@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up a simple statistic-based restriction for the savings account contract with the ID 123e4567-e89b-12d3-a456-426614174000, allowing a maximum transaction limit of 1000 euros.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/123e4567-e89b-12d3-a456-426614174000/BankAccountEntryStatisticBasedRestrictions",
+        "body": {
+            "MaximumTransactionLimit": 1000,
+            "CurrencyCode": "EUR"
+        }
+    }
+}

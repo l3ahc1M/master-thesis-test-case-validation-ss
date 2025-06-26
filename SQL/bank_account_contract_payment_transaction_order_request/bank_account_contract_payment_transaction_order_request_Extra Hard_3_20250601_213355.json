@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out how many payment transaction order requests were made each day over the past six months, grouped by the date they were posted?",
+    "output": {
+        "sql": "SELECT BankAccountPostingDate, COUNT(*) FROM BankAccountContractPaymentTransactionOrderRequest WHERE BankAccountPostingDate >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH) GROUP BY BankAccountPostingDate;"
+    }
+}

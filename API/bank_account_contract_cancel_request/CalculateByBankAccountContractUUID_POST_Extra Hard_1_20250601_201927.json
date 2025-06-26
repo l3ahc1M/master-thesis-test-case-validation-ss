@@ -1,0 +1,13 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I need a detailed calculation of the financial results for bank account contract with the ID abcdef12-3456-7890-abcd-ef1234567890. Please leave out any transactions related to fees and include a summary of the remaining balance.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateByBankAccountContractUUID",
+    "body": {
+      "BankAccountContractUUID": "abcdef12-3456-7890-abcd-ef1234567890",
+      "ExcludeFees": true,
+      "IncludeResidualBalanceSummary": true
+    }
+  }
+}

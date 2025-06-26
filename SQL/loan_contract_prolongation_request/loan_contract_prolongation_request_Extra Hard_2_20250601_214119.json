@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Show me the requests to extend loan contracts that have a final payment date after January 1, 2023, and are linked to a particular loan contract.",
+    "output": {
+        "sql": "SELECT * FROM LoanContractProlongationRequest WHERE FinalPaymentDate > '2023-01-01' AND LoanContract = 'specific_loan_contract';"
+    }
+}

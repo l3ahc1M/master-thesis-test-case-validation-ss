@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the reason name for the loan contract payoff request that has the ID 71?",
+    "output": {
+        "sql": "SELECT ReasonName FROM LoanContractPayoffRequest WHERE ID = '71';"
+    }
+}

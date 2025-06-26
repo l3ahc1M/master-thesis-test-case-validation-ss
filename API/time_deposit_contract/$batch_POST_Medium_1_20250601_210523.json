@@ -1,0 +1,30 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please set up time deposit contracts for the accounts with the IDs 33333 and 44444? Make sure both contracts are active and have a duration of 12 months.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts",
+                    "body": {
+                        "ID": "33333",
+                        "LifeCycleStatusCode": "2",
+                        "TermSpecification": "12 months"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts",
+                    "body": {
+                        "ID": "44444",
+                        "LifeCycleStatusCode": "2",
+                        "TermSpecification": "12 months"
+                    }
+                }
+            ]
+        }
+    }
+}

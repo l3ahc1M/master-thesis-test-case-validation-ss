@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you set up some balance-based restrictions for the savings account contract, which has the ID 321e0987-e34b-12d3-a456-426614174003? I’d like to have a maximum withdrawal limit of 5000 British pounds.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/BankAccountEntryBalanceBasedRestrictions",
+        "body": {
+            "MaximumWithdrawalLimit": 5000,
+            "CurrencyCode": "GBP"
+        }
+    }
+}

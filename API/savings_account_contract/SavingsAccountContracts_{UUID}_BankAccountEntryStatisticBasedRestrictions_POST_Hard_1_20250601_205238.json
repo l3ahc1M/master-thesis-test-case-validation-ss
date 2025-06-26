@@ -1,0 +1,14 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to set up a rule for a savings account contract with the ID 456e7890-e12b-12d3-a456-426614174002, so that the customer can only make transactions if the average amount of those transactions is less than 500 dollars. Also, the customer wants to get a notification whenever a transaction goes over that limit.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/BankAccountEntryStatisticBasedRestrictions",
+    "body": {
+      "AverageTransactionCondition": "LessThan",
+      "ThresholdAmount": 500,
+      "NotificationEnabled": true,
+      "CurrencyCode": "USD"
+    }
+  }
+}

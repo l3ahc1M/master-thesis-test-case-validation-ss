@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out the average net amount of loan disbursement requests for loan contracts that are currently active?",
+    "output": {
+        "sql": "SELECT AVG(NetAmount) FROM LoanDisbursementRequest AS T1 JOIN LoanContract AS T2 ON T1.LoanContractUUID = T2.UUID WHERE T2.LifeCycleStatusCode = '2';"
+    }
+}

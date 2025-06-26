@@ -1,0 +1,9 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I want to get rid of the bank account statement arrangement that has the ID 4 from the current account contract, which is identified by the UUID 45678901-23ab-cdef-0123-456789abcdef. Please make sure to remove all related settings as well.",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountStatementArrangements/4",
+    "body": {}
+  }
+}

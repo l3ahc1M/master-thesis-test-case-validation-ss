@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the IDs and lifecycle status names of all the bank credit facility contracts that are categorized as 'Loan'?",
+    "output": {
+        "sql": "SELECT ID, LifeCycleStatusName FROM BankCreditFacilityContract WHERE Product = 'Loan';"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to change the account holder for the time deposit account fedcba98-7654-3210-fedc-ba9876543210. The new account holder will be Diana Prince, and the previous account holder was Steve Trevor. This change is happening because of a legal agreement.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": [
+      {
+        "BankAccountContractUUID": "fedcba98-7654-3210-fedc-ba9876543210",
+        "NewAccountHolderPartyIdentifyingElements": "Diana Prince",
+        "FormerAccountHolderPartyIdentifyingElements": "Steve Trevor",
+        "ReasonCode": "1",
+        "ChargeWaiverRequestedIndicator": false
+      }
+    ]
+  }
+}

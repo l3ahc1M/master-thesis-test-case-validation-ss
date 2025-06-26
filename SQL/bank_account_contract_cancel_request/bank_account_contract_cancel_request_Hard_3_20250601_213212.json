@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the unique identifiers for bank account contract cancellation requests that have been cancelled and need a bank account settlement?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractCancelRequest WHERE BankAccountSettlementRequiredIndicator = TRUE AND CancellationDate IS NOT NULL;"
+    }
+}

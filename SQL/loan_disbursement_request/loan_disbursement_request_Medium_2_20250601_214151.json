@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me how many loan disbursement requests have a gross amount that exceeds 1,000?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanDisbursementRequest WHERE GrossAmount > '1000';"
+    }
+}

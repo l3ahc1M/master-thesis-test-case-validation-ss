@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Find out the average gross amount of loan disbursement requests for each loan contract ID where the activation charge has been waived.",
+    "output": {
+        "sql": "SELECT LoanContractUUID, AVG(GrossAmount) FROM LoanDisbursementRequest WHERE ActivationChargeWaiverRequestedIndicator = TRUE GROUP BY LoanContractUUID;"
+    }
+}

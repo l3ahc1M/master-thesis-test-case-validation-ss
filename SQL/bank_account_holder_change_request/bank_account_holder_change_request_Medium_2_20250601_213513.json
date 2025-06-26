@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the UUIDs of all the requests for changing account holders that were completed because of marriage?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractAccountHolderChangeRequest WHERE LifeCycleStatusName = 'Completed' AND ReasonName = 'Marriage';"
+    }
+}

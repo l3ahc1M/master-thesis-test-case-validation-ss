@@ -1,0 +1,8 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please take out the term agreement from the time deposit contract that has the ID 23456789-01ab-cdef-0123-456789abcdef?",
+    "output": {
+        "method": "DELETE",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/TermAgreements/1"
+    }
+}

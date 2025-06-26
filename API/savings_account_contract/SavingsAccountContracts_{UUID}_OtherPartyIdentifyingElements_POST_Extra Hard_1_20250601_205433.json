@@ -1,0 +1,28 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please add detailed identifying information for several parties involved in savings account contract, which has the ID 789e0123-e45b-12d3-a456-426614174004? I need their roles and contact details included as follows: The first party is a co-signer with ID 11111, their email is cosigner@example.com and phone number is 123-456-7890. The second party is a beneficiary with ID 22222, their email is beneficiary@example.com and phone number is 098-765-4321.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/789e0123-e45b-12d3-a456-426614174004/OtherPartyIdentifyingElements",
+        "body": {
+            "Parties": [
+                {
+                    "ID": "11111",
+                    "Role": "Co-signer",
+                    "ContactInfo": {
+                        "Email": "cosigner@example.com",
+                        "Phone": "123-456-7890"
+                    }
+                },
+                {
+                    "ID": "22222",
+                    "Role": "Beneficiary",
+                    "ContactInfo": {
+                        "Email": "beneficiary@example.com",
+                        "Phone": "098-765-4321"
+                    }
+                }
+            ]
+        }
+    }
+}

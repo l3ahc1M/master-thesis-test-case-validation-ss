@@ -1,0 +1,60 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Can you set up four prenote entries for the bank account, which has the ID 01234567-89ab-cdef-0123-456789abcdef? The first one should be a debit entry with the reference PRENOTE-REFERENCE-4001, the second one a credit entry with the reference PRENOTE-REFERENCE-4002, the third one another debit entry with the reference PRENOTE-REFERENCE-4003, and the last one a credit entry with the reference PRENOTE-REFERENCE-4004. They should all be valid  from beginning of 2024 until the end of 2025 and include a request to deactivate material checks.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-4001",
+            "BankAccountDebitIndicator": true,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2025-12-31",
+            "AdditionalMaterialChecksDeactivationRequestedIndicator": true
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-4002",
+            "BankAccountDebitIndicator": false,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2025-12-31",
+            "AdditionalMaterialChecksDeactivationRequestedIndicator": true
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-4003",
+            "BankAccountDebitIndicator": true,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2025-12-31",
+            "AdditionalMaterialChecksDeactivationRequestedIndicator": true
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-4004",
+            "BankAccountDebitIndicator": false,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2025-12-31",
+            "AdditionalMaterialChecksDeactivationRequestedIndicator": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average length of time that direct debit mandates are valid, and break it down by each creditor party?",
+    "output": {
+        "sql": "SELECT CreditorParty, AVG(ValidityPeriod) FROM DirectDebitMandate GROUP BY CreditorParty;"
+    }
+}

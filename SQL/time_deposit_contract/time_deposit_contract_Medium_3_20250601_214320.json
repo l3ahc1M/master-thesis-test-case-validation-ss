@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the IDs of all the time deposit contracts that are not active right now?",
+    "output": {
+        "sql": "SELECT ID FROM TimeDepositContract WHERE LifeCycleStatusCode != '2';"
+    }
+}

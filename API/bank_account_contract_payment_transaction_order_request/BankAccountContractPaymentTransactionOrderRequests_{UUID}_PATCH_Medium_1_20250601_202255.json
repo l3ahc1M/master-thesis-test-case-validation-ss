@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Please update the payment transaction order request with the ID 01234567-89ab-cdef-0123-456789abcdef. I would like to change the planned execution date to June 1, 2024, and include a payment reference ID of New-ReferenceID.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "PlannedExecutionDate": "2024-06-01",
+            "PaymentTransactionReferenceID": "New-ReferenceID"
+        }
+    }
+}

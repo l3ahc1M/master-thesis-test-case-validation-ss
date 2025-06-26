@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the number of loan payment skip requests that were canceled due to an 'Error processing' reason?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanPaymentSkipRequest WHERE CancellationReasonName = 'Error processing';"
+    }
+}

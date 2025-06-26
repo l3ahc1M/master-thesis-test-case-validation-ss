@@ -1,0 +1,21 @@
+{
+  "difficulty": "Medium",
+  "input": "Could you please send a batch request to create a lock for the bank account contract with the ID 01234567-89ab-cdef-0123-456789abcdef? Make sure to include an event code of 4841 and a note mentioning that the customer passed away on 1st April 2019.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/BankAccountContractLockRequests",
+          "body": {
+            "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "EventCode": "4841",
+            "Note": "Customer deceased April 01, 2019"
+          }
+        }
+      ]
+    }
+  }
+}

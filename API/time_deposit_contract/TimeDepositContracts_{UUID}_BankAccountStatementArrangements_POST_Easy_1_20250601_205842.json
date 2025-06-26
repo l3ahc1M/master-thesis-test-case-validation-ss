@@ -1,0 +1,9 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to arrange for bank account statements for the time deposit contract with the ID 12345678-90ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+        "body": {}
+    }
+}

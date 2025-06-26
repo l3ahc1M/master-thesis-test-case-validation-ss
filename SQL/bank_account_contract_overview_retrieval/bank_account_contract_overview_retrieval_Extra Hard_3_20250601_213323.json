@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out how many bank account contracts there are, and break that down by their current lifecycle status?",
+    "output": {
+        "sql": "SELECT LifeCycleStatusName, COUNT(*) FROM BankAccountContract GROUP BY LifeCycleStatusName;"
+    }
+}

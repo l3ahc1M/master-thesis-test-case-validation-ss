@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me how many prenote entries were turned down because there weren't enough funds in the bank account with the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountPrenoteEntry WHERE BankAccountUUID = '01234567-89ab-cdef-0123-456789abcdef' AND RejectionReasonName = 'Insufficient Funds';"
+    }
+}

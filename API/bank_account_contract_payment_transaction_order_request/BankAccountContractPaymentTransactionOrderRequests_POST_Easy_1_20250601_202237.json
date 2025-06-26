@@ -1,0 +1,13 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up a payment transaction order request for a bank account. The unique ID for the account is 01234567-89ab-cdef-0123-456789abcdef, and I'm looking to make a transaction of one hundred dollars.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests",
+        "body": {
+            "UUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "TransactionCurrencyAmount": "100.00"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "difficulty": "Medium",
+  "input": "Could you please take out the bank account statement arrangement with the ID of 2 for current account contract that has the UUID 23456789-01ab-cdef-0123-456789abcdef?",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountStatementArrangements/2",
+    "body": {}
+  }
+}

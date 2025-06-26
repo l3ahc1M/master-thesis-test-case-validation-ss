@@ -1,0 +1,22 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to process several payment transaction order requests for a account all at once. The first request is for the active account with the id 01234567-89ab-cdef-0123-456789abcdef, and I'm looking to send an amount of 50.00 US dollars.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "50.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                }
+            ]
+        }
+    }
+}

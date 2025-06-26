@@ -1,0 +1,14 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please set up some detailed payment transaction rules for savings account contract with the ID 789e0123-e45b-12d3-a456-426614174004. I want payments to be allowed only if the average monthly balance is over 2000 euros. Also, make sure to send the user a notification if there's ever a payment attempt that falls below that amount, and set a cap on the maximum payment to 1000 euros.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/789e0123-e45b-12d3-a456-426614174004/PaymentTransactionInstructions",
+        "body": {
+            "AverageBalanceCondition": "GreaterThan",
+            "ThresholdAmount": 2000,
+            "NotificationEnabled": true,
+            "MaximumPaymentLimit": 1000
+        }
+    }
+}

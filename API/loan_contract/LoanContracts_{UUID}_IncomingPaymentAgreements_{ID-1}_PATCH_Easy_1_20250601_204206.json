@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I need to update the incoming payment agreement with the ID of 1 for the loan contract that has the UUID of 12345678-90ab-cdef-0123-456789abcdef to switch the payment method to Direct Debit.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/LoanContracts/12345678-90ab-cdef-0123-456789abcdef/IncomingPaymentAgreements/1",
+        "body": {
+            "PaymentMethod": "Direct Debit"
+        }
+    }
+}

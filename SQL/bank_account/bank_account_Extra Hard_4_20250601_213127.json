@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you help me find the bank account IDs linked to contracts that have been canceled for a specific reason?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccount WHERE BankAccountContractUUID IN (SELECT BankAccountContractUUID FROM BankAccountContractCancelRequest WHERE ReasonCode = '107');"
+    }
+}

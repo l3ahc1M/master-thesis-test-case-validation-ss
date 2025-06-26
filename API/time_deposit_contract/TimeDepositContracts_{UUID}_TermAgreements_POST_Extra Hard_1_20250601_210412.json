@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you please draft a term agreement for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I need it to cover a period of 36 months, with an interest rate of 4%, and I want to include a clause for automatic renewal.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/TermAgreements",
+        "body": {
+            "duration": "36 months",
+            "interestRate": 4,
+            "automaticRenewal": true
+        }
+    }
+}

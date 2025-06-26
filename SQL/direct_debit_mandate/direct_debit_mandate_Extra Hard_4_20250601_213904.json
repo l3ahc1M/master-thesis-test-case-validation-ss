@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me how many direct debit mandates there are, organized by the status of the users?",
+    "output": {
+        "sql": "SELECT UserStatusName, COUNT(*) FROM DirectDebitMandate GROUP BY UserStatusName;"
+    }
+}

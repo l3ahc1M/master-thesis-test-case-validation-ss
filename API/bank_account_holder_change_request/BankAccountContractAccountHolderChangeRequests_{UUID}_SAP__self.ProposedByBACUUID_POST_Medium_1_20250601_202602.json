@@ -1,0 +1,15 @@
+{
+  "difficulty": "Medium",
+  "input": "I need to update the account holder for current bank account 12345678-90ab-cdef-0123-456789abcdef. The new account holder will be Bruce Wayne, while the previous account holder was Alfred Pennyworth. This change is happening because of a legal agreement.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "12345678-90ab-cdef-0123-456789abcdef",
+      "NewAccountHolderPartyIdentifyingElements": "Bruce Wayne",
+      "FormerAccountHolderPartyIdentifyingElements": "Alfred Pennyworth",
+      "ReasonCode": "1",
+      "ChargeWaiverRequestedIndicator": false
+    }
+  }
+}

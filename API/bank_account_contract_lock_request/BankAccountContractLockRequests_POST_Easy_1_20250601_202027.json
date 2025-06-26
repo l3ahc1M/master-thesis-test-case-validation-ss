@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up a lock request for a bank account contract that has the ID 105 and the UUID 01234567-89ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractLockRequests",
+        "body": {
+            "ID": "105",
+            "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef"
+        }
+    }
+}

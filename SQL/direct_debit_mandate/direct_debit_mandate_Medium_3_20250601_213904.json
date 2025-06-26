@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the details of all active direct debit mandates?",
+    "output": {
+        "sql": "SELECT * FROM DirectDebitMandate WHERE UserStatusName = 'Mandate - Active';"
+    }
+}

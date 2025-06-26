@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me how many direct debit mandates are still valid until the end of this month?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM DirectDebitMandate WHERE ValidityPeriod > CURRENT_DATE;"
+    }
+}

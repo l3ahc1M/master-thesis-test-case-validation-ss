@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you let me know the bank account ID for the account that has the standard ID DE65904199170010000707?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccount WHERE StandardID = 'DE65904199170010000707';"
+    }
+}

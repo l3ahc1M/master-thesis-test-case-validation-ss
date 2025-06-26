@@ -1,0 +1,16 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up a new loan contract for the customer with the ID 11111 using US dollars. The contract should be active and categorized as a personal loan.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanContracts",
+        "body": {
+            "ID": "11111",
+            "CurrencyCode": "USD",
+            "BorrowerPartyIdentifyingElements": "Customer ID 11111",
+            "LifeCycleStatusCode": "1",
+            "LifeCycleStatusName": "Active",
+            "Product": "Personal Loan"
+        }
+    }
+}

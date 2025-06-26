@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the debtor parties for all active direct debit mandates that are valid for more than one year?",
+    "output": {
+        "sql": "SELECT DebtorParty FROM DirectDebitMandate WHERE UserStatusCode = '2' AND ValidityPeriod > 'P1Y';"
+    }
+}

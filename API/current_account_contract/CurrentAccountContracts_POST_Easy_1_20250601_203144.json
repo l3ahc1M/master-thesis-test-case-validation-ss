@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I would like to open a current account with euros, and the account holder ID is 12345.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CurrentAccountContracts",
+        "body": {
+            "CurrencyCode": "EUR",
+            "AccountHolderPartyIdentifyingElements": "12345"
+        }
+    }
+}

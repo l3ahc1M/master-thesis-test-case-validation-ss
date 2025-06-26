@@ -1,0 +1,15 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I need to update the account holder for savings account abcdef01-2345-6789-abcd-ef0123456789. The new account holder will be Peter Parker, and the previous account holder was Mary Jane. This is an urgent request, and I would like to have the activation fee waived. The change state ID for this request is 20230309121401.6154150.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/ProposedBankAccountContractAccountHolderChangeRequest",
+    "body": {
+      "BankAccountContractUUID": "abcdef01-2345-6789-abcd-ef0123456789",
+      "NewAccountHolderPartyIdentifyingElements": "Peter Parker",
+      "FormerAccountHolderPartyIdentifyingElements": "Mary Jane",
+      "ChargeWaiverRequestedIndicator": true,
+      "ChangeStateID": "20230309121401.6154150"
+    }
+  }
+}

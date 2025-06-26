@@ -1,0 +1,13 @@
+{
+  "difficulty": "Hard",
+  "input": "I want to set a limit on current account contract, which has the ID 34567890-12ab-cdef-0123-456789abcdef, so that the account holder can only make transactions up to 5000 dollars each month.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions",
+    "body": {
+      "transactionLimit": 5000,
+      "currency": "USD",
+      "period": "monthly"
+    }
+  }
+}

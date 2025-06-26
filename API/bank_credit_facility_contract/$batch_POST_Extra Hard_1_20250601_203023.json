@@ -1,0 +1,32 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I want to update several bank credit facility contracts all at once. For the contracts with the IDs 1234 and 5678, please change their lifecycle status to 'Inactive' and set seasonal limits of 20,000 euros for both of them.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "PATCH",
+                    "url": "/BankCreditFacilityContract/1234",
+                    "body": {
+                        "LifeCycleStatusCode": "0",
+                        "SeasonalLimits": [
+                            20000
+                        ]
+                    }
+                },
+                {
+                    "method": "PATCH",
+                    "url": "/BankCreditFacilityContract/5678",
+                    "body": {
+                        "LifeCycleStatusCode": "0",
+                        "SeasonalLimits": [
+                            20000
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

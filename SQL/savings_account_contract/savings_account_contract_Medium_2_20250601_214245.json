@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the number of savings account contracts for each type of currency?",
+    "output": {
+        "sql": "SELECT CurrencyCode, COUNT(*) FROM SavingsAccountContract GROUP BY CurrencyCode;"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Find out how many active bank credit facility contracts there are that are classified as 'Loan' and have a specific change state ID.",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCreditFacilityContract WHERE LifeCycleStatusName = 'Active' AND Product = 'Loan' AND ChangeStateID IS NOT NULL;"
+    }
+}

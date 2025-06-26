@@ -1,0 +1,12 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to update the incoming payment agreement with the ID of 3 for the loan contract that has the UUID of 34567890-12ab-cdef-0123-456789abcdef. I want to change the payment amount to 1500 and specify Bank Transfer as new payment method.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/LoanContracts/34567890-12ab-cdef-0123-456789abcdef/IncomingPaymentAgreements/3",
+    "body": {
+      "PaymentMethod": "Bank Transfer",
+      "Amount": 1500
+    }
+  }
+}

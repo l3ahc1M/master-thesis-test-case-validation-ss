@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the final installment amount for the loan payment skip request that has the ID 47938?",
+    "output": {
+        "sql": "SELECT FinalInstallmentAmount FROM LoanPaymentSkipRequest WHERE ID = '47938';"
+    }
+}

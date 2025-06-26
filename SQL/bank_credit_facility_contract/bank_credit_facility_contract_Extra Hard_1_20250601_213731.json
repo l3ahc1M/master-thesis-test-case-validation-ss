@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Find out how many subordinated bank contracts there are for all active bank credit facility contracts that are classified as current accounts.",
+    "output": {
+        "sql": "SELECT SUM(SubordinatedBankContractNumberValue) FROM BankCreditFacilityContract WHERE LifeCycleStatusName = 'Active' AND Product = 'Current Account';"
+    }
+}

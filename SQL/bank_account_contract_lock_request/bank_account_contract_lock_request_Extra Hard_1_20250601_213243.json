@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you list the names of the events related to bank account contract lock requests for users who are currently active and were created within the last month?",
+    "output": {
+        "sql": "SELECT EventName FROM BankAccountContractLockRequest WHERE UserStatusCode = '2' AND ValidityStartDate >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH);"
+    }
+}

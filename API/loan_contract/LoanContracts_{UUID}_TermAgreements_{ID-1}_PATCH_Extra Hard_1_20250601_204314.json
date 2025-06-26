@@ -1,0 +1,13 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Please update the term agreement with the ID of 4 for the loan contract that has the UUID of 45678901-23ab-cdef-0123-456789abcdef. Change the term specification to 48 months, set the interest rate to 5.5%, and make sure to include \"Adjustment due to market conditions\" as Reason.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/LoanContracts/45678901-23ab-cdef-0123-456789abcdef/TermAgreements/4",
+    "body": {
+      "TermSpecification": "48 months",
+      "InterestRate": "5.5%",
+      "Reason": "Adjustment due to market conditions"
+    }
+  }
+}

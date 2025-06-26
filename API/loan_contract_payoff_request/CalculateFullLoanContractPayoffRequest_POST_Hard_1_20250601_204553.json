@@ -1,0 +1,13 @@
+{
+  "difficulty": "Hard",
+  "input": "Can you help me figure out the total payoff amount for the loan with the ID 71/UUID 01234567-89ab-cdef-0123-456789abcdef? I\u2019d like to know the total amount due and if there are any unpaid billing entries.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateFullLoanContractPayoffRequest",
+    "body": {
+      "ID": "71",
+      "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+      "IncludeUnpaidBillingEntries": true
+    }
+  }
+}

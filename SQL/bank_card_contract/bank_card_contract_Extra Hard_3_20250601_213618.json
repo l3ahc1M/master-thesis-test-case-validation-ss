@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you show me the bank card contracts that have been given to customers with a certain bank account and are still active?",
+    "output": {
+        "sql": "SELECT * FROM BankCardContract WHERE BankAccount = 'YourBankAccountID' AND PaymentCardLifeCycleStatusCode = '1';"
+    }
+}

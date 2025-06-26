@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average number of active loan contracts that each account holder has?",
+    "output": {
+        "sql": "SELECT AVG(loan_count) FROM (SELECT COUNT(*) AS loan_count FROM BankAccountContract WHERE TypeName = 'Loan Contract' AND LifeCycleStatusName = 'Active' GROUP BY AccountHolderPartyIdfgElmnts) AS loan_counts;"
+    }
+}

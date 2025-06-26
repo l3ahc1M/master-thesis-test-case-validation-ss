@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you show me the bank account entries for the account that has the Internal ID D4E088A52D5B1ED8BEE3FA163E6B7DE1?",
+    "output": {
+        "sql": "SELECT * FROM BankAccountEntries WHERE BankAccountInternalID = 'D4E088A52D5B1ED8BEE3FA163E6B7DE1';"
+    }
+}

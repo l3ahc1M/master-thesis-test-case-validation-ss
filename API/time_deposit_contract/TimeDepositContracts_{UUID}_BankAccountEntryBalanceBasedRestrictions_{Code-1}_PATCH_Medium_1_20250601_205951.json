@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please change the balance restriction for the time deposit contract, which has the ID 23456789-01ab-cdef-0123-456789abcdef, to set the transaction limit to 800 euros and make sure it's active?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/1",
+        "body": {
+            "transactionThreshold": 800,
+            "LifeCycleStatusCode": "2"
+        }
+    }
+}

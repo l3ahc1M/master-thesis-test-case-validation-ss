@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you look up all the requests from bank customers to lock their accounts that mention in the notes that the customer has relocated to a different country?",
+    "output": {
+        "sql": "SELECT * FROM BankCustomerLockRequest WHERE Note LIKE '%moved to another country%';"
+    }
+}

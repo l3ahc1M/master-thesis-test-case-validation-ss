@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me how many loan disbursement requests are currently being prepared?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanDisbursementRequest WHERE LifeCycleStatusName = 'In Preparation';"
+    }
+}

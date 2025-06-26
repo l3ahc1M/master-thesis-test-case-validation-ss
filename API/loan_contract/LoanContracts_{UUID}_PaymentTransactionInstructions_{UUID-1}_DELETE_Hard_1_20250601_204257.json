@@ -1,0 +1,8 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to remove the payment transaction instruction with the ID of 3 for the loan contract that has the UUID of 34567890-12ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "DELETE",
+        "endpoint": "/LoanContracts/34567890-12ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/3"
+    }
+}

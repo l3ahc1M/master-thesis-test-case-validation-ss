@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you provide me with the UUIDs of savings account contracts that have a withdrawal allowance rule of 'No Notice' and are linked to a particular account holder?",
+    "output": {
+        "sql": "SELECT UUID FROM SavingsAccountContract WHERE WithdrawalAllowanceRule = 'No Notice' AND AccountHolderPartyIdentifyingElements = 'Specific Account Holder';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Get the loan contract payoff requests and their net amounts, but only for those where the expected payment date is later than the last scheduled payment date.",
+    "output": {
+        "sql": "SELECT ID, NetAmount FROM LoanContractPayoffRequest WHERE ExpectedPaymentDate > LastScheduledPaymentDate;"
+    }
+}

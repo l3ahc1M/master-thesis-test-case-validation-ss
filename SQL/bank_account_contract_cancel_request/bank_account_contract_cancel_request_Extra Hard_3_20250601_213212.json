@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you get me the reasons for canceling bank account contracts that have been completed and still have a leftover balance of more than 1,000?",
+    "output": {
+        "sql": "SELECT CancellationReasonName FROM BankAccountContractCancelRequest WHERE CompletionDate IS NOT NULL AND ResidualBankAccountBalanceAmount > '1000';"
+    }
+}

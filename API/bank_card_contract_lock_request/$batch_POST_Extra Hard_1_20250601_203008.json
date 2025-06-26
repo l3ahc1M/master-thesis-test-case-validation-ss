@@ -1,0 +1,29 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I want to lock bank card contract with ID 105 and Cusomet ID 12345 and make sure it stays locked until I come back on May 1st 2025. Leave the not \"Cusomter requests indefinite lock until further notice\".",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/BankCardContractLockRequests",
+          "body": {
+            "ID": "105",
+            "PartyIdentifyingElements": "Customer ID 12345",
+            "ChangeStateID": "2024-05-01T10:00:00Z",
+            "EventCode": "103000",
+            "EventName": "Card Dispatch Lock",
+            "UserStatusCode": "2",
+            "UserStatusName": "Active",
+            "ValidityStartDate": "2024-05-01",
+            "ValidityEndDate": "2025-05-01",
+            "BusinessProcessChainAssignment": "Locking Process",
+            "Note": "Customer requests indefinite lock until further notice."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please go ahead and process a payment transaction order request for the account, which has the ID 01234567-89ab-cdef-0123-456789abcdef. I'm looking to make a payment of 500.00 US dollars, and I want to make sure that it only goes through if everything checks out as valid.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests",
+        "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "TransactionCurrencyAmount": "500.00",
+            "PostOrCancelRequestedIndicator": true,
+            "LifeCycleStatusCode": "1",
+            "LifeCycleStatusName": "Active"
+        }
+    }
+}

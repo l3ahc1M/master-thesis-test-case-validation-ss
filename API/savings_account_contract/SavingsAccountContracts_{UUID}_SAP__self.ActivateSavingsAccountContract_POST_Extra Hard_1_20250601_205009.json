@@ -1,0 +1,9 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you go ahead and activate the savings account contract for the account with the ID 321e0987-e34b-12d3-a456-426614174003 and make sure that the account holder meets all the necessary conditions?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/SAP__self.ActivateSavingsAccountContract",
+        "body": {}
+    }
+}

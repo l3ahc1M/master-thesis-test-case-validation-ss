@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get the UUIDs of bank accounts that have a balance lower than the average balance of all bank accounts.",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccount WHERE Balance < (SELECT AVG(Balance) FROM BankAccount);"
+    }
+}

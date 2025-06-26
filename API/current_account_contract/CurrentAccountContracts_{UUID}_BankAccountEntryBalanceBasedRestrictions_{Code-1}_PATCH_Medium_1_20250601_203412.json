@@ -1,0 +1,13 @@
+{
+  "difficulty": "Medium",
+  "input": "Could you please change the balance limit for the current account contract, which has the ID 23456789-01ab-cdef-0123-456789abcdef, to 3000 US dollars and make sure that overdrafts are not permitted?",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/2",
+    "body": {
+      "restrictionAmount": 3000,
+      "currency": "USD",
+      "allowOverdraft": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out the final payment amount for loan contract extension requests where the activation charge is more than 100?",
+    "output": {
+        "sql": "SELECT FinalPaymentAmount FROM LoanContractProlongationRequest WHERE ActivationChargeAmount > '100';"
+    }
+}

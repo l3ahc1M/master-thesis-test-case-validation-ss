@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you provide me with the names of the events and the user status for all the requests to lock bank customers that have a change state ID beginning with '2019'?",
+    "output": {
+        "sql": "SELECT EventName, UserStatusName FROM BankCustomerLockRequest WHERE ChangeStateID LIKE '2019%';"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please create a bank card contract for the account, which has the ID 12345, starting from January 1, 2024, and lasting until January 1, 2026?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankCardContracts",
+        "body": {
+            "ID": "12345",
+            "PaymentCardValidFrom": "2024-01-01",
+            "PaymentCardValidTo": "2026-01-01"
+        }
+    }
+}

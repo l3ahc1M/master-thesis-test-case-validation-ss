@@ -1,0 +1,28 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please put together a batch request to change the lifecycle status of the current accounts with the IDs 12345678-90ab-cdef-0123-456789abcdef and 23456789-01ab-cdef-0123-456789abcdef to Active?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "PATCH",
+                    "url": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef",
+                    "body": {
+                        "LifeCycleStatusCode": "2",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "PATCH",
+                    "url": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef",
+                    "body": {
+                        "LifeCycleStatusCode": "2",
+                        "LifeCycleStatusName": "Active"
+                    }
+                }
+            ]
+        }
+    }
+}

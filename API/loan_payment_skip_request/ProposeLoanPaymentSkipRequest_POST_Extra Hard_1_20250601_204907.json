@@ -1,0 +1,15 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I'm looking to request a loan payment skip for the contract with the ID 47938. I'd like to skip payments for 4 months, change the new installment amount to 250, and set the final payment date to January 15, 2025, because the customer is facing a temporary financial setback.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/ProposeLoanPaymentSkipRequest",
+        "body": {
+            "ID": "47938",
+            "SkipDatePeriod": "4 months",
+            "NewInstallmentAmount": "250",
+            "FinalPaymentDate": "2025-01-15",
+            "ReasonName": "Temporary Financial Setback"
+        }
+    }
+}

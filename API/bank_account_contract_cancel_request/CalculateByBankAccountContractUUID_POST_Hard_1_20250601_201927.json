@@ -1,0 +1,12 @@
+{
+  "difficulty": "Hard",
+  "input": "Please figure out the financial results for bank account contract with the ID 87654321-90ab-cdef-0123-456789abcdef, and make sure to leave out any transactions that happened after I requested to cancel.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateByBankAccountContractUUID",
+    "body": {
+      "BankAccountContractUUID": "87654321-90ab-cdef-0123-456789abcdef",
+      "ExcludeRecentTransactions": true
+    }
+  }
+}

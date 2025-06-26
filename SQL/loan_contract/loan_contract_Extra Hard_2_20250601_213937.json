@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "How many loan contracts have been extended and have their final payment date set in the future?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContractProlongationRequest AS T1 JOIN LoanContract AS T2 ON T1.LoanContract = T2.ID WHERE T1.LifeCycleStatusCode = '5' AND T1.LoanContractProlongationTermValidityEndDate > CURRENT_DATE;"
+    }
+}

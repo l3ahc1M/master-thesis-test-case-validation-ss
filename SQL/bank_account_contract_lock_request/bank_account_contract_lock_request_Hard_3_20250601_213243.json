@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with a list of unique user status names for bank account contract lock requests that were created within the past year.",
+    "output": {
+        "sql": "SELECT DISTINCT UserStatusName FROM BankAccountContractLockRequest WHERE ValidityStartDate >= DATE_SUB(CURRENT_DATE, INTERVAL 1 YEAR);"
+    }
+}

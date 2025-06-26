@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you please set up the individual interest conditions for savings account contract, which has the ID 987e6543-e21b-12d3-a456-426614174001? I’d like to specify a fixed interest rate of 1.5%.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/987e6543-e21b-12d3-a456-426614174001/IndividualInterestConditions",
+        "body": {
+            "InterestRate": 1.5
+        }
+    }
+}

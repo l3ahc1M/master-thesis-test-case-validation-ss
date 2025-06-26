@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the UUID for the payment transaction order request that has the ID '0001-123456'?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractPaymentTransactionOrderRequest WHERE ID = '0001-123456';"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please update the agreement terms for the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef to have a duration of one year and an interest rate of 3%?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/TermAgreements/1",
+        "body": {
+            "duration": "12 months",
+            "interestRate": 3
+        }
+    }
+}

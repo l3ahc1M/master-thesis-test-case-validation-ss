@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up payment transaction instructions for savings account contract with the ID 123e4567-e89b-12d3-a456-426614174000, so I can allow automatic payments.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/123e4567-e89b-12d3-a456-426614174000/PaymentTransactionInstructions",
+        "body": {
+            "AutomaticPayments": true
+        }
+    }
+}

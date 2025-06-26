@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the total net amount for loan payment skip requests where the final installment amount is less than five hundred dollars?",
+    "output": {
+        "sql": "SELECT SUM(NetAmount) FROM LoanPaymentSkipRequest WHERE FinalInstallmentAmount < '500';"
+    }
+}

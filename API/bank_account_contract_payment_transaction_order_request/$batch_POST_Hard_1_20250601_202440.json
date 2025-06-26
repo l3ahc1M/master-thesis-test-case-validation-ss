@@ -1,0 +1,42 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to process three payment transaction order requests all at once. The first request is for the user with the id 01234567-89ab-cdef-0123-456789abcdef, and the amount is 300.00 US dollars. The second request is for the user with the id 23456789-90ab-cdef-0123-456789abcdef, and the amount is 400.00 US dollars. Lastly, the third request is for the user with the id 34567890-01ab-cdef-0123-456789abcdef, and the amount is 500.00 US dollars.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "300.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "23456789-90ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "400.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "34567890-01ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "500.00",
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                }
+            ]
+        }
+    }
+}

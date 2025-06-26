@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out how many savings account contracts are currently inactive and linked to a particular product?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM SavingsAccountContract WHERE DormancyStatusCode = '01' AND Product = 'Specific Product';"
+    }
+}

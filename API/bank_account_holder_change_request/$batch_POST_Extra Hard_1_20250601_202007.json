@@ -1,0 +1,18 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I would like to cancel the bank account contract with the ID abcdef12-3456-7890-abcd-ef1234567890 and make sure that the leftover balance of $500.00 is settled in cash. The reason for this cancellation is that I'm facing financial hardship. Charge is 25 dollars.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractCancelRequests",
+    "body": {
+      "BankAccountContractUUID": "abcdef12-3456-7890-abcd-ef1234567890",
+      "ImmediateCompletionRequiredIndicator": true,
+      "BalancingByCashIndicator": true,
+      "ResidualBankAccountBalanceAmount": "500.00",
+      "CancellationChargeAmount": "25.00",
+      "ReasonCode": "110",
+      "ReasonName": "Financial Hardship",
+      "ReceiptDate": "2024-05-01"
+    }
+  }
+}

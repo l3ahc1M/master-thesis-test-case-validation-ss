@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to set up arrangements for receiving bank account statements for savings account contract, which has the ID 456e7890-e12b-12d3-a456-426614174002. The customer wants to get these statements every three months and receive notifications via email.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/BankAccountStatementArrangements",
+        "body": {
+            "Frequency": "Quarterly",
+            "NotificationMethod": "Email"
+        }
+    }
+}

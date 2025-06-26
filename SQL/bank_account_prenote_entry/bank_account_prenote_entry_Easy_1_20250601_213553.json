@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you tell me how many prenote entries there are for a particular bank account?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountPrenoteEntry WHERE BankAccountUUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

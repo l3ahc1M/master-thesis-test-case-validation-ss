@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get the names of account holders along with their UUIDs for current account contracts that are active and use the Euro as the currency.",
+    "output": {
+        "sql": "SELECT AccountHolderPartyIdentifyingElements, UUID FROM CurrentAccountContract WHERE LifeCycleStatusCode = '2' AND CurrencyCode = 'EUR';"
+    }
+}

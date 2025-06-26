@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get me the UUIDs of the loan contract borrower party change requests that were completed in the past year and have a reason for the change listed as 'Change of legal form'.",
+    "output": {
+        "sql": "SELECT UUID FROM LoanContractBorrowerPartyChangeRequest WHERE ReasonName = 'Change of legal form' AND CompletionDate >= DATEADD(YEAR, -1, GETDATE());"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you set up some detailed individual interest conditions for a savings account contract with the ID 321e0987-e34b-12d3-a456-426614174003? I’d like to include conditions for loyalty bonuses (0.5 for one year) and promotional rates (2.5 for 6 months).",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/IndividualInterestConditions",
+        "body": {
+            "BaseInterestRate": 1.2,
+            "LoyaltyBonus": {
+                "Rate": 0.5,
+                "Duration": "P1Y"
+            },
+            "PromotionalRate": {
+                "Rate": 2.5,
+                "Duration": "P6M"
+            }
+        }
+    }
+}

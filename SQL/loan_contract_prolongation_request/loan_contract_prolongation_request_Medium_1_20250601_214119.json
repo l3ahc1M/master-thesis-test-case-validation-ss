@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the requests for extending loan contracts, along with the reasons for their cancellation?",
+    "output": {
+        "sql": "SELECT LCPR.ID, LCPR.CancellationReasonName FROM LoanContractProlongationRequest AS LCPR;"
+    }
+}

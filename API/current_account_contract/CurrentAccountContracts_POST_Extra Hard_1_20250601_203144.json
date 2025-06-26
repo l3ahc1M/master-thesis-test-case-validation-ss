@@ -1,0 +1,16 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you help me set up a current account contract with the following details: the unique identifier is 98765432-10ab-cdef-0123-456789abcdef, the currency is Euro, the account status is currently active, and I’d like to make sure there are no previous restrictions on the account?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CurrentAccountContracts",
+        "body": {
+            "UUID": "98765432-10ab-cdef-0123-456789abcdef",
+            "CurrencyCode": "EUR",
+            "LifeCycleStatusCode": "2",
+            "LifeCycleStatusName": "Active",
+            "BankAccountEntryBalanceBasedRestrictions": [],
+            "BankAccountEntryStatisticBasedRestrictions": []
+        }
+    }
+}

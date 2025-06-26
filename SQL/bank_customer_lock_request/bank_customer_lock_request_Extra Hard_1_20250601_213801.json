@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average length of time that bank customers' lock requests are valid for, but only for those customers who have an 'Active' status and whose requests have the event code '103000'?",
+    "output": {
+        "sql": "SELECT AVG(DATEDIFF(ValidityEndDate, ValidityStartDate)) FROM BankCustomerLockRequest WHERE UserStatusCode = '2' AND EventCode = '103000';"
+    }
+}

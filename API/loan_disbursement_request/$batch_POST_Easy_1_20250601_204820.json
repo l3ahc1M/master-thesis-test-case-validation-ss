@@ -1,0 +1,30 @@
+{
+  "difficulty": "Easy",
+  "input": "I'm looking to make a batch request to handle several loan disbursement requests for loan contract 01234567-89ab-cdef-0123-456789abcdef at once. The first request is for a total amount of 5,000 with a value date set for December 1, 2024. The second request is for a total amount of 7,000 with a value date scheduled for December 15, 2024.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "5000",
+            "ValueDate": "2024-12-01"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "7000",
+            "ValueDate": "2024-12-15"
+          }
+        }
+      ]
+    }
+  }
+}

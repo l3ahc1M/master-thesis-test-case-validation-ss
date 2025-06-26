@@ -1,0 +1,23 @@
+{
+    "difficulty": "Medium",
+    "input": "Please lock the account of the customer with the ID 250 because the account holder passed away on April 2, 2024.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": [
+            {
+                "ID": "250",
+                "PartyIdentifyingElements": "Customer ID 250",
+                "ChangeStateID": "2024-04-02T10:00:00Z",
+                "EventCode": "104000",
+                "EventName": "Account Holder Deceased",
+                "UserStatusCode": "3",
+                "UserStatusName": "Deceased",
+                "ValidityStartDate": "2024-04-02",
+                "ValidityEndDate": "2025-04-02",
+                "BusinessProcessChainAssignment": "Lock Account Process",
+                "Note": "Customer deceased April 2, 2024."
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you help me find all the active lock requests made by bank customers?",
+    "output": {
+        "sql": "SELECT * FROM BankCustomerLockRequest WHERE UserStatusCode = '2';"
+    }
+}

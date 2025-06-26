@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to ask if I can skip a payment for the loan contract that has the ID 01234567-89ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/ProposeLoanPaymentSkipRequest",
+        "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef"
+        }
+    }
+}

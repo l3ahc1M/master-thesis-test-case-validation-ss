@@ -1,0 +1,8 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to remove the payment note that has the ID of 1 from the transaction order request with the UUID of 01234567-89ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "DELETE",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef/PaymentNotes/1"
+    }
+}

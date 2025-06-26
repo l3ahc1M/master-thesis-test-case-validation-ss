@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the requests to skip loan payments, along with the amounts of the previous installments and the new installment amounts?",
+    "output": {
+        "sql": "SELECT PreviousInstallmentAmount, NewInstallmentAmount FROM LoanPaymentSkipRequest;"
+    }
+}

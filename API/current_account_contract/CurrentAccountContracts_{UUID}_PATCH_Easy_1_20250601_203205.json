@@ -1,0 +1,12 @@
+{
+  "difficulty": "Easy",
+  "input": "I need to change the lifecycle status of the current account contract, which has the ID 12345678-90ab-cdef-0123-456789abcdef, to 'Inactive'.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef",
+    "body": {
+      "LifeCycleStatusCode": "0",
+      "LifeCycleStatusName": "Inactive"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please update the payment transaction order request with the ID 01234567-89ab-cdef-0123-456789abcdef. I want to mark its status as inactive and set a new change state ID to 20220126091744.5563510.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "LifeCycleStatusCode": "0",
+            "LifeCycleStatusName": "Inactive",
+            "ChangeStateID": "20220126091744.5563510"
+        }
+    }
+}

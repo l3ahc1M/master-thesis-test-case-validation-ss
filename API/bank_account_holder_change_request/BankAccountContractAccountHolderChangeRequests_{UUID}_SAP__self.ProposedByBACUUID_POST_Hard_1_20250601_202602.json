@@ -1,0 +1,14 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to change the account holder for time deposit account fedcba98-7654-3210-fedc-ba9876543210. The new account holder is Tony Stark, and the previous one was Pepper Potts. Also, I\u2019d like to request that the activation charge be waived for this change.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "fedcba98-7654-3210-fedc-ba9876543210",
+      "NewAccountHolderPartyIdentifyingElements": "Tony Stark",
+      "FormerAccountHolderPartyIdentifyingElements": "Pepper Potts",
+      "ChargeWaiverRequestedIndicator": true
+    }
+  }
+}

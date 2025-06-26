@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to fix the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef and change the currency to British Pounds while keeping it active.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/SAP__self.FixTimeDepositContract",
+        "body": {
+            "CurrencyCode": "GBP",
+            "LifeCycleStatusCode": "2",
+            "LifeCycleStatusName": "Active"
+        }
+    }
+}

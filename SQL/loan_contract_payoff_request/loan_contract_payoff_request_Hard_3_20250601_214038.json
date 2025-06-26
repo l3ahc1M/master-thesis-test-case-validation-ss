@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Look for the loan contract payoff requests where the gross amount is higher than the average gross amount and that haven't been canceled.",
+    "output": {
+        "sql": "SELECT * FROM LoanContractPayoffRequest WHERE GrossAmount > (SELECT AVG(GrossAmount) FROM LoanContractPayoffRequest) AND CancellationReasonName IS NULL;"
+    }
+}

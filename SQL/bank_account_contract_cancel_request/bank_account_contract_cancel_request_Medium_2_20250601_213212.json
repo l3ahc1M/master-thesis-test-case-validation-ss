@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the number of requests to cancel bank account contracts that currently have an active status?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountContractCancelRequest WHERE LifeCycleStatusName = 'Active';"
+    }
+}

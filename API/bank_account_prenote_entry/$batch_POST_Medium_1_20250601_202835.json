@@ -1,0 +1,34 @@
+{
+  "difficulty": "Medium",
+  "input": "Could you set up two prenote entries for the bank account with the ID 01234567-89ab-cdef-0123-456789abcdef? One should be a debit entry with the reference PRENOTE-REFERENCE-2001 and the other should be a credit entry with the reference PRENOTE-REFERENCE-2002. Both entries should be valid in 2024",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-2001",
+            "BankAccountDebitIndicator": true,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2024-12-31"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/BankAccountPrenoteEntries",
+          "body": {
+            "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "RequesterBankAccountPrenoteEntryID": "PRENOTE-REFERENCE-2002",
+            "BankAccountDebitIndicator": false,
+            "ValidityStartDate": "2024-01-01",
+            "PlannedValidityEndDate": "2024-12-31"
+          }
+        }
+      ]
+    }
+  }
+}

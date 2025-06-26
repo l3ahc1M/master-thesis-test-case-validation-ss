@@ -1,0 +1,17 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please update the current account contract with the ID 34567890-12ab-cdef-0123-456789abcdef to have a new account holder with the ID 54321 and adjust the interest conditions to include a special rate of 1.5%.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef",
+        "body": {
+            "AccountHolderPartyIdentifyingElements": "54321",
+            "AdaptedInterestConditions": [
+                {
+                    "rate": "1.5%",
+                    "type": "special"
+                }
+            ]
+        }
+    }
+}

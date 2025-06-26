@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please cancel the loan disbursement request that has the ID 47938? The reason for this cancellation is that there was an error in processing.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanDisbursementRequests/01234567-89ab-cdef-0123-456789abcdef/SAP__self.CancelLoanDisbursementRequest",
+        "body": {
+            "CancellationReasonCode": "1",
+            "CancellationReasonName": "Error processing"
+        }
+    }
+}

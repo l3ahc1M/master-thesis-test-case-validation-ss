@@ -1,0 +1,9 @@
+{
+  "difficulty": "Easy",
+  "input": "I want to set up a bank account statement arrangement for current account contract that has the ID 12345678-90ab-cdef-0123-456789abcdef.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+    "body": {}
+  }
+}

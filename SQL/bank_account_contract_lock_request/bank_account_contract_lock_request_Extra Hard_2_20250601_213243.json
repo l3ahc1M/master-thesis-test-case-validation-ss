@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average length of time that bank account contract lock requests are valid for, specifically for those that have the event code '4841'?",
+    "output": {
+        "sql": "SELECT AVG(DATEDIFF(ValidityEndDate, ValidityStartDate)) FROM BankAccountContractLockRequest WHERE EventCode = '4841';"
+    }
+}

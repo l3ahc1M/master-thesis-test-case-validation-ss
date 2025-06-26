@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set a balance restriction for the time deposit contract with the ID 12345678-90ab-cdef-0123-456789abcdef, limiting the transaction threshold to 300 euros.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/1",
+        "body": {
+            "transactionThreshold": 300
+        }
+    }
+}

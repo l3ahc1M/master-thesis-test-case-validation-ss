@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the reason name for the cancellation request that has the ID 761?",
+    "output": {
+        "sql": "SELECT ReasonName FROM BankAccountContractCancelRequest WHERE ID = '761';"
+    }
+}

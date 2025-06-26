@@ -1,0 +1,18 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to add some additional identifying details for other parties to a savings account contract with the ID 456e7890-e12b-12d3-a456-426614174002, including a co-signer and a beneficiary with their respective IDs and relationships. The co-signer has an ID of 54321 and their relationship is 'Co-signer'. The beneficiary has an ID of 67890 and their relationship is 'Beneficiary'.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/OtherPartyIdentifyingElements",
+        "body": {
+            "CoSigner": {
+                "ID": "54321",
+                "Relationship": "Co-signer"
+            },
+            "Beneficiary": {
+                "ID": "67890",
+                "Relationship": "Beneficiary"
+            }
+        }
+    }
+}

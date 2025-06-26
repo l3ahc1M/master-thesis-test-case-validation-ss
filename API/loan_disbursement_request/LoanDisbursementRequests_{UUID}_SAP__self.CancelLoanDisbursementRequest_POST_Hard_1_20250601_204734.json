@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to cancel the loan disbursement request with the ID 01234567-89ab-cdef-0123-456789abcdef because the customer's financial situation has changed. Please go ahead and process this cancellation.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/LoanDisbursementRequests/01234567-89ab-cdef-0123-456789abcdef/SAP__self.CancelLoanDisbursementRequest",
+        "body": {
+            "CancellationReasonCode": "2",
+            "CancellationReasonName": "Change in financial situation"
+        }
+    }
+}

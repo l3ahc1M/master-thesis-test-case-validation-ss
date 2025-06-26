@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me the bank account entries for the account that has the ID 0010000707?",
+    "output": {
+        "sql": "SELECT BankAccountEntries FROM BankAccount WHERE ID = '0010000707';"
+    }
+}

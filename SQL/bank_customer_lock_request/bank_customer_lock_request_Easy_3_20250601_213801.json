@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the change state ID for the bank customer lock request that has the ID of 105?",
+    "output": {
+        "sql": "SELECT ChangeStateID FROM BankCustomerLockRequest WHERE ID = '105';"
+    }
+}

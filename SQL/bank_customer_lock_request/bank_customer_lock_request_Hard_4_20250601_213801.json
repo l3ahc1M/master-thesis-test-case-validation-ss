@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many bank customer lock requests have a validity period that lasts more than 30 days?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCustomerLockRequest WHERE DATEDIFF(ValidityEndDate, ValidityStartDate) > 30;"
+    }
+}

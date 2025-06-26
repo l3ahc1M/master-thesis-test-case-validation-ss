@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out the total leftover balance for all the bank account contracts that have been cancelled?",
+    "output": {
+        "sql": "SELECT SUM(ResidualBankAccountBalanceAmount) FROM BankAccountContractCancelRequest WHERE CancellationDate IS NOT NULL;"
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "difficulty": "Hard",
+  "input": "I want to make two disbursements for loan accout 01234567-89ab-cdef-0123-456789abcdef. The first request should have a total amount of $12,000, with $3,000 set aside for fees, and the date for this transaction is December 30, 2024. The second request will have a total amount of $15,000, with $4,000 held back for installments, and the reason for this request is that it's a customer request.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "12000",
+            "ItemsWithheldAmount": "3000",
+            "ValueDate": "2024-12-30"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "15000",
+            "ItemsWithheldAmount": "4000",
+            "ReasonCode": "1",
+            "ReasonName": "Customer Request"
+          }
+        }
+      ]
+    }
+  }
+}

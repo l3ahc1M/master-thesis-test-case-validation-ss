@@ -1,0 +1,15 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to change the account holder for time deposit account fedcba98-7654-3210-fedc-ba9876543210. The new account holder is Bruce Banner, and the previous one was Betty Ross. I'm making this change because of a divorce.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/ProposedBankAccountContractAccountHolderChangeRequest",
+    "body": {
+      "BankAccountContractUUID": "fedcba98-7654-3210-fedc-ba9876543210",
+      "NewAccountHolderPartyIdentifyingElements": "Bruce Banner",
+      "FormerAccountHolderPartyIdentifyingElements": "Betty Ross",
+      "ReasonCode": "3",
+      "ChargeWaiverRequestedIndicator": false
+    }
+  }
+}

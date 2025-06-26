@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to set up some restrictions based on balance for savings account contract with the ID 456e7890-e12b-12d3-a456-426614174002, so that the customer can only make transactions if the balance is over 2000 dollars.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/BankAccountEntryBalanceBasedRestrictions",
+        "body": {
+            "TransactionCondition": "BalanceGreaterThan",
+            "ThresholdAmount": 2000,
+            "CurrencyCode": "USD"
+        }
+    }
+}

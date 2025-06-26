@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to set up a statistic-based limit for the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef, capping the maximum transaction amount at 5000 euros and making sure it's active.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions",
+        "body": {
+            "maximumTransactionAmount": 5000,
+            "LifeCycleStatusCode": "2"
+        }
+    }
+}

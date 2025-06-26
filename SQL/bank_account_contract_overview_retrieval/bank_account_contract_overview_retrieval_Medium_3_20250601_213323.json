@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please provide me with the currency codes for all the active savings account contracts?",
+    "output": {
+        "sql": "SELECT CurrencyCode FROM BankAccountContract WHERE TypeName = 'Savings Account Contract' AND LifeCycleStatusName = 'Active';"
+    }
+}

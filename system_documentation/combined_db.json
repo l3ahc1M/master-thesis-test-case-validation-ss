@@ -1,0 +1,2526 @@
+{
+    "tables": [
+        {
+            "name": "BankAccount",
+            "description": "A Bank Account is an account that holds funds in a bank and is subject to deposits and withdrawals.Remark: \n Filter: Only 'Eq' is supported as logical operator. \n Integrity Conditions: \n The following combinations of properties for filtering are allowed: \n a.) by Bank Account ID \n - ID (mandatory) \n - CurrencyCode (optional) \n - BankRoutingID (optional) \n - BankCountryCode (optional) \n No other filter attributes are allowed. \n b.) by Bank Account Standard ID \n - StandardID (mandatory) \n - CurrencyCode (optional) \n c.) by BankAccountContractUUID \n - BankAccountContractUUID (mandatory) \n d.) by Bank Account Contract ID \n - BankAccountContractID (mandatory)",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is a universal unique identifier of a bank account. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "InternalID",
+                    "description": "InternalID is a bank internal identifier for the bank account. Example: D4E088A52D5B1ED8BEE3FA163E6B7DE1",
+                    "format": "string"
+                },
+                {
+                    "name": "ID",
+                    "description": "Bank account number (Basic Bank Account Number, BBAN). An account number that is assigned by the account managing bank. \nIt uniquely identifies a bank account in most countries only together with BankRoutingID and BankCountryCode. Example: 0010000707",
+                    "format": "string"
+                },
+                {
+                    "name": "StandardID",
+                    "description": "International bank account number (International Bank Account Number, IBAN). Example: DE65904199170010000707",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A coded representation of the currency of the bank account. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankRoutingID",
+                    "description": "Number of the bank in a clearing system (see GDT BankRoutingID). Example: 90419917",
+                    "format": "string"
+                },
+                {
+                    "name": "BankCountryCode",
+                    "description": "Country in which the bank identified earlier goes about its business. \nIf the bank is a member in a national clearing system, the country to which this clearing system belongs is entered here. Example: DE",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractUUID",
+                    "description": "A bank internal identifier for the bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "BankAccountContractID",
+                    "description": "An identifier for a BankAccountContract.",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractPaymentTransactionOrderRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntries",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountPrenoteEntries",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "StandingPaymentInstructions",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountContractCancelRequest",
+            "description": "A Bank Account Contract Cancel Request is a request from the account holder party to the bank to cancel a current account contract or a savings account contract immediately or at a future time.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is an universal unique identifier of a bank account contract cancel request. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "ID is an identifier of the Bank Account Contract Cancel Request. Example: 761",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractUUID",
+                    "description": "A BankAccountContractUUID is an universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 2019-06-04T08:29:04Z",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A LifeCycleStatusCode is the coded representation of the life cycle status of a BankAccountContractCancelRequest. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "A LifeCycleStatusName is the name of a LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "A coded representation of the reason for the BankAccountContractCancelRequest. Example: 107",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "ReasonName is the name of a ReasonCode. Example: Other",
+                    "format": "string"
+                },
+                {
+                    "name": "ImmediateCompletionRequiredIndicator",
+                    "description": "Indicates whether immediate completion of the bank account contract cancel request is required or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "ReceiptDate",
+                    "description": "A ReceiptDate is the date on which the request for canceling the bank account contract is received. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PlannedCompletionDate",
+                    "description": "A PlannedCompletionDate is the date for which the completion of the bank account contract cancel request is planned. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "CompletionDate",
+                    "description": "A CompletionDate is the date on which the request for canceling the bank account contract is completed. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BankAccountSettlementRequiredIndicator",
+                    "description": "Indicates whether a bank account settlement is required for a bank account contract cancel request or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "BankAccountSettlementRequestedValueDate",
+                    "description": "Is the value date requested for settlement of the bank account associated with the cancelled bank account contract. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "CancellationReasonCode",
+                    "description": "A coded representation of the reason for the cancelation of a CurrentAccountContractCancelRequest. Example: 000003",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonName",
+                    "description": "A BankAccountContractCancelRequestCancellationReasonName is the name of a BankAccountContractCancelRequestCancellationReasonCode. Example: Customer Request",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountSettlementCancellationRequiredIndicator",
+                    "description": "Indicates whether or not a cancelation of a bank account settlement is required for the cancelation of a bank account contract cancel request.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "CancellationDate",
+                    "description": "A CancellationDate is the date on which the request for canceling the current account contract is cancelled. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ResidualBankAccountBalanceAmount",
+                    "description": "The residual balance of the bank account, before it is balanced by cash or by payment to payment transaction instruction.",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationChargeAmount",
+                    "description": "The charge amount for cancelation of the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "BalancingByCashIndicator",
+                    "description": "Indicates whether amount resulting from balancing the bank account associated with bank account contract cancellation is requested as payment by cash or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "BalancingPaymentTransactionInstruction",
+                    "description": "BalancingPaymentTransactionInstruction specifies the payment transaction instruction for balancing the residual balance of the bank account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountSettlementSummaries",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountContractLockRequest",
+            "description": "A bank account contract lock request is a request to maintain locks on product features and transactions of bank account contract.Bank account contract is a view of a bank contract.",
+            "columns": [
+                {
+                    "name": "ID",
+                    "description": "Is an identifier of a bank account contract lock request. Example: 105",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractUUID",
+                    "description": "An universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "An unique identifier of a bank account contract lock request for a change state. Example: 2019-07-13T13:34:46Z",
+                    "format": "string"
+                },
+                {
+                    "name": "EventCode",
+                    "description": "A coded representation of the event of a bank contract lock request. Example: 4841",
+                    "format": "string"
+                },
+                {
+                    "name": "EventName",
+                    "description": "Name of EventCode. Example: Debit Card Lock (for Account)",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusCode",
+                    "description": "A coded representation of the user status of a bank contract lock request. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusName",
+                    "description": "Name of UserStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "ValidityStartDate",
+                    "description": "The validity start date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ValidityEndDate",
+                    "description": "The validity end date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "Note",
+                    "description": "A note on bank contract lock request about the lock. Example: Customer deceased April 01, 2019",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountCurrencyAmountLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "ChequeLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "DirectDebitCreditorLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "DirectDebitMandateLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "ProductionControlFeatureLockInstructions",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountContract",
+            "description": "Bank Account Contract is a contract between a credit institute and customer, which is based on the customer's request for opening a bank account and consists among others, the bank account type, account holder, general terms and conditions.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is an universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier of a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "TypeCode",
+                    "description": "A coded representation of the type of a bank account contract. Example: 874",
+                    "format": "string"
+                },
+                {
+                    "name": "TypeName",
+                    "description": "Name of TypeCode. Example: Current Account Contract",
+                    "format": "string"
+                },
+                {
+                    "name": "SubTypeCode",
+                    "description": "A coded representation of the sub type of a bank account contract. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "SubTypeName",
+                    "description": "Name of SubTypeCode. Example: Current Account Contract",
+                    "format": "string"
+                },
+                {
+                    "name": "GroupCode",
+                    "description": "A coded representation of a group of bank account contracts. Example: 0030",
+                    "format": "string"
+                },
+                {
+                    "name": "GroupName",
+                    "description": "Name of GroupCode. Example: Current Accounts",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A CurrencyCode specifies the currency of the bank account contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountIdentifyingElements",
+                    "description": "A BankAccount is a bank account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank account contract. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusCode",
+                    "description": "A coded representation of the dormancy status of a bank account contract. Example: 01",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusName",
+                    "description": "Name of DormancyStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "A Product describes the (financial) product upon which the bank account contract is based.",
+                    "format": "string"
+                },
+                {
+                    "name": "AccountHolderPartyIdfgElmnts",
+                    "description": "A party which legally holds a Bank Account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "UsageNote",
+                    "description": "A comment on the usage of the bank account contract. Example: USAGENOTE",
+                    "format": "string"
+                },
+                {
+                    "name": "StartDate",
+                    "description": "Date when the bank account contract becomes operational from the customer's point of view. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ActualCancellationDate",
+                    "description": "Date when a bank account contract is actually canceled. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PlannedCancellationDate",
+                    "description": "Date when a cancellation of a bank account contract is planned. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ActiveProductionControlFeatures",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "AlternativeIdentifications",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccount",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractAccountHolderChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractCancelRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BalanceKeyFigures",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "CurrentAccountContract",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractBorrowerPartyChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "LoanContract",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractLockRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "OtherPartyIdfgElmnts",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SavingsAccountContract",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "TimeDepositContract",
+                    "description": "",
+                    "format": "string"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountContractPaymentTransactionOrderRequest",
+            "description": "Request for a payment transaction for a order bank account contract.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "Universally unique identifier for a bank account contract payment transaction order request. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An indentifier for a bank account contract payment transaction order request. Example: 0001-123456",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountUUID",
+                    "description": "A UUID is an universal unique identifier of a bank account. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "RequesterBACPaymentTransactionOrderRequestID",
+                    "description": "An identifier for a bank account contract payment transaction order request issued by the requester of the BankAccountContractPaymentTransactionOrderRequest. Example: Xample-RequestID",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentTransactionReferenceID",
+                    "description": "A reference number for a transaction in payment transactions. Example: Xample-ReferenceID",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "An identifier for a change status. Example: 20210126091744.5563510",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "Coded representation of the life cycle status of a BankAccountContractPaymentTransactionOrderRequest. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of a life cycle status. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountPostingDate",
+                    "description": "Specifies the date when the sender item is posted to the corresponding bank account. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PlannedExecutionDate",
+                    "description": "Date on which a bank account contract payment transaction order request is planned to be executed. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BankAccountValueDate",
+                    "description": "Specifies the date on which a posted sender item is relevant for interest calculation. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "TransactionCurrencyAmount",
+                    "description": "Amount in the transaction currency of a business transaction.",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountCurrencyAmount",
+                    "description": "Amount in the currency of a bank account.",
+                    "format": "string"
+                },
+                {
+                    "name": "SenderItem",
+                    "description": "Represents the sending side of the payment transaction.",
+                    "format": "string"
+                },
+                {
+                    "name": "RecipientItem",
+                    "description": "Represents the receiving side of the payment transaction.",
+                    "format": "string"
+                },
+                {
+                    "name": "MaterialChecksDeactivationRequestedIndicator",
+                    "description": "Indicates whether deactivation of the all material checks is requested for processing the bank account payment entries  on the sender and the recipient account of the bank account contract payment transaction order request.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "PostOrCancelRequestedIndicator",
+                    "description": "Indicates whether it is requested that the payment transaction order request shall only be accepted by the system if the bank account payment entries for the sender and recipient account can be posted. Otherwise, the payment transaction order request shall be rejected.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "MoreRecipientsAvailableIndicator",
+                    "description": "Indicates that the payment transaction order requests has more than one recipient.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentNotes",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountContractAccountHolderChangeRequest",
+            "description": "A Bank Account Contract Account Holder Change Request is a request to change the account holder of a current account contract or savings account contract or time deposit contract immediately.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "UUID is an universal unique identifier of a bank account contract account holder change request. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "ID is an identifier of a bank account contract account holder change request. Example: 47938",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractUUID",
+                    "description": "BankAccountContractUUID is an universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "ChangeStateID is a unique identifier for a change state. Example: 20200309121401.6154150",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "LifeCycleStatusCode is the coded representation of the life cycle status of a bank account contract account holder change request. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Is the name of LifeCycleStatusCode. Example: Completed",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "ReasonCode is the coded representation of the reason for the bank account contract account holder change request. Example: 5",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "Is the name of ReasonCode Example: Marriage",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "BusinessProcessChainAssignment is the assignment of a business object node to a business process chain.  ",
+                    "format": "string"
+                },
+                {
+                    "name": "NewAccountHolderPartyIdentifyingElements",
+                    "description": "NewAccountHolderPartyIdentifyingElements is a party that legally holds a bank account associated with the bank account contract after completion of the account holder change request.",
+                    "format": "string"
+                },
+                {
+                    "name": "FormerAccountHolderPartyIdentifyingElements",
+                    "description": "FormerAccountHolderPartyIdentifyingElements is a party that legally holds a bank account associated with the current account contract or savings account contract before completion of the account holder change request.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChargeWaiverRequestedIndicator",
+                    "description": "ChargeWaiverRequestedIndicator indicates whether a charge for activation of a bank account contract account holder change request is requested to be waived or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "CompletionDate",
+                    "description": "The CompletionDate is the date on which a bank account contract account holder change request is completed. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "Activities",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankAccountPrenoteEntry",
+            "description": "A Bank Account Prenote Entry represents a reservation on a Bank Account for either a debit or a credit amount.  A Bank Account is an account that holds funds in a bank and is subject to deposits and withdrawals.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "Is the unique identifier for a bank account prenote entry. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "BankAccountUUID",
+                    "description": "A BankAccountUUID is an universal unique identifier for the bank account to which the entry is assigned. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "RequesterBankAccountPrenoteEntryID",
+                    "description": "Identifies a bank account prenote entry and is assigned by the requester of the bank account prenote entry. Example: PRENOTE-REFERENCE-4711",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 2019-06-04T08:29:04Z",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "Coded representation of the life cycle status of a bank account prenote entry. Example: 5",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of a LifeCycleStatusCode. Example: Discarded",
+                    "format": "string"
+                },
+                {
+                    "name": "TypeCode",
+                    "description": "Coded representation of a type of bank account prenote entry. Example: 30",
+                    "format": "string"
+                },
+                {
+                    "name": "TypeName",
+                    "description": "Name of a TypeCode. Example: Payment Advice - Debit",
+                    "format": "string"
+                },
+                {
+                    "name": "RejectionReasonCode",
+                    "description": "A coded representation of reason for reject of a bank account prenote entry. Example: 01",
+                    "format": "string"
+                },
+                {
+                    "name": "RejectionReasonName",
+                    "description": "A name of a RejectionReasonCode. Example: Insufficient Funds",
+                    "format": "string"
+                },
+                {
+                    "name": "BankPaymentCommunicationChannelCode",
+                    "description": "Coded representation of the communication channel for payments in a bank. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "BankPaymentCommunicationChannelName",
+                    "description": "Name of a BankPaymentCommunicationChannel. Example: EFT",
+                    "format": "string"
+                },
+                {
+                    "name": "ValidityStartDate",
+                    "description": "Date on which the bank account prenote entry becomes valid. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PlannedValidityEndDate",
+                    "description": "Date on which the validity of a bank acocunt prenote entry is planned to end. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ValidityEndDate",
+                    "description": "Date on which the validity of the bank account prenote entry ends. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BankAccountDebitIndicator",
+                    "description": "Indicates whether the bank account will be debited by the bank account prenote entry or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "BankAccountAvailableAmountRelevanceIndicator",
+                    "description": "Indicates whether the bank account prenote entry is relevant for the calculation of the available amount of the bank account or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "LimitCheckDeactivationRequestedIndicator",
+                    "description": "Indicates whether deactivation of limit check was requested for processing the bank account prenote entry.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "AdditionalMaterialChecksDeactivationRequestedIndicator",
+                    "description": "Indicates whether deactivation of the all material checks (except limit check) is requested for processing the bank account prenote entry.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "ValidIndicator",
+                    "description": "Indicates whether the bank account prenote entry is valid or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "Note",
+                    "description": "A note about a bank account prenote entry. Example: Long Text",
+                    "format": "string"
+                },
+                {
+                    "name": "AdditionalNote",
+                    "description": "An additional note about a bank account prenote entry. Example: Short Text",
+                    "format": "string"
+                },
+                {
+                    "name": "MaterialCheckNote",
+                    "description": "A note for processing customer owned checks for a prenote entry. Example: Material Check Note",
+                    "format": "string"
+                },
+                {
+                    "name": "MaterialCheckAdditionalNote",
+                    "description": "An additional note for processing customer owned checks for a prenote entry. Example: AdChNt",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountCurrencyAmount",
+                    "description": "Amount in the currency of a bank account.",
+                    "format": "string"
+                },
+                {
+                    "name": "TransactionCurrencyAmount",
+                    "description": "Amount in the currency of a business transaction.",
+                    "format": "string"
+                },
+                {
+                    "name": "Reference",
+                    "description": "References of the bank account prenote entry.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "The Business Process Chain Assignment is the assignment of a bank prenote entry to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentNotes",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankCardContract",
+            "description": "A Bank Card Contract is a contract between a financial institution and customer that is based on the customer\u00e2\u20ac\u2122s request to have a bank card issued.",
+            "columns": [
+                {
+                    "name": "BankCardContractUUID",
+                    "description": "A BankCardContractUUID is an universal unique identifier of a bank card contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier of a bank card contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A CurrencyCode specifies the currency of the bank card contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardTypeCode",
+                    "description": "A coded representation of the type of payment card associated to a bank card contract. Example: 0010",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardTypeName",
+                    "description": "Name of PaymentCardTypeCode Example: Debit Card",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardID",
+                    "description": "PaymentCardID is a unique identifier of a payment card that is assigned by the issuer of the payment card. Example: 4111555533336666",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardSequenceID",
+                    "description": "An identifier for the sequence number of a payment card. Example: 0001",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardValidFrom",
+                    "description": "The valid-from date of the payment card. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PaymentCardValidTo",
+                    "description": "The valid-to date of the payment card. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PaymentCardCharacterCode",
+                    "description": "A coded representation for the character of a payment card associated to a bank card contract. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardCharacterName",
+                    "description": "Name of PaymentCardCharacterCode Example: First Payment Card",
+                    "format": "string"
+                },
+                {
+                    "name": "FirstPaymentCardUUID",
+                    "description": "The UUID of the payment card, which has PaymentCardOriginCode = First Card Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "AdditionalPaymentCardIndicator",
+                    "description": "Indicates that the payment card is an additional payment card to the main payment card.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "PaymentCardLifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank card contract payment card. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardLifeCycleStatusName",
+                    "description": "Name of PaymentCardLifeCycleStatusCode Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardRenewalStatusCode",
+                    "description": "A coded representation for the renewal status of a payment card associated to a bank card contract. Example: 4",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentCardRenewalStatusName",
+                    "description": "Name of PaymentCardRenewalStatusCode Example: Renewed",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationDate",
+                    "description": "Date when a bank card contract is canceled. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BankAccount",
+                    "description": "BankAccount is the main bank account to which payments and charges in context with using the payment card are settled.",
+                    "format": "string"
+                },
+                {
+                    "name": "UsageNote",
+                    "description": "A comment on the usage of the bank card contract. Example: Sample Usage Note",
+                    "format": "string"
+                },
+                {
+                    "name": "SystemAdministrativeData",
+                    "description": "SystemAdministrativeData is administrative data that is stored in a system. This data includes change dates and change times.",
+                    "format": "string"
+                },
+                {
+                    "name": "CardHolderPartyIdentifyingElements",
+                    "description": "A party which legally holds a card associated with the bank card contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "ProductControl",
+                    "description": "A BankCardContractProductionControl defines the parameters that control the processing and handling in the production of a bank card contract. ",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "An OperationalBankContractManagement is responsible for managing operational bank contracts and executing the related banking processes.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 20191122135035.7818490",
+                    "format": "string"
+                }
+            ]
+        },
+        {
+            "name": "BankCardContractLockRequest",
+            "description": "A Bank Card Contract Lock Request is a request from the card holder party to the bank to lock a card contract immediately or at a future time.",
+            "columns": [
+                {
+                    "name": "ID",
+                    "description": "Is an identifier of a bank card contract lock request. Example: 105",
+                    "format": "string"
+                },
+                {
+                    "name": "PartyIdentifyingElements",
+                    "description": "PartyIdentifyingElements contains all the identifying elements of a bank customer.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "An unique identifier of a bank card contract lock request for a change state. Example: 2019-07-13T13:34:46Z",
+                    "format": "string"
+                },
+                {
+                    "name": "EventCode",
+                    "description": "A coded representation of the event of a bank card contract lock request. Example: 103000",
+                    "format": "string"
+                },
+                {
+                    "name": "EventName",
+                    "description": "Name of EventCode. Example: Card Dispatch Lock",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusCode",
+                    "description": "A coded representation of the user status of a bank contract lock request. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusName",
+                    "description": "Name of UserStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "ValidityStartDate",
+                    "description": "The validity start date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ValidityEndDate",
+                    "description": "The validity end date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "Note",
+                    "description": "A note on bank contract lock request about the lock. Example: Customer permanently moved to another country",
+                    "format": "string"
+                },
+                {
+                    "name": "BankCardContractSelections",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankCardContractLockRequestEventSpecification",
+            "description": "A Bank card contract lock request event specification is a specification of the possible events of a bank card contract lock request.",
+            "columns": [
+                {
+                    "name": "EventCode",
+                    "description": "A coded representation of the event of a bank card contract lock request. Example: 301000",
+                    "format": "string"
+                },
+                {
+                    "name": "EventName",
+                    "description": "Name of EventCode. Example: Debit Card Lock",
+                    "format": "string"
+                }
+            ]
+        },
+        {
+            "name": "BankCreditFacilityContract",
+            "description": "Bank Credit Facility Contract is a frame contract that defines an overall credit line for a hierarchy of subordinated bank contracts.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A universal unique identifier of a Bank Credit Facility Contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier for a Bank Master Contract of type Bank Credit Facility Contract. Example: 1234",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "Specifies the currency of a bank credit facility contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank credit facility contract. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "Describes the (financial) product upon which the bank master contract is based.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessEventRecord",
+                    "description": "A record of a business event that changes a bank master contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "HolderPartyIdentifyingElements",
+                    "description": "Is a party that legally holds a Bank Master Contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "Is responsible for managing operational bank contracts andexecuting the related banking processes.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Is the assignment of a bank credit facility contract to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 20191122135035.7818490",
+                    "format": "string"
+                },
+                {
+                    "name": "SubordinatedBankContractNumberValue",
+                    "description": "A number of subordinated bank contracts of one level below. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "Limits",
+                    "description": "A maximum preset amount of the credit line defined by a bank credit facility contract.",
+                    "format": "array"
+                },
+                {
+                    "name": "Hierarchies",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SeasonalLimits",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "BankCustomerLockRequest",
+            "description": "A bank customer lock request is a request to maintain locks on product features and transactions of all bank account contract of a bank customer.",
+            "columns": [
+                {
+                    "name": "ID",
+                    "description": "Is an identifier of a bank customer lock request. Example: 105",
+                    "format": "string"
+                },
+                {
+                    "name": "PartyIdentifyingElements",
+                    "description": "The party identifying elements of the bank customer.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "An unique identifier of a bank customer lock request for a change state. Example: 2019-07-13T13:34:46Z",
+                    "format": "string"
+                },
+                {
+                    "name": "EventCode",
+                    "description": "A coded representation of the event of a bank contract lock request. Example: 103000",
+                    "format": "string"
+                },
+                {
+                    "name": "EventName",
+                    "description": "Name of EventCode. Example: Negative Credit Rating",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusCode",
+                    "description": "A coded representation of the user status of a bank contract lock request. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusName",
+                    "description": "Name of UserStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "ValidityStartDate",
+                    "description": "The validity start date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ValidityEndDate",
+                    "description": "The validity end date for a bank contract lock request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "Note",
+                    "description": "A note on bank contract lock request about the lock. Example: Customer deceased April 01, 2019",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountEntryLockInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContracts",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "ProductionControlFeatureLockInstructions",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "CurrentAccountContract",
+            "description": "A Current Account Contract is a contract between a credit institute and customer, which is based on the customer's request for opening a bank account of type current account and consists among others, account holder, general terms and conditions.\n\nComment: A bank account based on a current account contract is an account that allows money to be held on behalf of the account holder",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "An universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier of a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A CurrencyCode specifies the currency of the bank account contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountIdentifyingElements",
+                    "description": "A BankAccount is a bank account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank account contract. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusCode",
+                    "description": "A coded representation of the dormancy status of a bank account contract. Example: 01",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusName",
+                    "description": "Name of DormancyStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "UsageNote",
+                    "description": "A comment on the usage of the current account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "SystemAdministrativeData",
+                    "description": "SystemAdministrativeData is administrative data that is stored in a system. This data includes change dates and change times.",
+                    "format": "string"
+                },
+                {
+                    "name": "AccountHolderPartyIdentifyingElements",
+                    "description": "A party which legally holds a Bank Account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "A Product describes the (financial) product upon which the bank account contract is based.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessEventRecord",
+                    "description": "A record of a business event that changes a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "An OperationalBankContractManagement is responsible for managing operational bank contracts and executing the related banking processes.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 20191122135035.7818490",
+                    "format": "string"
+                },
+                {
+                    "name": "CreateDraftRequestedIndicator",
+                    "description": "Indicates whether the current account contract shall be created with life cycle status code 'Draft Entered'.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "AdaptedInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountStatementArrangements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryBalanceBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryStatisticBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankProductPriceListAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccount",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractAccountHolderChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractCancelRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractLockRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "FinancialConditionTypeGroupAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "IndividualInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "Limits",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "OtherPartyIdentifyingElements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "PaymentTransactionInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SeasonalLimits",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SettlementArrangements",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "DirectDebitMandate",
+            "description": "A Direct Debit Mandate is the authorisation given by a debtor to a creditor to initiate instructions to debit funds owed to the creditor from a specified account, and the authorisation to the debtor bank to comply with the instructions issued by the creditor.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "Is a universal unique identifier of a direct debit mandate. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "A identifier of Direct Debit Mandate. Example: TEST1234",
+                    "format": "string"
+                },
+                {
+                    "name": "CreditorPartyID",
+                    "description": "A unique identifier of a creditor party of direct debit mandate. Example: DE123452345678901",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 2019-06-04T08:29:04Z",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusCode",
+                    "description": "A coded representation of the user status of a direct debit mandate. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "UserStatusName",
+                    "description": "Name of UserStatusCode. Example: Mandate - Active",
+                    "format": "string"
+                },
+                {
+                    "name": "SignatureDate",
+                    "description": "Time Point at which a signature for direct debit mandate is given. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "SignatureCityName",
+                    "description": "Name of the city where the signature for a direct debit mandate is given. Example: Berlin",
+                    "format": "string"
+                },
+                {
+                    "name": "ValidityPeriod",
+                    "description": "Period for which the direct debit mandate is valid.",
+                    "format": "string"
+                },
+                {
+                    "name": "DirectDebitSchemeCode",
+                    "description": "A coded representation of a direct debit scheme. A direct debit scheme is a set of rules and obligations regarding the collection of direct debit payments. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "DirectDebitSchemeName",
+                    "description": "Name of DirectDebitSchemeCode.  Example: SEPA Core",
+                    "format": "string"
+                },
+                {
+                    "name": "DirectDebitCollectionSEPASequenceTypeCode",
+                    "description": "A coded representation of a SEPA sequence type of a direct debit collection. A SEPA sequence type specifies a type of direct debit collection for which the direct debit mandate is issued.  Example: RCUR",
+                    "format": "string"
+                },
+                {
+                    "name": "DirectDebitCollectionSEPASequenceTypeName",
+                    "description": "Name of DirectDebitCollectionSEPASequenceTypeCode.  Example: Recurring",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "The assignment of a direct debit mandate to a business process chain. ",
+                    "format": "string"
+                },
+                {
+                    "name": "RelatedCreditorParty",
+                    "description": "A party that is related with the creditor party. ",
+                    "format": "string"
+                },
+                {
+                    "name": "CreditorParty",
+                    "description": "Creditor party of the direct debit mandate. ",
+                    "format": "string"
+                },
+                {
+                    "name": "OriginalCreditorParty",
+                    "description": "Creditor party for whom the direct debit mandate is originally given.The CreditorParty acts on behalf of OriginalCreditorParty. ",
+                    "format": "string"
+                },
+                {
+                    "name": "RelatedDebtorPartyID",
+                    "description": "A party that is related with the debtor party. ",
+                    "format": "string"
+                },
+                {
+                    "name": "DebtorParty",
+                    "description": "Debtor party of the direct debit mandate. ",
+                    "format": "string"
+                },
+                {
+                    "name": "FinalDebtorParty",
+                    "description": "Debtor party of the direct debit mandate that is finally debited. ",
+                    "format": "string"
+                },
+                {
+                    "name": "DebtorBankAccount",
+                    "description": "Bank account of the debtor. ",
+                    "format": "string"
+                },
+                {
+                    "name": "CreditorReferenceID",
+                    "description": "An identifier for a direct debit mandate creditor reference ",
+                    "format": "string"
+                },
+                {
+                    "name": "CreditorReferenceDescription",
+                    "description": "A description for a direct debit mandate creditor reference. ",
+                    "format": "string"
+                },
+                {
+                    "name": "AmendmentHistoryItems",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "UtilisationEntries",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanContract",
+            "description": "LoanContractisacontractualagreementbetweenlendersandborrowers,whichisbasedonaborrower\u00e2\u20ac\u2122srequestforaloanandincludes,forexample,loantype,borrower(s),andgeneraltermsandconditions.\n\nComment:ABankAccountisabankaccountassociatedwiththebankaccountcontract.\n\nIntegrityCondition:StartDateofTermSpecificationValidityPeriod,TermAgreementFixingPeriod,andIncomingPaymentAgreementPeriodhavetobethesamedate.\n\nConstraint:LoanContractCreate-Duringcreationofaloancontract,itisrequiredtospecifythedetailsofTermAgreementandInpaymentAgreement.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "Anuniversaluniqueidentifierofabankaccountcontract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "Anidentifierofabankaccountcontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "ACurrencyCodespecifiesthecurrencyofthebankaccountcontract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountIdentifyingElements",
+                    "description": "ABankAccountisabankaccountassociatedwiththebankaccountcontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "Acodedrepresentationofthelifecyclestatusofabankaccountcontract. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "NameofLifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "BorrowerPartyIdentifyingElements",
+                    "description": "ABorrowerPartyisapartywhotakesupafinancialinstrument,inthiscasealoancontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "AProductdescribesthe(financial)productuponwhichthebankaccountcontractisbased.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessEventRecord",
+                    "description": "Arecordofabusinesseventthatchangesabankaccountcontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "AnOperationalBankContractManagementisresponsibleformanagingoperationalbankcontractsandexecutingtherelatedbankingprocesses.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "BusinessProcessChainAssignmentistheassignmentofabusinessobjectnodetoabusinessprocesschain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "AChangeStateIDisauniqueidentifierforachangestate. Example: 20191122135035.7818490",
+                    "format": "string"
+                },
+                {
+                    "name": "ClearingBankAccountContract",
+                    "description": "AClearingBankAccountContractisaBankAccountContractthatreceivesincomingpaymentsthathavetobetransferredtoaspecificloancontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "TermSpecification",
+                    "description": "Aspecificationoftermelementsthataffectsalltermagreementsoftheloancontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "Dunning",
+                    "description": "Specifiestheprocessthroughwhichbankscouldsendnoticestocustomersrequestingpaymentoftheoverduereceivablesoftheloancontract.",
+                    "format": "string"
+                },
+                {
+                    "name": "BalanceKeyFigures",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "CommittedCapitalAdjustments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "EffectiveYields",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "IncomingPaymentAgreements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BasicDataLoanDisbursementRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "LoanContractBorrowerPartyChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "LoanPaymentSkipRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "PaymentTransactionInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "TermAgreements",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanContractBorrowerPartyChangeRequest",
+            "description": "A LoanContractBorrowerPartyChangeRequest is a request to change the borrower of a loan contract immediately.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "UUID is an universal unique identifier of a loan contract borrower party change request. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "ID is an identifier of a loan contract borrower party change request. Example: 47938",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractUUID",
+                    "description": "An internal ID of Loan Contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 20200309121401.6154150",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "LifeCycleStatusCode is the coded representation of the life cycle status of a loan contract borrower party change request. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of a LifeCycleStatusCode. Example: Completed",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "ReasonCode is the coded representation of the reason for the loan contract borrower party change request. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "Is the name of the reason code Example: Change of legal  form",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "BusinessProcessChainAssignment is the assignment of a business object node to a business process chain. ",
+                    "format": "string"
+                },
+                {
+                    "name": "NewBorrowerPartyIdentifyingElements",
+                    "description": "NewBorrowerPartyIdentifyingElements is a party that legally holds a bank account associated with the loan contract after completion of the borrower party change request.",
+                    "format": "string"
+                },
+                {
+                    "name": "FormerBorrowerPartyIdentifyingElements",
+                    "description": "FormerBorrowerPartyIdentifyingElements is a party that legally holds a bank account associated with the loan contract before completion of the borrower party change request.",
+                    "format": "string"
+                },
+                {
+                    "name": "NewClearingBankAccountContractUUID",
+                    "description": "NewClearingBankAccountContractUUID is an universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChargeWaiverRequestedIndicator",
+                    "description": "ChargeWaiverRequestedIndicator indicates whether a charge for activation of a loan contract borrower party change request is requested to be waived or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "CompletionDate",
+                    "description": "The CompletionDate is the date on which a loan contract borrower party change request is completed. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "Activities",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanContractPayoffRequest",
+            "description": "A Loan Contract Payoff Request is a request from the borrower to a lender (financial institution) to pay off a loan contract.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is a  universal unique identifier of a LoanContractPayoffRequest. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An ID is an identifier of the LoanContractPayoffRequest. Example: 71",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractUUID",
+                    "description": "An internal ID of Loan Contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 20200309121401.6154150",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A LifeCycleStatusCode is the coded representation of the life cycle status of a LoanContractPayoffRequest. Example: 5",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of a LifeCycleStatusCode. Example: Completed",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "A ReasonCode is the coded representation of the reason for the payoff. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "Is the name of the reason code Example: Borrower Decision",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonCode",
+                    "description": "A CancellationReasonCode is the coded representation of the reason for the cancellation of a loan contract payoff request. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonName",
+                    "description": "Is the name of a CancellationReasonCode. Example: Borrower Decision",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanPaymentPlanChangeTypeCode",
+                    "description": "A LoanPaymentPlanChangeTypeCode is a coded representation of the type of a LoanPaymentPlanChange. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanPaymentPlanChangeTypeName",
+                    "description": "Is the name of a LoanPaymentPlanChangeTypeCode. Example: Without Term End Change",
+                    "format": "string"
+                },
+                {
+                    "name": "ValueDate",
+                    "description": "A ValueDate is the value date of the payoff. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ExpectedPaymentDate",
+                    "description": "An ExpectedPaymentDate is the date on which the payment to payoff of loan is expected. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "LastScheduledPaymentDate",
+                    "description": "The date on which last scheduled payment is to be made before payoff. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "CompletionDate",
+                    "description": "A Completion Date is the  date on which the loan contract payoff request is completed. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "DueDate",
+                    "description": "A PayoffDueDate is the date on which the payoff  is due. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "FinalPaymentDate",
+                    "description": "Indicates whether the bank account will be debited by the bank account prenote entry or not. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "NetAmount",
+                    "description": "A NetAmount is the net amount of the loan contract payoff request.",
+                    "format": "string"
+                },
+                {
+                    "name": "GrossAmount",
+                    "description": "A GrossAmount is the gross amount of the loan contract payoff request",
+                    "format": "string"
+                },
+                {
+                    "name": "DailyInterestAmount",
+                    "description": "A DailyInterestAmount is the daily amount of the interest calculated for the value date of the loan contract payoff request.",
+                    "format": "string"
+                },
+                {
+                    "name": "DailyInterestOnArrearsAmount",
+                    "description": "A DailyInterestOnArrearsAmount is the daily amount of the interest on arrears calculated for the value date of the loan contract payoff request. ",
+                    "format": "string"
+                },
+                {
+                    "name": "ActivationChargeAmount",
+                    "description": "An ActivationChargeAmount is the charge amount for activation.",
+                    "format": "string"
+                },
+                {
+                    "name": "NewInstalmentAmount",
+                    "description": "NewInstallmentAmount is the  installment amount after the LoanContractPayoff Request.",
+                    "format": "string"
+                },
+                {
+                    "name": "ImmediateCompletionRequiredIndicator",
+                    "description": "An ImmediateCompletionRequiredIndicator indicates whether immediate completion is required for a LoanContractPayoffRequest or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "FullPayoffRequiredIndicator",
+                    "description": "A FullPayoffRequiredIndicator indicates whether a full payoff is required for a loan contract payoff or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "ActivationChargeWaiverRequestedIndicator",
+                    "description": "Indicates whether a charge is applied for a activated loan contract payoff request or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "ImmediateCompletionChargeWaiverRequestedIndicator",
+                    "description": "Indicates whether a charge is applied for immediate completion of  loan contract payoff request or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "EarlyRepaymentCompensationRequiredIndicator",
+                    "description": "An EarlyRepaymentCompensationRequiredIndicator is an indicator of whether early repayment compensation is required or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "GrossAmountCalculationResult",
+                    "description": "Gross Amount Calculation Result",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of Loan Contract Payoff Request to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "PaymentTransactionInstruction",
+                    "description": "A Payment Transaction Instruction is an instruction for payment transactions related to the loan contract.",
+                    "format": "array"
+                },
+                {
+                    "name": "UnpaidBankAccountBillingEntries",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanContractProlongationRequest",
+            "description": "A Loan Contract Prolongation Request is a request to extend one or multiple time-limited parts of the contractual relationship between the lender party and the borrower party.",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is a  universal unique identifier of a LoanContractProlongationRequest. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "ID is an identifier of the LoanContractProlongationRequest. Example: 71",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContract",
+                    "description": "The loan contract for which a loan contract prolongation request is made.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain. ",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state of a Loan Contract Prolongation Request. Example: 2019-06-03T06:16:41Z",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A LifeCycleStatusCode is the coded representation of the life cycle status of a LoanContractProlongationRequest. Example: 5",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of a LifeCycleStatusCode. Example: Completed",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonCode",
+                    "description": "A CancellationReasonCode is the coded representation of the reason for the cancellation of a Loan Contract Prolongation Request. Example: 10",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonName",
+                    "description": "Name of a CancellationReasonCode. Example: Bank Request",
+                    "format": "string"
+                },
+                {
+                    "name": "PenaltyRelevanceIndicator",
+                    "description": "Indicates whether the penalty for the Loan Contract Prolongation Request is relevant or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "ActivationChargeWaiverRequestedIndicator",
+                    "description": "Indicates whether a charge for activation of Loan Contract Prolongation Request is requested to be waived or not.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "LoanContractProlongationTermValidityEndDate",
+                    "description": "Is the end date of validity of term after prolongation of the loan contract.  Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ActivationChargeAmount",
+                    "description": "Is the activation charge amount.",
+                    "format": "string"
+                },
+                {
+                    "name": "EarlyRepaymentCompensationAmount",
+                    "description": "Is the amount of early repayment compensation.",
+                    "format": "string"
+                },
+                {
+                    "name": "ReimbursementAmount",
+                    "description": "Is the amount of reimbursement.",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractPaymentPlanPlannedBalanceAmount",
+                    "description": "Is the planned balance of payments remaining in the payment plan of the  loan contract at the time of the LoanContractProlongationRequest.",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractPaymentPlanActualBalanceAmount",
+                    "description": "Is the actual balance of payments remaining in the payment plan of the  loan contract at the time of the LoanContractProlongationRequest.",
+                    "format": "string"
+                },
+                {
+                    "name": "FinalPaymentAmount",
+                    "description": "Is the final installment amount(Balloon)  for a loan contract after this loan contract prolongation request.",
+                    "format": "string"
+                },
+                {
+                    "name": "FinalPaymentDate",
+                    "description": "Is the due date for FinalPaymentAmount after this loan contract prolongation request. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "IncomingPaymentAgreements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "TermAgreements",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanDisbursementRequest",
+            "description": "A LoanDisbursementRequest is a request from a borrower to a lender (credit institute) to transfer money from the loan contract to areceiving account at a specific time. The borrower or a loan officer can decide to withhold money from the gross disbursement amount topay due or expected items. Items can consist of installments or fees. Note :The sum of withhold items is returned during read of LoanDisbursementRequest",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "Is a universal unique identifier of a Loan Disbursement Request. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "Identifier of the LoanDisbursementRequest. Example: 47938",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractUUID",
+                    "description": "A globally unique identifier for a LoanContract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 20200220054415.0000000",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "LifeCycleStatusCode is the coded representation of the life cycle status of a LoanDisbursementRequest. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode Example: In Preparation",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "ReasonCode is the coded representation of the reason for the LoanDisbursementRequest. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "Name of ReasonCode. Example: Customer Request",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonCode",
+                    "description": "CancellationReasonCode is the coded representation of the reason for the cancellation of the LoanDisbursementRequest Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonName",
+                    "description": "Name of CancellationReasonCode Example: Error processing",
+                    "format": "string"
+                },
+                {
+                    "name": "NetAmount",
+                    "description": "NetAmount is the net amount of the disbursement.",
+                    "format": "string"
+                },
+                {
+                    "name": "GrossAmount",
+                    "description": "GrossAmount is the gross amount of the disbursement.",
+                    "format": "string"
+                },
+                {
+                    "name": "BillingItemsWithheldAmount",
+                    "description": "BillingItemsWithheldAmount is the sum of due amount of billing items withheld from the disbursement GrossAmount.",
+                    "format": "string"
+                },
+                {
+                    "name": "ItemsWithheldAmount",
+                    "description": "ItemsWithheldAmount is the sum of planned amount of items withheld from the disbursement GrossAmount",
+                    "format": "string"
+                },
+                {
+                    "name": "ActivationChargeAmount",
+                    "description": "An ActivationChargeAmount is the charge amount for activation.",
+                    "format": "string"
+                },
+                {
+                    "name": "ValueDate",
+                    "description": "ValueDate is the value date of the disbursement. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "PlannedPaymentDate",
+                    "description": "PlannedPaymentDate is the planned payment date of the disbursement. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "ActivationChargeWaiverRequestedIndicator",
+                    "description": "Indicates whether charges for activation of the loan disbursement request are requested to be waived.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "PaymentTransactionInstructionItems",
+                    "description": "An item describes a single element of a BankContractPaymentTransactionInstruction.",
+                    "format": "array"
+                },
+                {
+                    "name": "WithholdLoanPaymentPlanItems",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "LoanPaymentSkipRequest",
+            "description": "A LoanPaymentSkipRequest is a request from a borrower to a lender (credit institute) to to skip one or more payments of the loan contract or skip payments for a specific period of the loan contract. Integrity Condition: Any one of the following filter is allowed: ID ,LoanContractUUID ,LoanContractUUID and LifeCycleStatusCode",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "A UUID is a  universal unique identifier of LoanPaymentSkipRequest. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "Identifier of the LoanPaymentSkipRequest. Example: 47938",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanContractUUID",
+                    "description": "A globally unique identifier for a LoanContract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "Identifies a change state. Example: 20200220054415.0000000",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "LifeCycleStatusCode is the coded representation of the life cycle status of a LoanPaymentSkipRequest. Example: 3",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode Example: Completed",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanPaymentPlanSkippedInstallmentPaymentModeCode",
+                    "description": "A coded representation of the mode of payment of a skipped installment of the payment plan of a loan. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "LoanPaymentPlanSkippedInstallmentPaymentModeName",
+                    "description": "Name of LoanPaymentPlanSkippedInstallmentPaymentModeCode. Example: Term Change",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonCode",
+                    "description": "ReasonCode is the coded representation of the reason for the cancellation of the LoanPaymentSkipRequest. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "ReasonName",
+                    "description": "Name of ReasonCode. Example: Customer Request",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonCode",
+                    "description": "CancellationReasonCode is the coded representation of the reason for the cancellation of the LoanPaymentSkipRequest.. Example: 1",
+                    "format": "string"
+                },
+                {
+                    "name": "CancellationReasonName",
+                    "description": "Name of CancellationReasonCode. Example: Error processing",
+                    "format": "string"
+                },
+                {
+                    "name": "ActivationChargeWaiverRequestedIndicator",
+                    "description": "ActivationChargeWaiverRequestedIndicator",
+                    "format": "boolean"
+                },
+                {
+                    "name": "PreviousInstallmentAmount",
+                    "description": "PreviousInstallmentAmount is the installmet amount before the LoanPaymentSkipRequest.",
+                    "format": "string"
+                },
+                {
+                    "name": "NewInstallmentAmount",
+                    "description": "NewInstallmentAmount is the installment amount after the LoanPaymentSkipRequest.",
+                    "format": "string"
+                },
+                {
+                    "name": "NewInstallmentStartDate",
+                    "description": "NewInstallmentStartDate is the calender date on which the new installment starts. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "FinalInstallmentAmount",
+                    "description": "FinalInstallmentAmount is the last installment amount for a loan contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "FinalPaymentDate",
+                    "description": "FinalPaymentDate is the due date for FinalInstallmentAmount. Example: 2017-04-13",
+                    "format": "date"
+                },
+                {
+                    "name": "SkipDatePeriod",
+                    "description": "SkipDatePeriod is the period for which payments to be skipped.",
+                    "format": "string"
+                },
+                {
+                    "name": "SkipItems",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "SavingsAccountContract",
+            "description": "A Savings Account Contract is a contract between a credit institute and customer, which is based on the customer's request for opening a bank account of type Savings account and consists among others, account holder, general terms and conditions.\nComment: A bank account based on a Savings account contract is an account that allows money to be held on behalf of the account holder",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "An universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier of a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A CurrencyCode specifies the currency of the bank account contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountIdentifyingElements",
+                    "description": "A BankAccount is a bank account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank account contract. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusCode",
+                    "description": "A coded representation of the dormancy status of a bank account contract. Example: 01",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusName",
+                    "description": "Name of DormancyStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "UsageNote",
+                    "description": "A comment on the usage of the current account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "SystemAdministrativeData",
+                    "description": "SystemAdministrativeData is administrative data that is stored in a system. This data includes change dates and change times.",
+                    "format": "string"
+                },
+                {
+                    "name": "AccountHolderPartyIdentifyingElements",
+                    "description": "A party which legally holds a Bank Account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "A Product describes the (financial) product upon which the bank account contract is based.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessEventRecord",
+                    "description": "A record of a business event that changes a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "An OperationalBankContractManagement is responsible for managing operational bank contracts and executing the related banking processes.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 20191122135035.7818490",
+                    "format": "string"
+                },
+                {
+                    "name": "WithdrawalEarningsAvailabilityDuration",
+                    "description": "An EarningsAvailabilityDuration is the period of time during which earnings are available for withdrawal by the account holder. Example: P1M",
+                    "format": "string"
+                },
+                {
+                    "name": "WithdrawalAllowanceRule",
+                    "description": "An AllowanceRule is a rule for granting allowance to the account holder to withdraw an amount from the bank account of a savings account contract without prior notice.",
+                    "format": "string"
+                },
+                {
+                    "name": "CreateDraftRequestedIndicator",
+                    "description": "Indicates whether the savings account contract shall be created with life cycle status code 'Draft Entered'.",
+                    "format": "boolean"
+                },
+                {
+                    "name": "AdaptedInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountStatementArrangements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryBalanceBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryStatisticBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankProductPriceListAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "FinancialConditionTypeGroupAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "IndividualInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "OtherPartyIdentifyingElements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "PaymentTransactionInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccount",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractAccountHolderChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractCancelRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractLockRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SettlementArrangements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "WithdrawalNoticeRules",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        },
+        {
+            "name": "TimeDepositContract",
+            "description": "A Time Deposit Contract is a contract between a credit institute and customer, which is based on the customer's request for opening a bank account of type time deposit and consists among others, account holder, general terms and conditions.\nComment: A bank account based on a time deposit contract is an account that allows money to be held on behalf of the account holder",
+            "columns": [
+                {
+                    "name": "UUID",
+                    "description": "An universal unique identifier of a bank account contract. Example: 01234567-89ab-cdef-0123-456789abcdef",
+                    "format": "uuid"
+                },
+                {
+                    "name": "ID",
+                    "description": "An identifier of a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "CurrencyCode",
+                    "description": "A CurrencyCode specifies the currency of the bank account contract. Example: EUR",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountIdentifyingElements",
+                    "description": "A BankAccount is a bank account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusCode",
+                    "description": "A coded representation of the life cycle status of a bank account contract. Example: 2",
+                    "format": "string"
+                },
+                {
+                    "name": "LifeCycleStatusName",
+                    "description": "Name of LifeCycleStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusCode",
+                    "description": "A coded representation of the dormancy status of a bank account contract. Example: 01",
+                    "format": "string"
+                },
+                {
+                    "name": "DormancyStatusName",
+                    "description": "Name of DormancyStatusCode. Example: Active",
+                    "format": "string"
+                },
+                {
+                    "name": "UsageNote",
+                    "description": "A comment on the usage of the current account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "SystemAdministrativeData",
+                    "description": "SystemAdministrativeData is administrative data that is stored in a system. This data includes change dates and change times.",
+                    "format": "string"
+                },
+                {
+                    "name": "AccountHolderPartyIdentifyingElements",
+                    "description": "A party which legally holds a Bank Account associated with the bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "Product",
+                    "description": "A Product describes the (financial) product upon which the bank account contract is based.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessEventRecord",
+                    "description": "A record of a business event that changes a bank account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "OperationalBankContractManagement",
+                    "description": "An OperationalBankContractManagement is responsible for managing operational bank contracts and executing the related banking processes.",
+                    "format": "string"
+                },
+                {
+                    "name": "BusinessProcessChainAssignment",
+                    "description": "Business Process Chain Assignment is the assignment of a business object node to a business process chain.",
+                    "format": "string"
+                },
+                {
+                    "name": "ChangeStateID",
+                    "description": "A ChangeStateID is a unique identifier for a change state. Example: 20191122135035.7818490",
+                    "format": "string"
+                },
+                {
+                    "name": "TermSpecification",
+                    "description": "A specification of term elements that affects all term agreements of the deposit account contract.",
+                    "format": "string"
+                },
+                {
+                    "name": "AdaptedInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountStatementArrangements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryBalanceBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountEntryStatisticBasedRestrictions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankProductPriceListAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "FinancialConditionTypeGroupAssignments",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "IndividualInterestConditions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "OtherPartyIdentifyingElements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "PaymentTransactionInstructions",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "SettlementArrangements",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccount",
+                    "description": "",
+                    "format": "string"
+                },
+                {
+                    "name": "BankAccountContractAccountHolderChangeRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractCancelRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "BankAccountContractLockRequests",
+                    "description": "",
+                    "format": "array"
+                },
+                {
+                    "name": "TermAgreements",
+                    "description": "",
+                    "format": "array"
+                }
+            ]
+        }
+    ]
+}

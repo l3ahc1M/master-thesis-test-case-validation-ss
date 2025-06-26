@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the bank credit facility contracts that are currently marked as 'Inactive'?",
+    "output": {
+        "sql": "SELECT * FROM BankCreditFacilityContract WHERE LifeCycleStatusName = 'Inactive';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the bank card contract lock requests that are currently active?",
+    "output": {
+        "sql": "SELECT * FROM BankCardContractLockRequest WHERE UserStatusCode = '2';"
+    }
+}

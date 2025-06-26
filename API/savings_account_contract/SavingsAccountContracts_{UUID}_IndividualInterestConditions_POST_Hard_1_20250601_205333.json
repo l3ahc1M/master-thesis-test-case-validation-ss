@@ -1,0 +1,24 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to set up specific interest conditions for a savings account contract with the ID 456e7890-e12b-12d3-a456-426614174002, which includes a tiered interest rate system based on the account balance. The conditions should specify that if the balance is between 1000 and 5000, the interest rate should be 1.0%. For balances between 5000 and 10000, the interest rate should be 1.5%. Finally, for balances above 10000, the interest rate should be 2.0%.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/IndividualInterestConditions",
+        "body": {
+            "TieredInterestRates": [
+                {
+                    "BalanceThreshold": 1000,
+                    "InterestRate": 1.0
+                },
+                {
+                    "BalanceThreshold": 5000,
+                    "InterestRate": 1.5
+                },
+                {
+                    "BalanceThreshold": 10000,
+                    "InterestRate": 2.0
+                }
+            ]
+        }
+    }
+}

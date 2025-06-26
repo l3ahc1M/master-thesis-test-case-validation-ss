@@ -1,0 +1,14 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you please create a detailed instruction for locking a cheque for the lock request with the ID of 105? The cheque number is 789012, the amount is 1000, and it should be valid from January 1, 2023, to December 31, 2023.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractLockRequests/105/ChequeLockInstructions",
+        "body": {
+            "chequeNumber": "789012",
+            "chequeAmount": 1000,
+            "validityStartDate": "2023-01-01",
+            "validityEndDate": "2023-12-31"
+        }
+    }
+}

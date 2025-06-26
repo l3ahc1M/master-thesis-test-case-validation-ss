@@ -1,0 +1,8 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please remove the co-holder party from the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "DELETE",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/OtherPartyIdentifyingElements/4/CoHolder"
+    }
+}

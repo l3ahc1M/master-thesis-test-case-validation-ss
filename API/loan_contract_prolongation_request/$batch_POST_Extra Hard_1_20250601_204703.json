@@ -1,0 +1,28 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please help me with a request to extend the loan contract, which has the ID 71? I’d like to set up a new agreement that includes a final payment of 2000, which is due on December 31, 2025. Also, I want to make sure that any agreements involving used coupons or loyalty programs are not included.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/LoanContractProlongationRequest",
+                    "body": {
+                        "ID": "71",
+                        "LoanContract": "Loan12345",
+                        "FinalPaymentAmount": "2000",
+                        "FinalPaymentDate": "2025-12-31",
+                        "TermAgreements": {
+                            "exclude": {
+                                "usedCoupon": true,
+                                "inLoyaltyProgram": true
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

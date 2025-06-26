@@ -1,0 +1,17 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please arrange the payment transaction instructions for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef? Make sure to leave out any balance less than 1000 euros, and also set up a monthly email notification for the customer.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/PaymentTransactionInstructions",
+    "body": {
+      "exclude": {
+        "balanceThreshold": 1000
+      },
+      "notification": {
+        "method": "email",
+        "frequency": "weekly"
+      }
+    }
+  }
+}

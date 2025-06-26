@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the UUIDs of all the active time deposit contracts that are in euros?",
+    "output": {
+        "sql": "SELECT UUID FROM TimeDepositContract WHERE LifeCycleStatusCode = '2' AND CurrencyCode = 'EUR';"
+    }
+}

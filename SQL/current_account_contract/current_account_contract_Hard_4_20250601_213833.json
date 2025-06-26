@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many current account contracts are in draft status and also include a specific product?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM CurrentAccountContract WHERE Product = 'Specific Product' AND CreateDraftRequestedIndicator = TRUE;"
+    }
+}

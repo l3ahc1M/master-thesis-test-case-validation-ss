@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the ID of the account holder change request that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccountContractAccountHolderChangeRequest WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

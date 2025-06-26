@@ -1,0 +1,15 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I'm looking to switch the account holder for current account fedcba98-7654-3210-fedc-ba9876543210. The new account holder will be Emily Davis, and the previous one was David Davis. The activation fee is to be waived. The change state ID for this request is 20200309121401.6154150.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "fedcba98-7654-3210-fedc-ba9876543210",
+      "NewAccountHolderPartyIdentifyingElements": "Emily Davis",
+      "FormerAccountHolderPartyIdentifyingElements": "David Davis",
+      "ChargeWaiverRequestedIndicator": true,
+      "ChangeStateID": "20200309121401.6154150"
+    }
+  }
+}

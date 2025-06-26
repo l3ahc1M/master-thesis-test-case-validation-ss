@@ -1,0 +1,8 @@
+{
+  "difficulty": "Easy",
+  "input": "I want to remove the payment transaction instructions with id 1 for the time deposit contract that has the ID 12345678-90ab-cdef-0123-456789abcdef.",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/1"
+  }
+}

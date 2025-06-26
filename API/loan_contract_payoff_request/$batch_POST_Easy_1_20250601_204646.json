@@ -1,0 +1,21 @@
+{
+  "difficulty": "Easy",
+  "input": "I want to partially pay off the loan with the ID of 71. The UUID for the loan contract is 01234567-89ab-cdef-0123-456789abcdef.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/LoanContractPayoffRequests",
+          "body": {
+            "ID": "71",
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "FullPayoffRequiredIndicator": false
+          }
+        }
+      ]
+    }
+  }
+}

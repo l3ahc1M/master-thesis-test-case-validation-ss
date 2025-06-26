@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the total activation charges for all the time deposit contracts that were canceled in the past month?",
+    "output": {
+        "sql": "SELECT SUM(ActivationChargeAmount) FROM TimeDepositContract WHERE LifeCycleStatusCode = '3' AND CancellationDate >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH);"
+    }
+}

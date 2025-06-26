@@ -1,0 +1,13 @@
+{
+  "difficulty": "Medium",
+  "input": "Can you update the payment transaction instructions for the current account contract with the ID 23456789-01ab-cdef-0123-456789abcdef so that it needs dual authorization for any transactions that exceed 5000 US dollars?",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/2",
+    "body": {
+      "dualAuthorizationRequired": true,
+      "transactionLimit": 5000,
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you provide me with the IDs of all the current account contracts?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccountContract WHERE TypeName = 'Current Account Contract';"
+    }
+}

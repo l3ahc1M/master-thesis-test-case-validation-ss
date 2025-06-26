@@ -1,0 +1,9 @@
+{
+  "difficulty": "Hard",
+  "input": "I want to remove the statistic-based restriction with the ID of 3 from current account contract, which has the UUID of 34567890-12ab-cdef-0123-456789abcdef, because it's not required anymore.",
+  "output": {
+    "method": "DELETE",
+    "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions/3",
+    "body": {}
+  }
+}

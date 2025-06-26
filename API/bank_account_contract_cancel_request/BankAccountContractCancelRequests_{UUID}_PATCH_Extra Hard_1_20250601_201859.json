@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I need to update the cancellation request with the ID 01234567-89ab-cdef-0123-456789abcdef to include that the customer want the leftover balance settled in cash and the reason for cancellation to be 'Financial Hardship'.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractCancelRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "BalancingByCashIndicator": true,
+            "ReasonCode": "110",
+            "ReasonName": "Financial Hardship"
+        }
+    }
+}

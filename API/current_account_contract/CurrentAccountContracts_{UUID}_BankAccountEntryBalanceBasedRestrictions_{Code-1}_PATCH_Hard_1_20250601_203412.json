@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to update the balance limit on the current account contract, which has the ID 34567890-12ab-cdef-0123-456789abcdef, to 5000 British pounds and include a note that says 'No withdrawals allowed'.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/3",
+        "body": {
+            "restrictionAmount": 5000,
+            "currency": "GBP",
+            "note": "No withdrawals allowed"
+        }
+    }
+}

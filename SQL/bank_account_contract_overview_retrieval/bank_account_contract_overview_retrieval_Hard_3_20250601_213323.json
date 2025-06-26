@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you give me the IDs of bank account contracts that have a scheduled cancellation date and are classified as current accounts?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccountContract WHERE TypeName = 'Current Account Contract' AND PlannedCancellationDate IS NOT NULL;"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you set up payment transaction instructions for savings account contract with the ID 321e0987-e34b-12d3-a456-426614174003? I’d like the payments to happen monthly, and the maximum amount should be 500 euros.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/321e0987-e34b-12d3-a456-426614174003/PaymentTransactionInstructions",
+        "body": {
+            "PaymentFrequency": "Monthly",
+            "MaximumAmount": 500
+        }
+    }
+}

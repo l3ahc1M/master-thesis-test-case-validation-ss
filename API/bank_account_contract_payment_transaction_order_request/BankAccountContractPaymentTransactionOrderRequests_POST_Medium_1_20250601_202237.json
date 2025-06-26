@@ -1,0 +1,15 @@
+{
+    "difficulty": "Medium",
+    "input": "Please start a payment transaction order request for the account with the ID 0001-123456. The payment reference ID is Xample-ReferenceID, and I’d like to have it executed on May 1, 2024.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests",
+        "body": {
+            "ID": "0001-123456",
+            "PaymentTransactionReferenceID": "Xample-ReferenceID",
+            "PlannedExecutionDate": "2024-05-01",
+            "LifeCycleStatusCode": "1",
+            "LifeCycleStatusName": "Active"
+        }
+    }
+}

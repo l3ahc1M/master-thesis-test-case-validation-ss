@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to set up some balance-based restrictions for the savings account contract with the ID 123e4567-e89b-12d3-a456-426614174000, allowing for a minimum balance of 1000 euros.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/123e4567-e89b-12d3-a456-426614174000/BankAccountEntryBalanceBasedRestrictions",
+        "body": {
+            "MinimumBalance": 1000,
+            "CurrencyCode": "EUR"
+        }
+    }
+}

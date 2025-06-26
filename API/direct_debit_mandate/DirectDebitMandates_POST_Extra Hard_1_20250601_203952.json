@@ -1,0 +1,16 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you figure out the average amount spent on direct debit mandates, but leave out any transactions that used coupons or were part of loyalty programs?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CalculateAvgPurchase",
+        "body": {
+            "exclude": {
+                "usedCoupon": true,
+                "inLoyaltyProgram": true
+            },
+            "aggregation": "average",
+            "field": "purchaseAmount"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out the average amount charged for cancellations of bank account contracts that were completed in the year 2021?",
+    "output": {
+        "sql": "SELECT AVG(CancellationChargeAmount) FROM BankAccountContractCancelRequest WHERE YEAR(CompletionDate) = 2021;"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to change the payment note for the transaction order request with the ID 01234567-89ab-cdef-0123-456789abcdef. The note I'm updating has the ID of 1, and the new note will say 'Payment for service #54321'.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef/PaymentNotes/1",
+        "body": {
+            "PaymentNotes": [
+                "Payment for service #54321"
+            ]
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out how many bank card contract lock requests there are, and group the results by the name of the event?",
+    "output": {
+        "sql": "SELECT EventName, COUNT(*) FROM BankCardContractLockRequest GROUP BY EventName;"
+    }
+}

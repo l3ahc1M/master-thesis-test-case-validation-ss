@@ -1,0 +1,12 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please add a personal interest condition to current account contract, which has the ID 45678901-23ab-cdef-0123-456789abcdef? I want it to have a rate of 2.0% and include a note that says, \"Special promotional rate for new customers.\"",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/IndividualInterestConditions",
+    "body": {
+      "rate": "2.0%",
+      "note": "Special promotional rate for new customers"
+    }
+  }
+}

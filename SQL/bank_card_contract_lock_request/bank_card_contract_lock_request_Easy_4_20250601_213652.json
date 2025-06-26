@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me how many requests for locking bank card contracts have a validity start date that is before January 1, 2022?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCardContractLockRequest WHERE ValidityStartDate < '2022-01-01';"
+    }
+}

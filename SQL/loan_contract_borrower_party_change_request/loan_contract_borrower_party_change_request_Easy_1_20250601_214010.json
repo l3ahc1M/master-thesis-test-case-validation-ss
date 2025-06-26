@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Could you please provide the details of the loan contract borrower party change request that has the ID 47938?",
+    "output": {
+        "sql": "SELECT * FROM LoanContractBorrowerPartyChangeRequest WHERE ID = '47938';"
+    }
+}

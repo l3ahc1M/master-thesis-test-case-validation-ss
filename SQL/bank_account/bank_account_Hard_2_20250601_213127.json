@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you provide me with the bank account IDs and their currency codes for the accounts that are associated with the bank account contract identified by the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT ID, CurrencyCode FROM BankAccount WHERE BankAccountContractUUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

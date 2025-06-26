@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the UUIDs and reasons for all the loan payment skip requests that are currently active?",
+    "output": {
+        "sql": "SELECT UUID, ReasonName FROM LoanPaymentSkipRequest WHERE LifeCycleStatusName = 'Active';"
+    }
+}

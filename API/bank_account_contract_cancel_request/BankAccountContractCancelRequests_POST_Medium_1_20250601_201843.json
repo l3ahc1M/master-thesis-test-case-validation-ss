@@ -1,0 +1,18 @@
+{
+  "difficulty": "Medium",
+  "input": "Please go ahead and cancel savings account contract with the ID 761. I\u2019d like the cancellation to take effect starting next month, and I also need the settlement to be taken care of.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractCancelRequests",
+    "body": {
+      "ID": "761",
+      "ImmediateCompletionRequiredIndicator": false,
+      "PlannedCompletionDate": "2024-06-01",
+      "BankAccountSettlementRequiredIndicator": true,
+      "BankAccountSettlementRequestedValueDate": "2024-06-01",
+      "ReasonCode": "108",
+      "ReasonName": "Customer Request",
+      "ReceiptDate": "2024-05-01"
+    }
+  }
+}

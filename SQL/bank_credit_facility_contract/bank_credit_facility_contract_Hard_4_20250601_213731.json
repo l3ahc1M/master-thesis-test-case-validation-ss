@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the IDs of all active bank credit facility contracts that are in US dollars.",
+    "output": {
+        "sql": "SELECT ID FROM BankCreditFacilityContract WHERE CurrencyCode = 'USD' AND LifeCycleStatusName = 'Active';"
+    }
+}

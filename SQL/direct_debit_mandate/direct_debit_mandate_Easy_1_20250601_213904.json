@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "How many direct debit mandates are currently active?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM DirectDebitMandate WHERE UserStatusCode = '2';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the number of requests to cancel bank account contracts that we received on April 13, 2021?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountContractCancelRequest WHERE ReceiptDate = '2021-04-13';"
+    }
+}

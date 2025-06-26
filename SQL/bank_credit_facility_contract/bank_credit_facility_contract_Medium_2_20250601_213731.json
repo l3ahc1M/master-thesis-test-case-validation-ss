@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the number of subordinated bank contracts linked to the bank credit facility contract that has the ID 1234?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCreditFacilityContract WHERE ID = '1234' AND SubordinatedBankContractNumberValue IS NOT NULL;"
+    }
+}

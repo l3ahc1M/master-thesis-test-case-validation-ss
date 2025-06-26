@@ -1,0 +1,14 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to set up a rule for the savings account contract, which has the ID 456e7890-e12b-12d3-a456-426614174002. This rule should require the customer to give a heads-up of 5 days before making any withdrawals, and only take out a maximum of 2000 dollars without giving notice.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/WithdrawalNoticeRules",
+        "body": {
+            "NoticePeriod": "P5D",
+            "MaximumWithdrawalLimit": 2000,
+            "CurrencyCode": "USD",
+            "NoNoticeAllowed": true
+        }
+    }
+}

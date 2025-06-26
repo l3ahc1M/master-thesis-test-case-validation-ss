@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Get me the IDs and planned execution dates of payment transaction order requests that are still pending and were created within the last year.",
+    "output": {
+        "sql": "SELECT ID, PlannedExecutionDate FROM BankAccountContractPaymentTransactionOrderRequest WHERE LifeCycleStatusName = 'Pending' AND YEAR(BankAccountPostingDate) = YEAR(CURDATE()) - 1;"
+    }
+}

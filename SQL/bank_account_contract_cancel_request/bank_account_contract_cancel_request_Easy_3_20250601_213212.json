@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the ID of the most recent request to cancel a bank account contract?",
+    "output": {
+        "sql": "SELECT ID FROM BankAccountContractCancelRequest ORDER BY ReceiptDate DESC LIMIT 1;"
+    }
+}

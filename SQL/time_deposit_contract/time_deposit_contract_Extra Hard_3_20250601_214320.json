@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Find out the average balance of all bank accounts that are linked to time deposit contracts which have been canceled because the customer requested it.",
+    "output": {
+        "sql": "SELECT AVG(Balance) FROM BankAccount WHERE ID IN (SELECT BankAccountIdentifyingElements FROM TimeDepositContract WHERE LifeCycleStatusCode = '3' AND CancellationReasonName = 'Customer Request');"
+    }
+}

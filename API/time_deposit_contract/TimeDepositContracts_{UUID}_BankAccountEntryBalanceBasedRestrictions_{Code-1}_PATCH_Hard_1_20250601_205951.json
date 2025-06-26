@@ -1,0 +1,14 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to update the balance restriction for the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef so that the transaction threshold is set to 1200 euros, and I want to exclude any accounts that have a balance below this amount.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/1",
+        "body": {
+            "transactionThreshold": 1200,
+            "exclude": {
+                "balanceThreshold": 1200
+            }
+        }
+    }
+}

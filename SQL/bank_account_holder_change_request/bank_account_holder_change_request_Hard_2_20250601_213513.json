@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the reason code and name for every request to change an account holder where a charge waiver has been requested.",
+    "output": {
+        "sql": "SELECT ReasonCode, ReasonName FROM BankAccountContractAccountHolderChangeRequest WHERE ChargeWaiverRequestedIndicator = TRUE;"
+    }
+}

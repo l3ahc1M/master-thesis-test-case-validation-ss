@@ -1,0 +1,16 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you get me the bank account entries for the bank account with the ID 54321, but only the ones that have a balance of at least 1000?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "GET",
+                    "url": "/BankAccountEntries?accountId=54321&minBalance=1000"
+                }
+            ]
+        }
+    }
+}

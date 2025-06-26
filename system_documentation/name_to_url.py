@@ -1,0 +1,26 @@
+
+
+name_to_url = {
+    "bank_account": "https://5d7db06b-95f8-4b33-8e98-f1fa3906454c.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccount/0001",
+    "bank_account_contract_cancel_request": "https://e660f169-500c-4eb5-8e08-64eeb7df8ef0.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccountcontractcancelrequest/0001",
+    "bank_account_contract_lock_request": "https://e149c27e-a94b-47f5-ba0c-975f0b269800.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccountcontractlockrequest/0001",
+    "bank_account_contract_overview_retrieval": "https://b9c490ff-05f7-4600-b70d-2e1b28c8c14a.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccountcontractoverviewretrieval/0001",    
+    "bank_account_contract_payment_transaction_order_request": "https://f57fbec5-69f0-4c1b-9337-6d0a57bda68e.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bacpaymenttransactionorderrequest/0001",
+    "bank_account_entry": "https://38f3b5d8-c180-48a0-bdb7-4f6d13a155ab.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccountentry/0001",
+    "bank_account_holder_change_request": "https://9e68ce12-67c0-4cb5-9aa0-db85e661635a.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bacaccountholderchangerequest/0001",
+    "bank_account_prenote_entry": "https://61f6e9ef-543b-4329-9853-51e78f7671a1.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankaccountprenoteentry/0001",
+    "bank_card_contract": "https://1e7fe9c0-fb85-4719-9949-2a77d4aae383.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankcardcontract/0001",
+    "bank_card_contract_lock_request": "https://49706312-a568-4cff-b6e5-c5e0f022b49b.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankcardcontractlockrequest/0001",
+    "bank_credit_facility_contract": "https://c5f783dc-29e8-453c-9db0-c05a3204d240.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankcreditfacilitycontract/0001",
+    "bank_customer_lock_request": "https://915a8528-4704-40cd-863c-b3c9117ed440.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/bankcustomerlockrequest/0001",
+    "current_account_contract": "https://48bf842a-8fe4-440b-8044-95ae3c41b920.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/currentaccountcontract/0001",
+    "direct_debit_mandate": "https://41bf4368-684f-4447-bf2e-c3f3a68fd281.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/directdebitmandate/0001",
+    "loan_contract": "https://c6caf044-5e4f-411a-be6b-e4ad4f76e6da.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/loancontract/0001",
+    "loan_contract_borrower_party_change_request": "https://c69600fd-0a39-41ae-aa7e-54a30e7e7b38.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/lcborrowerpartychangerequest/0001",
+    "loan_contract_payoff_request": "https://702215a4-0c18-4e7f-a6c6-a1e885b310f0.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/loancontractpayoffrequest/0001",
+    "loan_contract_prolongation_request": "https://1782c3e2-0df7-4c65-b896-6bc4e319faef.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/loancontractprolongationrequest/0001",
+    "loan_disbursement_request": "https://62360e04-5b52-4219-8ad5-bf66c655912c.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/loandisbursementrequest/0001",
+    "loan_payment_skip_request": "https://df2979fb-5b0e-43f6-85e3-3b723decc526.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/loanpaymentskiprequest/0001",
+    "savings_account_contract": "https://2446c287-75f2-4bef-8713-dcfaa5559964.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap",
+    "time_deposit_contract": "https://917617fe-e8db-42ac-ad3f-37cb74de6ae0.mock.pstmn.io/sap/opu/odata4/sap/transactionalbanking/default/sap/timedepositcontract/0001", 
+}

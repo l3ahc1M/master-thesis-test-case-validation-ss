@@ -1,0 +1,14 @@
+{
+  "difficulty": "Medium",
+  "input": "I'm looking to change the account holder for savings account abcdef01-2345-6789-abcd-ef0123456789. The new account holder will be Alice Johnson, and the previous one was Bob Johnson. Additionally, I would like the activation charge to be waived.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractAccountHolderChangeRequests",
+    "body": {
+      "BankAccountContractUUID": "abcdef01-2345-6789-abcd-ef0123456789",
+      "NewAccountHolderPartyIdentifyingElements": "Alice Johnson",
+      "FormerAccountHolderPartyIdentifyingElements": "Bob Johnson",
+      "ChargeWaiverRequestedIndicator": true
+    }
+  }
+}

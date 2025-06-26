@@ -1,0 +1,11 @@
+{
+  "difficulty": "Medium",
+  "input": "Could you please set up a specific interest condition for the current account contract, which has the ID 23456789-01ab-cdef-0123-456789abcdef, and make the interest rate 1.2%?",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/23456789-01ab-cdef-0123-456789abcdef/IndividualInterestConditions",
+    "body": {
+      "rate": "1.2%"
+    }
+  }
+}

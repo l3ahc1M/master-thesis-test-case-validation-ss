@@ -1,0 +1,33 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I need make two loan disbursements for Loan account 01234567-89ab-cdef-0123-456789abcdef. The first request is for a total amount of 25,000, and I want to hold back 5,000 for fees, plus I\u2019d like to waive the activation charge. The value date is January 1, 2025. The second request is for a total amount of 30,000, with 8,000 held back for installments, and it should be assigned to the business process chain called \"Loan Processing.\"",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "25000",
+            "ItemsWithheldAmount": "5000",
+            "ActivationChargeWaiverRequestedIndicator": true,
+            "ValueDate": "2025-01-01"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "/LoanDisbursementRequests",
+          "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "30000",
+            "ItemsWithheldAmount": "8000",
+            "BusinessProcessChainAssignment": "Loan Processing"
+          }
+        }
+      ]
+    }
+  }
+}

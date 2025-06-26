@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the UUIDs of bank accounts that are currently locked and linked to a specific bank account contract?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccount WHERE UUID IN (SELECT BankAccountContractUUID FROM BankAccountContractLockRequest WHERE LifeCycleStatusCode = '2');"
+    }
+}

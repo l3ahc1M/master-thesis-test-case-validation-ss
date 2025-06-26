@@ -1,0 +1,13 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please change the individual interest conditions for the time deposit contract, which has the ID 23456789-01ab-cdef-0123-456789abcdef, so that it doesn't apply to accounts with a balance of less than 1000 euros?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/IndividualInterestConditions/1",
+        "body": {
+            "exclude": {
+                "balanceThreshold": 1000
+            }
+        }
+    }
+}

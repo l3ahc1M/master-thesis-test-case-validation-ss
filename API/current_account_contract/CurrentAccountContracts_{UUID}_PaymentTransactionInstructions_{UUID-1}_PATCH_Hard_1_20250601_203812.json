@@ -1,0 +1,13 @@
+{
+  "difficulty": "Hard",
+  "input": "I need to change the payment transaction instructions for the current account contract with the ID 34567890-12ab-cdef-0123-456789abcdef so that it allows international transfers and sets a limit of 10,000 British pounds.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/3",
+    "body": {
+      "allowInternationalTransfers": true,
+      "transactionLimit": 10000,
+      "currency": "GBP"
+    }
+  }
+}

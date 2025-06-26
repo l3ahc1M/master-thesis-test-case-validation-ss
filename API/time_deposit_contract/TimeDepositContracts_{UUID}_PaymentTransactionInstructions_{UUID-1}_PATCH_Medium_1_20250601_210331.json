@@ -1,0 +1,14 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please update the payment transaction instructions for the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef to set up a recurring payment of 200 euros every month?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/1",
+        "body": {
+            "recurringPayment": {
+                "frequency": "monthly",
+                "amount": 200
+            }
+        }
+    }
+}

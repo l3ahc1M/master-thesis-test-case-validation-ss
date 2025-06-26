@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you find out how many current account contracts we have, sorted by their currency codes, but only count the ones that are currently active?",
+    "output": {
+        "sql": "SELECT CurrencyCode, COUNT(*) FROM CurrentAccountContract WHERE LifeCycleStatusCode = '2' GROUP BY CurrencyCode;"
+    }
+}

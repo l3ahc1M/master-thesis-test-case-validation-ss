@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you give me the UUIDs of all the requests to change the borrower party on loan contracts, but only for those cases where the new borrower party is not the same as the old one?",
+    "output": {
+        "sql": "SELECT UUID FROM LoanContractBorrowerPartyChangeRequest WHERE NewBorrowerPartyIdentifyingElements != FormerBorrowerPartyIdentifyingElements;"
+    }
+}

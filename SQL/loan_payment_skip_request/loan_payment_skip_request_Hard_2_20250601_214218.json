@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Find the UUIDs of loan payment skip requests that have a final payment date later than January 1, 2023, and have not been cancelled.",
+    "output": {
+        "sql": "SELECT UUID FROM LoanPaymentSkipRequest WHERE FinalPaymentDate > '2023-01-01' AND CancellationReasonCode IS NULL;"
+    }
+}

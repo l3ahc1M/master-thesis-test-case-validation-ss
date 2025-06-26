@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the names of all the products from bank credit facility contracts that are in euros and are currently active.",
+    "output": {
+        "sql": "SELECT Product FROM BankCreditFacilityContract WHERE CurrencyCode = 'EUR' AND LifeCycleStatusName = 'Active';"
+    }
+}

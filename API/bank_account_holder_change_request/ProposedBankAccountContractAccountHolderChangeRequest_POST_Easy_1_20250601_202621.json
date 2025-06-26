@@ -1,0 +1,14 @@
+{
+  "difficulty": "Easy",
+  "input": "I would like to request a change of account holder for savings account abcdef34-5678-90ab-cdef-1234567890ab. The new account holder is Clara Oswald, and the previous account holder was Matt Smith.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/ProposedBankAccountContractAccountHolderChangeRequest",
+    "body": {
+      "BankAccountContractUUID": "abcdef34-5678-90ab-cdef-1234567890ab",
+      "NewAccountHolderPartyIdentifyingElements": "Clara Oswald",
+      "FormerAccountHolderPartyIdentifyingElements": "Matt Smith",
+      "ChargeWaiverRequestedIndicator": false
+    }
+  }
+}

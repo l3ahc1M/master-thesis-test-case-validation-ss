@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Look for all the requests to lock bank card contracts that have a change state ID of July 13, 2019, at 1:34 PM UTC and are linked to a specific event code.",
+    "output": {
+        "sql": "SELECT * FROM BankCardContractLockRequest WHERE ChangeStateID = '2019-07-13T13:34:46Z' AND EventCode = '103000';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the life cycle status name for the loan contract borrower party change request that has the UUID 01234567-89ab-cdef-0123-456789abcdef?",
+    "output": {
+        "sql": "SELECT LifeCycleStatusName FROM LoanContractBorrowerPartyChangeRequest WHERE UUID = '01234567-89ab-cdef-0123-456789abcdef';"
+    }
+}

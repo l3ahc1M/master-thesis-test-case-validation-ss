@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the total number of payment transaction order requests that are currently marked as 'Active'?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankAccountContractPaymentTransactionOrderRequest WHERE LifeCycleStatusName = 'Active';"
+    }
+}

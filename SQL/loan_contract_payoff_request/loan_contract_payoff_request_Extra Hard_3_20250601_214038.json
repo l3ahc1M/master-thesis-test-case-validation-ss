@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please provide a list of all loan contract payoff requests where the daily interest on overdue payments is greater than zero and that need to be completed right away.",
+    "output": {
+        "sql": "SELECT * FROM LoanContractPayoffRequest WHERE DailyInterestOnArrearsAmount > '0' AND ImmediateCompletionRequiredIndicator = TRUE;"
+    }
+}

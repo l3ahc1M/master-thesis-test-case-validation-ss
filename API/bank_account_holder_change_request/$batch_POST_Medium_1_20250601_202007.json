@@ -1,0 +1,18 @@
+{
+  "difficulty": "Medium",
+  "input": "On customer request I need to cancel savings account contract with the ID 98765 starting from next month? I also need to have the settlement taken care of.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractCancelRequests",
+    "body": {
+      "ID": "98765",
+      "ImmediateCompletionRequiredIndicator": false,
+      "PlannedCompletionDate": "2024-06-01",
+      "BankAccountSettlementRequiredIndicator": true,
+      "BankAccountSettlementRequestedValueDate": "2024-06-01",
+      "ReasonCode": "108",
+      "ReasonName": "Customer Request",
+      "ReceiptDate": "2024-05-01"
+    }
+  }
+}

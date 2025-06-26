@@ -1,0 +1,14 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please add a restriction based on statistics to the current account contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I want it to limit the customer to 5 transactions and a total amount of 2000 euros each month.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions",
+        "body": {
+            "transactionLimit": 5,
+            "totalAmountLimit": 2000,
+            "currency": "EUR",
+            "period": "monthly"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you set up a statistic-based restriction for the time deposit contract with the ID 23456789-01ab-cdef-0123-456789abcdef? I’d like to have a minimum of 10 transactions required.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/23456789-01ab-cdef-0123-456789abcdef/BankAccountEntryStatisticBasedRestrictions",
+        "body": {
+            "minimumTransactionCount": 10
+        }
+    }
+}

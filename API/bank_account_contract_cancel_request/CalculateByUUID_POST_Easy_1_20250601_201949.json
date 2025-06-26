@@ -1,0 +1,11 @@
+{
+  "difficulty": "Easy",
+  "input": "Can you help me figure out the financial results for bank account contract with ID = 12345678-90ab-cdef-0123-456789abcdef.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateByUUID",
+    "body": {
+      "BankAccountContractUUID": "12345678-90ab-cdef-0123-456789abcdef"
+    }
+  }
+}

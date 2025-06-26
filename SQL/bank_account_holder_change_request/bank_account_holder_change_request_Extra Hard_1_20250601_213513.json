@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me how many requests to change account holders there are, organized by the reason for each request?",
+    "output": {
+        "sql": "SELECT ReasonName, COUNT(*) FROM BankAccountContractAccountHolderChangeRequest GROUP BY ReasonName;"
+    }
+}

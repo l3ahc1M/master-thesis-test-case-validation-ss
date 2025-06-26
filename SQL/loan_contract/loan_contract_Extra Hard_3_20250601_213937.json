@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Find out how many loan contracts have had changes made to the borrower party and their completion date.",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContractBorrowerPartyChangeRequest AS T1 JOIN LoanContract AS T2 ON T1.LoanContractUUID = T2.UUID WHERE T1.LifeCycleStatusCode = '3' AND T1.CompletionDate > CURRENT_DATE;"
+    }
+}

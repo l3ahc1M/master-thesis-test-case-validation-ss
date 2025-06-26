@@ -1,0 +1,56 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please process four payment transaction order requests in one go. The first request is for the user with the id 01234567-89ab-cdef-0123-456789abcdef, and the amount is 600.00 US dollars. The second request is for the user with the id 45678901-23ab-cdef-0123-456789abcdef, with an amount of 700.00 US dollars. The third request is for the user with the id 56789012-34ab-cdef-0123-456789abcdef, and the amount is 800.00 US dollars. Finally, the fourth request is for the user with the id 67890123-45ab-cdef-0123-456789abcdef, with an amount of 900.00 US dollars. Make sure all entries are valid before you go ahead and process them.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "01234567-89ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "600.00",
+                        "PostOrCancelRequestedIndicator": true,
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "45678901-23ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "700.00",
+                        "PostOrCancelRequestedIndicator": true,
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "56789012-34ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "800.00",
+                        "PostOrCancelRequestedIndicator": true,
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/BankAccountContractPaymentTransactionOrderRequests",
+                    "body": {
+                        "BankAccountUUID": "67890123-45ab-cdef-0123-456789abcdef",
+                        "TransactionCurrencyAmount": "900.00",
+                        "PostOrCancelRequestedIndicator": true,
+                        "LifeCycleStatusCode": "1",
+                        "LifeCycleStatusName": "Active"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please update the payment transaction instructions with id 1 for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I want to make sure that there is a balance threshold of 1000, and I\u2019d like to set up notifications to be sent to the customer's email every week.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/1",
+    "body": {
+      "exclude": {
+        "balanceThreshold": 1000
+      },
+      "notification": {
+        "method": "email",
+        "frequency": "weekly"
+      }
+    }
+  }
+}

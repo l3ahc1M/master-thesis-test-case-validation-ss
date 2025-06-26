@@ -1,0 +1,16 @@
+{
+  "difficulty": "Medium",
+  "input": "I want to change the account holder for current account 12345678-90ab-cdef-0123-456789abcdef. The new account holder is Clark Kent, and the previous one was Lois Lane. Activation charge is to be waived.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": [
+      {
+        "BankAccountContractUUID": "12345678-90ab-cdef-0123-456789abcdef",
+        "NewAccountHolderPartyIdentifyingElements": "Clark Kent",
+        "FormerAccountHolderPartyIdentifyingElements": "Lois Lane",
+        "ChargeWaiverRequestedIndicator": true
+      }
+    ]
+  }
+}

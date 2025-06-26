@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the UUIDs of the completed loan contract prolongation requests that have a planned balance amount of less than five thousand.",
+    "output": {
+        "sql": "SELECT UUID FROM LoanContractProlongationRequest WHERE LifeCycleStatusName = 'Completed' AND LoanContractPaymentPlanPlannedBalanceAmount < '5000';"
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "difficulty": "Hard",
+  "input": "Create a bank account statement arrangement for the account with the ID 34567890-12ab-cdef-0123-456789abcdef. The customer would like to receive querterly email notifications.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+    "body": {
+      "notificationMethod": "email",
+      "frequency": "quarterly"
+    }
+  }
+}

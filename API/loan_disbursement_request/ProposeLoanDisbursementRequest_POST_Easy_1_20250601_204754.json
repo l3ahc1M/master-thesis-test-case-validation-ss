@@ -1,0 +1,14 @@
+{
+    "difficulty": "Easy",
+    "input": "I'm looking to put in a request for loan disbursement. The total amount is 5000, but I want to set aside 1000 for fees. The date I want this to take effect is September 1, 2024.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/ProposeLoanDisbursementRequest",
+        "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "GrossAmount": "5000",
+            "ItemsWithheldAmount": "1000",
+            "ValueDate": "2024-09-01"
+        }
+    }
+}

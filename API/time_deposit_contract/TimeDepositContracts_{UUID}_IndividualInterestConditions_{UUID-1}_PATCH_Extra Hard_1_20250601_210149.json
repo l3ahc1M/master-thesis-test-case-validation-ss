@@ -1,0 +1,15 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please update the individual interest conditions for the time deposit contract with the ID 45678901-23ab-cdef-0123-456789abcdef? I want to make sure that accounts with a balance of less than 500 euros are excluded, and I would like to calculate the average interest rate.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/IndividualInterestConditions/1",
+        "body": {
+            "exclude": {
+                "balanceThreshold": 500
+            },
+            "aggregation": "average",
+            "field": "interestRate"
+        }
+    }
+}

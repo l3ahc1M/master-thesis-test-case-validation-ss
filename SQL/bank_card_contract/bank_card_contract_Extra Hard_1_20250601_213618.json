@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you show me the bank card contracts that have been renewed and are associated with a particular bank account?",
+    "output": {
+        "sql": "SELECT * FROM BankCardContract WHERE PaymentCardRenewalStatusName = 'Renewed' AND BankAccount = 'YourBankAccountID';"
+    }
+}

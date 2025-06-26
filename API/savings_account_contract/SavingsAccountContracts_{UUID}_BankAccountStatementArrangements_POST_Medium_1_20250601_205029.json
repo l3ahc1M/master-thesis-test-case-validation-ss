@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you set up bank account statement arrangements for the savings account contract with the ID 987e6543-e21b-12d3-a456-426614174001 and make sure to include monthly statements?",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/987e6543-e21b-12d3-a456-426614174001/BankAccountStatementArrangements",
+        "body": {
+            "Frequency": "Monthly"
+        }
+    }
+}

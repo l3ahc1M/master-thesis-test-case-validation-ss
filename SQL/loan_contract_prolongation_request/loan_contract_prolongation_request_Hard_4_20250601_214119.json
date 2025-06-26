@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the UUIDs of loan contract extension requests that have a cancellation reason code of 10 and are still pending completion.",
+    "output": {
+        "sql": "SELECT UUID FROM LoanContractProlongationRequest WHERE CancellationReasonCode = '10' AND LifeCycleStatusName != 'Completed';"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the average time it takes to finish account holder change requests from when they first started?",
+    "output": {
+        "sql": "SELECT AVG(DATEDIFF(CompletionDate, ChangeStateID)) FROM BankAccountContractAccountHolderChangeRequest WHERE LifeCycleStatusName = 'Completed';"
+    }
+}

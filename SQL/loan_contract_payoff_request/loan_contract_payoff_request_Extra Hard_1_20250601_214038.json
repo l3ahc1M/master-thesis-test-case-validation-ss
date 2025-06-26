@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Get the loan contract payoff requests along with their related loan contract UUIDs for any requests that have an expected payment date coming up in the next 30 days.",
+    "output": {
+        "sql": "SELECT LoanContractUUID, ID FROM LoanContractPayoffRequest WHERE ExpectedPaymentDate BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 30 DAY);"
+    }
+}

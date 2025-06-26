@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me the total number of loan contract payoff requests that were submitted in the year 2023?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContractPayoffRequest WHERE YEAR(ValueDate) = 2023;"
+    }
+}

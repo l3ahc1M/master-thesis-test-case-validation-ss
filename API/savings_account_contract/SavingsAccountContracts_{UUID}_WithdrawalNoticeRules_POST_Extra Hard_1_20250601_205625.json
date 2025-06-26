@@ -1,0 +1,14 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please set up a detailed withdrawal notice rule for the savings account contract with the ID 789e0123-e45b-12d3-a456-426614174004. I want to have a notice period of 7 days for any withdrawals that exceed 5000 euros, and the customer wants to receive notifications via SMS for all withdrawal requests.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/789e0123-e45b-12d3-a456-426614174004/WithdrawalNoticeRules",
+        "body": {
+            "NoticePeriod": "P7D",
+            "ThresholdAmount": 5000,
+            "CurrencyCode": "EUR",
+            "NotificationMethod": "SMS"
+        }
+    }
+}

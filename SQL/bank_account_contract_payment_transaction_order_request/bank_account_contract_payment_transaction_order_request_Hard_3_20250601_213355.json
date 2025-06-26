@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you look for the payment transaction order requests that have been completed and have a transaction amount that is higher than the average transaction amount?",
+    "output": {
+        "sql": "SELECT * FROM BankAccountContractPaymentTransactionOrderRequest WHERE TransactionCurrencyAmount > (SELECT AVG(TransactionCurrencyAmount) FROM BankAccountContractPaymentTransactionOrderRequest);"
+    }
+}

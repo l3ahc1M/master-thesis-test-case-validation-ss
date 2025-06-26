@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the total gross amount for loan payment skip requests where a waiver for the activation charge was requested?",
+    "output": {
+        "sql": "SELECT SUM(GrossAmount) FROM LoanPaymentSkipRequest WHERE ActivationChargeWaiverRequestedIndicator = TRUE;"
+    }
+}

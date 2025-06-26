@@ -1,0 +1,38 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you please put together a batch request to fix the time deposit contracts for the accounts with the IDs 77777 and 88888? Just make sure to leave out any accounts that have a balance of less than 1000 euros, and also calculate the average interest rate while you're at it.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts/77777/SAP__self.FixTimeDepositContract",
+                    "body": {
+                        "IndividualInterestConditions": {
+                            "exclude": {
+                                "balanceThreshold": 1000
+                            },
+                            "aggregation": "average",
+                            "field": "interestRate"
+                        }
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts/88888/SAP__self.FixTimeDepositContract",
+                    "body": {
+                        "IndividualInterestConditions": {
+                            "exclude": {
+                                "balanceThreshold": 1000
+                            },
+                            "aggregation": "average",
+                            "field": "interestRate"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

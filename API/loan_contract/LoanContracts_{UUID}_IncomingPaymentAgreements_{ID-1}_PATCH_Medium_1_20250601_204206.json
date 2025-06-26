@@ -1,0 +1,11 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please update the payment agreement with the ID of 2 for the loan contract that has the UUID 23456789-01ab-cdef-0123-456789abcdef to change the payment frequency to bi-weekly?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/LoanContracts/23456789-01ab-cdef-0123-456789abcdef/IncomingPaymentAgreements/2",
+        "body": {
+            "Frequency": "Bi-Weekly"
+        }
+    }
+}

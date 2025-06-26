@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you provide me with the IDs and names of events related to bank customer lock requests that are linked to a particular bank account contract UUID?",
+    "output": {
+        "sql": "SELECT ID, EventName FROM BankCustomerLockRequest WHERE BankAccountContracts LIKE '%specific_bank_account_contract_uuid%';"
+    }
+}

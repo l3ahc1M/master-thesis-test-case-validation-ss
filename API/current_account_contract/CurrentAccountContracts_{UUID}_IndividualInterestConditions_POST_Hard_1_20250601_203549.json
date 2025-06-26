@@ -1,0 +1,12 @@
+{
+  "difficulty": "Hard",
+  "input": "I want to add a special interest condition to the current account contract, which has the ID 34567890-12ab-cdef-0123-456789abcdef. This condition should offer a special rate of 1.5% for our loyal customers.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/IndividualInterestConditions",
+    "body": {
+      "rate": "1.5%",
+      "type": "loyalty"
+    }
+  }
+}

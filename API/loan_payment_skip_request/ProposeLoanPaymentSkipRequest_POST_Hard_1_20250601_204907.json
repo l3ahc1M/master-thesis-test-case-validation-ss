@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I'm looking to put in a request to skip loan payments for the loan contract with the ID 01234567-89ab-cdef-0123-456789abcdef. I'd like to skip the payments for a period of 6 months and also ask for a waiver on the activation charge.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/ProposeLoanPaymentSkipRequest",
+        "body": {
+            "LoanContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "SkipDatePeriod": "6 months",
+            "ActivationChargeWaiverRequestedIndicator": true
+        }
+    }
+}

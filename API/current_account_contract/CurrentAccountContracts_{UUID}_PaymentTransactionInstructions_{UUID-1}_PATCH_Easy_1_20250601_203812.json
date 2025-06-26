@@ -1,0 +1,12 @@
+{
+  "difficulty": "Easy",
+  "input": "I want to change the payment transaction instructions for the current account contract with the ID 12345678-90ab-cdef-0123-456789abcdef so that I can make transactions of up to 2000 euros.",
+  "output": {
+    "method": "PATCH",
+    "endpoint": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef/PaymentTransactionInstructions/1",
+    "body": {
+      "transactionLimit": 2000,
+      "currency": "EUR"
+    }
+  }
+}

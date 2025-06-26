@@ -1,0 +1,38 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to set up a batch request to create time deposit contracts for the accounts with the IDs 55555 and 66666. The transaction limit should be 1500 euros, and I want to make sure these contracts are active.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts",
+                    "body": {
+                        "ID": "55555",
+                        "LifeCycleStatusCode": "2",
+                        "BankAccountEntryBalanceBasedRestrictions": [
+                            {
+                                "transactionThreshold": 1500
+                            }
+                        ]
+                    }
+                },
+                {
+                    "method": "POST",
+                    "url": "/TimeDepositContracts",
+                    "body": {
+                        "ID": "66666",
+                        "LifeCycleStatusCode": "2",
+                        "BankAccountEntryBalanceBasedRestrictions": [
+                            {
+                                "transactionThreshold": 1500
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

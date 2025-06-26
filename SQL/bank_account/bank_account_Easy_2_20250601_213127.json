@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the currency code for the bank account that has the ID 0010000707?",
+    "output": {
+        "sql": "SELECT CurrencyCode FROM BankAccount WHERE ID = '0010000707';"
+    }
+}

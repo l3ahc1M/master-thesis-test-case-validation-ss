@@ -1,0 +1,34 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "I would like a comprehensive summary of all bank account contracts, which includes current account, deposit account, and loan contracts, along with their respective balance details.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/$batch",
+    "body": {
+      "requests": [
+        {
+          "method": "GET",
+          "endpoint": "/BankAccountContractOverview",
+          "body": {
+            "accountType": "current"
+          }
+        },
+        {
+          "method": "GET",
+          "endpoint": "/BankAccountContractOverview",
+          "body": {
+            "accountType": "deposit"
+          }
+        },
+        {
+          "method": "GET",
+          "endpoint": "/BankAccountContractOverview",
+          "body": {
+            "accountType": "loan",
+            "includeBalanceKeyFigures": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "I want to get all the bank account entries for the bank account with the ID 98765, and I need the entries to be sorted by date, with the most recent ones first.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/$batch",
+        "body": {
+            "requests": [
+                {
+                    "method": "GET",
+                    "url": "/BankAccountEntries?accountId=98765&sortBy=date&order=desc"
+                }
+            ]
+        }
+    }
+}

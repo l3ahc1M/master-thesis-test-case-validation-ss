@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to update the individual interest conditions for the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef to set a maximum interest rate of 5% and make sure it's active.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef/IndividualInterestConditions/1",
+        "body": {
+            "maximumInterestRate": 5,
+            "LifeCycleStatusCode": "2"
+        }
+    }
+}

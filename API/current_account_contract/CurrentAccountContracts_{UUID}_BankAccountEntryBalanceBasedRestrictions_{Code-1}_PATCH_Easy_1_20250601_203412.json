@@ -1,0 +1,12 @@
+{
+    "difficulty": "Easy",
+    "input": "I would like to set a balance limit of 1500 euros on the current account contract with the ID 12345678-90ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/CurrentAccountContracts/12345678-90ab-cdef-0123-456789abcdef/BankAccountEntryBalanceBasedRestrictions/1",
+        "body": {
+            "restrictionAmount": 1500,
+            "currency": "EUR"
+        }
+    }
+}

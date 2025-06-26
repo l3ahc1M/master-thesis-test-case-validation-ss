@@ -1,0 +1,16 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Can you figure out the average amount of money customers spend on direct debit mandates, but leave out any transactions that have certain creditor references and those that are part of loyalty programs?",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CalculateAvgPurchase",
+    "body": {
+      "exclude": {
+        "specificCreditorReferences": true,
+        "inLoyaltyProgram": true
+      },
+      "aggregation": "average",
+      "field": "transactionAmount"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you find out the total gross amount for all loan contract payoff requests that were canceled because the borrower decided to cancel?",
+    "output": {
+        "sql": "SELECT SUM(GrossAmount) FROM LoanContractPayoffRequest WHERE CancellationReasonName = 'Borrower Decision';"
+    }
+}

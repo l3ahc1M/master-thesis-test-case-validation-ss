@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the UUIDs of time deposit contracts that are set to end before January 1, 2024, and are associated with accounts that have a balance of less than $500?",
+    "output": {
+        "sql": "SELECT UUID FROM TimeDepositContract WHERE PlannedEndDate < '2024-01-01' AND BankAccountIdentifyingElements IN (SELECT ID FROM BankAccount WHERE Balance < 500);"
+    }
+}

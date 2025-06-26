@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me the details of the direct debit mandate that has the longest validity period?",
+    "output": {
+        "sql": "SELECT * FROM DirectDebitMandate ORDER BY ValidityPeriod DESC LIMIT 1;"
+    }
+}

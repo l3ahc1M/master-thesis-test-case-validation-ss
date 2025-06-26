@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you help me find the UUIDs of all the active bank credit facility contracts that are associated with a specific operational bank contract management?",
+    "output": {
+        "sql": "SELECT UUID FROM BankCreditFacilityContract WHERE LifeCycleStatusName = 'Active' AND OperationalBankContractManagement IS NOT NULL;"
+    }
+}

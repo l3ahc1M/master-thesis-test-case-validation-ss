@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "How many savings account contracts are active right now?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM SavingsAccountContract WHERE LifeCycleStatusCode = '2';"
+    }
+}

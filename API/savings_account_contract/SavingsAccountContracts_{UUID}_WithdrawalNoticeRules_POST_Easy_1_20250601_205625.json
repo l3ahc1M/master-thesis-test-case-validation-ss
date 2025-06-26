@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to create a rule for the savings account contract, which has the ID 123e4567-e89b-12d3-a456-426614174000, that requires to give a one-day notice before the customer can make any withdrawals.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/123e4567-e89b-12d3-a456-426614174000/WithdrawalNoticeRules",
+        "body": {
+            "NoticePeriod": "P1D"
+        }
+    }
+}

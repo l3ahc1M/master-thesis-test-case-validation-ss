@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please provide me with the UUIDs of the loan contract borrower party change requests that were completed in the last month and were started by a particular business process chain.",
+    "output": {
+        "sql": "SELECT UUID FROM LoanContractBorrowerPartyChangeRequest WHERE CompletionDate >= DATEADD(MONTH, -1, GETDATE()) AND BusinessProcessChainAssignment = 'SpecificProcessChain';"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to take out a beneficiary from the time deposit contract that has the ID 12345678-90ab-cdef-0123-456789abcdef.",
+    "output": {
+        "method": "DELETE",
+        "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef/OtherPartyIdentifyingElements/1/Beneficiary"
+    }
+}

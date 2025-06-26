@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the loan contract IDs along with the details of the borrowers for the contracts that are currently active?",
+    "output": {
+        "sql": "SELECT ID, BorrowerPartyIdentifyingElements FROM LoanContract WHERE LifeCycleStatusCode = '2';"
+    }
+}

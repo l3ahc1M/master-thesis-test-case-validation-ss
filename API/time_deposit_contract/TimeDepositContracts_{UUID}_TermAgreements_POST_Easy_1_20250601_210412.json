@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to create a term agreement for the time deposit contract with the ID 12345678-90ab-cdef-0123-456789abcdef that lasts for 6 months.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/TimeDepositContracts/12345678-90ab-cdef-0123-456789abcdef/TermAgreements",
+        "body": {
+            "duration": "6 months"
+        }
+    }
+}

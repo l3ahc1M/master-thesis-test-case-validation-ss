@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "How many requests have been made to lock bank card contracts?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCardContractLockRequest;"
+    }
+}

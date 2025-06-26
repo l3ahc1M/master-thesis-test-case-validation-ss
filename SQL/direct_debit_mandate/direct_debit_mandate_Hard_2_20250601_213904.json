@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Please provide me with the creditor reference IDs for all direct debit mandates that were signed in the city of Berlin.",
+    "output": {
+        "sql": "SELECT CreditorReferenceID FROM DirectDebitMandate WHERE SignatureCityName = 'Berlin';"
+    }
+}

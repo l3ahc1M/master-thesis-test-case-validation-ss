@@ -1,0 +1,9 @@
+{
+    "difficulty": "Medium",
+    "input": "I would like to check out the details of the bank account entry that has the ID 33333 for the bank account with the UUID 44444. Please share the information with me.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountEntries/33333/44444/SAP__self.ReturnBankAccountEntry",
+        "body": {}
+    }
+}

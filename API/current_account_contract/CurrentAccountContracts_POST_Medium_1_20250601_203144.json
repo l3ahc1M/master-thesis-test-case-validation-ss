@@ -1,0 +1,14 @@
+{
+  "difficulty": "Medium",
+  "input": "Can you help me set up a current account contract? Account ID is 67890, and I\u2019d like it to be in US dollars. Also, please make sure the status is set to Active.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts",
+    "body": {
+      "ID": "67890",
+      "CurrencyCode": "USD",
+      "LifeCycleStatusCode": "1",
+      "LifeCycleStatusName": "Active"
+    }
+  }
+}

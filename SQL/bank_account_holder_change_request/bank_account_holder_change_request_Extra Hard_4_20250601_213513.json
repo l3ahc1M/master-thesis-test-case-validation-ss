@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you provide me with the UUIDs of the account holder change requests where the previous account holder was 'Jane Smith' and the requests have been completed?",
+    "output": {
+        "sql": "SELECT UUID FROM BankAccountContractAccountHolderChangeRequest WHERE LifeCycleStatusName = 'Completed' AND FormerAccountHolderPartyIdentifyingElements = 'Jane Smith';"
+    }
+}

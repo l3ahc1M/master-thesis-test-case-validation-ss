@@ -1,0 +1,9 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to add a cheque lock instruction to the lock request with the ID of 105.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractLockRequests/105/ChequeLockInstructions",
+        "body": {}
+    }
+}

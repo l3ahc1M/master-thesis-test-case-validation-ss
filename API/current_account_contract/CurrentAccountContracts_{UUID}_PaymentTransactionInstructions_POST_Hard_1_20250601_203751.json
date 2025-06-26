@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to add a payment transaction instruction to the current account contract, which has the ID 34567890-12ab-cdef-0123-456789abcdef, and I’d like to set a limit of 5000 euros for each transaction.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/CurrentAccountContracts/34567890-12ab-cdef-0123-456789abcdef/PaymentTransactionInstructions",
+        "body": {
+            "transactionLimit": 5000,
+            "currency": "EUR"
+        }
+    }
+}

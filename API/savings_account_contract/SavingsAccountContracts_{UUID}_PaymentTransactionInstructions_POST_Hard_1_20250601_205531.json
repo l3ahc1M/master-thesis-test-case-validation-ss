@@ -1,0 +1,13 @@
+{
+    "difficulty": "Hard",
+    "input": "I need to set up payment transaction instructions for savings account contract with the ID 456e7890-e12b-12d3-a456-426614174002. I want to allow payments only if the balance is over 1000 US dollars, and the user wants to receive a notification for any payment attempt that falls below that amount.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/456e7890-e12b-12d3-a456-426614174002/PaymentTransactionInstructions",
+        "body": {
+            "BalanceCondition": "GreaterThan",
+            "ThresholdAmount": 1000,
+            "NotificationEnabled": true
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to change the payment transaction order request with the ID 01234567-89ab-cdef-0123-456789abcdef to turn off material checks and make sure it can only be posted if everything is valid.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractPaymentTransactionOrderRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "MaterialChecksDeactivationRequestedIndicator": true,
+            "PostOrCancelRequestedIndicator": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Please update the time deposit contract with the ID 34567890-12ab-cdef-0123-456789abcdef to add new interest conditions, making sure to exclude any accounts that have a balance of less than 500 euros.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/34567890-12ab-cdef-0123-456789abcdef",
+        "body": {
+            "IndividualInterestConditions": {
+                "exclude": {
+                    "balanceThreshold": 500
+                }
+            }
+        }
+    }
+}

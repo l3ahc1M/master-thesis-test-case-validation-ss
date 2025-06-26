@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you tell me the average number of days left until the bank card contracts that are still active expire?",
+    "output": {
+        "sql": "SELECT AVG(DATEDIFF(PaymentCardValidTo, CURDATE())) FROM BankCardContract WHERE PaymentCardLifeCycleStatusCode = '1';"
+    }
+}

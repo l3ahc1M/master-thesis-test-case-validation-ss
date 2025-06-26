@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you tell me how many requests for extending loan contracts have the penalty relevance indicator marked as true?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanContractProlongationRequest WHERE PenaltyRelevanceIndicator = TRUE;"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "difficulty": "Medium",
+  "input": "Can you help me get the details of all deposit account contracts from last month?",
+  "output": {
+    "method": "POST",
+    "endpoint": "/BankAccountContractOverview",
+    "body": {
+      "accountType": "deposit",
+      "dateRange": {
+        "start": "2024-04-01",
+        "end": "2024-04-30"
+      }
+    }
+  }
+}

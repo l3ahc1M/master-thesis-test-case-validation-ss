@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you show me the loan contract extension requests that have a final payment date coming up in the next 30 days and are linked to a particular loan contract?",
+    "output": {
+        "sql": "SELECT * FROM LoanContractProlongationRequest WHERE FinalPaymentDate BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '30 days' AND LoanContract = 'specific_loan_contract';"
+    }
+}

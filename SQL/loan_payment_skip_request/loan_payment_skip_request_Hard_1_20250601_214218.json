@@ -1,0 +1,7 @@
+{
+    "difficulty": "Hard",
+    "input": "Can you tell me the average amount of new installments for loan payment skip requests that have been marked as completed?",
+    "output": {
+        "sql": "SELECT AVG(NewInstallmentAmount) FROM LoanPaymentSkipRequest WHERE LifeCycleStatusName = 'Completed';"
+    }
+}

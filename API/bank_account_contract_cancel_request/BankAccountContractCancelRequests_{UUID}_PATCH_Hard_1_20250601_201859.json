@@ -1,0 +1,12 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to update the cancellation request with the ID 01234567-89ab-cdef-0123-456789abcdef to show that the customer no longer needs a bank account settlement and wants to change the expected completion date to next month.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractCancelRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "BankAccountSettlementRequiredIndicator": false,
+            "PlannedCompletionDate": "2024-06-01"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "difficulty": "Hard",
+    "input": "I want to update the loan contract with the ID 12345678-90ab-cdef-0123-456789abcdef to include a dunning process that will send reminders if a payment is overdue by 10 days.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/LoanContracts/12345678-90ab-cdef-0123-456789abcdef",
+        "body": {
+            "Dunning": "Send reminders after 10 days of overdue payment"
+        }
+    }
+}

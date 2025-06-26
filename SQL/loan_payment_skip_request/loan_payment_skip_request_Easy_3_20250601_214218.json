@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me how many loan payment skip requests were made because the customer asked for it?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM LoanPaymentSkipRequest WHERE ReasonName = 'Customer Request';"
+    }
+}

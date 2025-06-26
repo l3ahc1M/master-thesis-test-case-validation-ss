@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you show me all the requests for changes to account holders that were finished after January 1, 2020?",
+    "output": {
+        "sql": "SELECT * FROM BankAccountContractAccountHolderChangeRequest WHERE LifeCycleStatusName = 'Completed' AND CompletionDate > '2020-01-01';"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "difficulty": "Easy",
+    "input": "I want to go ahead and activate savings account contract with the ID 123e4567-e89b-12d3-a456-426614174000.",
+    "output": {
+        "method": "POST",
+        "endpoint": "/SavingsAccountContracts/123e4567-e89b-12d3-a456-426614174000/SAP__self.ActivateSavingsAccountContract",
+        "body": {}
+    }
+}

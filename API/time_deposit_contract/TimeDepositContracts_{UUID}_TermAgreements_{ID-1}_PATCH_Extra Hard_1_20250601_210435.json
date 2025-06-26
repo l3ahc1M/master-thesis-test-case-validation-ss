@@ -1,0 +1,13 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Could you please update the terms of the time deposit contract, which has the ID 45678901-23ab-cdef-0123-456789abcdef? I want it to specify a duration of 36 months, an interest rate of 4%, and to include a clause for automatic renewal.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/45678901-23ab-cdef-0123-456789abcdef/TermAgreements/1",
+        "body": {
+            "duration": "36 months",
+            "interestRate": 4,
+            "automaticRenewal": true
+        }
+    }
+}

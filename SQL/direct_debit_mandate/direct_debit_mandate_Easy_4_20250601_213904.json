@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "Can you tell me the total number of direct debit mandates?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM DirectDebitMandate;"
+    }
+}

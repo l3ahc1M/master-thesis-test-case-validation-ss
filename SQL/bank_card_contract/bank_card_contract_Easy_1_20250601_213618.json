@@ -1,0 +1,7 @@
+{
+    "difficulty": "Easy",
+    "input": "How many bank card contracts are active right now?",
+    "output": {
+        "sql": "SELECT COUNT(*) FROM BankCardContract WHERE PaymentCardLifeCycleStatusCode = '1';"
+    }
+}

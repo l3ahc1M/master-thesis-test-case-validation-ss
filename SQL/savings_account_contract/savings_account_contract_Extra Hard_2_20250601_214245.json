@@ -1,0 +1,7 @@
+{
+    "difficulty": "Extra Hard",
+    "input": "Can you provide me with the IDs of savings account contracts that are currently active and linked to a particular account holder?",
+    "output": {
+        "sql": "SELECT ID FROM SavingsAccountContract WHERE LifeCycleStatusCode = '2' AND AccountHolderPartyIdentifyingElements = 'Specific Account Holder';"
+    }
+}

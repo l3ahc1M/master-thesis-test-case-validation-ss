@@ -1,0 +1,7 @@
+{
+    "difficulty": "Medium",
+    "input": "Can you provide me with the IDs and currency codes for all the current account contracts that belong to a particular account holder?",
+    "output": {
+        "sql": "SELECT ID, CurrencyCode FROM CurrentAccountContract WHERE AccountHolderPartyIdentifyingElements = 'Specific Account Holder';"
+    }
+}

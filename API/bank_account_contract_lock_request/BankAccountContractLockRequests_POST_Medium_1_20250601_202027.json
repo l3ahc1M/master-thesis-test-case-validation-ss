@@ -1,0 +1,13 @@
+{
+    "difficulty": "Medium",
+    "input": "Please go ahead and submit a request to lock the bank account contract with the ID 01234567-89ab-cdef-0123-456789abcdef. Make sure to use the event code 4841 and include a note that says, \"Customer passed away on April 1, 2019.\"",
+    "output": {
+        "method": "POST",
+        "endpoint": "/BankAccountContractLockRequests",
+        "body": {
+            "BankAccountContractUUID": "01234567-89ab-cdef-0123-456789abcdef",
+            "EventCode": "4841",
+            "Note": "Customer deceased April 01, 2019"
+        }
+    }
+}

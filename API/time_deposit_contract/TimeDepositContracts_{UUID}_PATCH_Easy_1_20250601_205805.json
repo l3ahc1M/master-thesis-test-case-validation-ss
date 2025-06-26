@@ -1,0 +1,11 @@
+{
+    "difficulty": "Easy",
+    "input": "I need to update the time deposit contract with the ID 01234567-89ab-cdef-0123-456789abcdef to change the currency to US dollars.",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/TimeDepositContracts/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "CurrencyCode": "USD"
+        }
+    }
+}

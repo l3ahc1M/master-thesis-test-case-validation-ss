@@ -1,0 +1,12 @@
+{
+  "difficulty": "Extra Hard",
+  "input": "Could you please set up a bank account statement arrangement for current account contract, which has the ID 45678901-23ab-cdef-0123-456789abcdef? The customer wants to receive monthly statements and also request paper copies.",
+  "output": {
+    "method": "POST",
+    "endpoint": "/CurrentAccountContracts/45678901-23ab-cdef-0123-456789abcdef/BankAccountStatementArrangements",
+    "body": {
+      "frequency": "monthly",
+      "deliveryMethod": "paper"
+    }
+  }
+}

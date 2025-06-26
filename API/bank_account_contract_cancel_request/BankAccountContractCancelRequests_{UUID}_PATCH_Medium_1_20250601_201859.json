@@ -1,0 +1,12 @@
+{
+    "difficulty": "Medium",
+    "input": "Could you please update the cancellation request with the ID 01234567-89ab-cdef-0123-456789abcdef to require immediate completion and set the cancellation fee to 30 dollars?",
+    "output": {
+        "method": "PATCH",
+        "endpoint": "/BankAccountContractCancelRequests/01234567-89ab-cdef-0123-456789abcdef",
+        "body": {
+            "ImmediateCompletionRequiredIndicator": true,
+            "CancellationChargeAmount": "30.00"
+        }
+    }
+}
